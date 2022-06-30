@@ -23,6 +23,7 @@ export interface Node<T = any> {
     parentNode?: string;
     zIndex?: number;
     extent?: 'parent' | CoordinateExtent;
+    expandParent?: boolean;
 }
 export interface NodeProps<T = any> {
     id: string;

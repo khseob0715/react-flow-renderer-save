@@ -5,8 +5,6 @@ import { NodeChange, EdgeChange } from './changes';
 import { Node, NodeInternals, NodeDimensionUpdate, NodeDiffUpdate } from './nodes';
 import { Edge } from './edges';
 import { HandleType, StartHandle } from './handles';
-export declare type FlowElement<T = any> = Node<T> | Edge<T>;
-export declare type Elements<T = any> = Array<FlowElement<T>>;
 export declare type NodeTypesType = {
     [key: string]: ReactNode;
 };

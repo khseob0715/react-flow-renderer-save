@@ -167,3 +167,8 @@ export declare type OnSelectionChangeParams = {
     edges: Edge[];
 };
 export declare type OnSelectionChangeFunc = (params: OnSelectionChangeParams) => void;
+export declare type AttributionPosition = 'top-left' | 'top-center' | 'top-right' | 'bottom-left' | 'bottom-center' | 'bottom-right';
+export declare type ProOptions = {
+    account: string;
+    hideAttribution: boolean;
+};
