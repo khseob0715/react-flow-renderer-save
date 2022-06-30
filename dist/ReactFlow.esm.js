@@ -11543,7 +11543,7 @@ var initialState = {
   nodesConnectable: true,
   elementsSelectable: true,
   multiSelectionActive: false,
-  reactFlowVersion: "9.7.2" 
+  reactFlowVersion: "9.7.3" 
 };
 var store = configureStore(initialState);
 

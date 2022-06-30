@@ -9,7 +9,6 @@ export interface ControlProps extends HTMLAttributes<HTMLDivElement> {
     onZoomOut?: () => void;
     onFitView?: () => void;
     onInteractiveChange?: (interactiveStatus: boolean) => void;
-    // test
 }
 export interface ControlButtonProps extends HTMLAttributes<HTMLButtonElement> {
 }
