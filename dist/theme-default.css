@@ -115,6 +115,7 @@
 
 .react-flow__handle.connectable {
     cursor: pointer;
+    /* cursor: crosshair; */
   }
 
 .react-flow__minimap {

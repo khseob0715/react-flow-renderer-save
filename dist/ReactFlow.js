@@ -5,7 +5,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var React$1 = require('react');
 var require$$2 = require('react-dom');
 
-function _interopDefaultLegacy(e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
 function _interopNamespace(e) {
   if (e && e.__esModule) return e;
@@ -499,7 +499,7 @@ function warning(message) {
     // "break on all exceptions" in your console,
     // it would pause the execution at this line.
     throw new Error(message);
-  } catch (e) { } // eslint-disable-line no-empty
+  } catch (e) {} // eslint-disable-line no-empty
 
 }
 
@@ -558,30 +558,30 @@ function bindActionCreators(actionCreators, dispatch) {
  * If the function has been minified and NODE_ENV !== 'production', warn the user.
  */
 
-function isCrushed() { }
+function isCrushed() {}
 
 if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed') {
   warning('You are currently using minified code outside of NODE_ENV === "production". ' + 'This means that you are running a slower development build of Redux. ' + 'You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify ' + 'or setting mode to production in webpack (https://webpack.js.org/concepts/mode/) ' + 'to ensure you have the correct code for your production build.');
 }
 
 function getAugmentedNamespace(n) {
-  if (n.__esModule) return n;
-  var a = Object.defineProperty({}, '__esModule', { value: true });
-  Object.keys(n).forEach(function (k) {
-    var d = Object.getOwnPropertyDescriptor(n, k);
-    Object.defineProperty(a, k, d.get ? d : {
-      enumerable: true,
-      get: function () {
-        return n[k];
-      }
-    });
-  });
-  return a;
+	if (n.__esModule) return n;
+	var a = Object.defineProperty({}, '__esModule', {value: true});
+	Object.keys(n).forEach(function (k) {
+		var d = Object.getOwnPropertyDescriptor(n, k);
+		Object.defineProperty(a, k, d.get ? d : {
+			enumerable: true,
+			get: function () {
+				return n[k];
+			}
+		});
+	});
+	return a;
 }
 
-var propTypes = { exports: {} };
+var propTypes = {exports: {}};
 
-var reactIs$1 = { exports: {} };
+var reactIs$1 = {exports: {}};
 
 var reactIs_production_min$1 = {};
 
@@ -593,12 +593,12 @@ var reactIs_production_min$1 = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var b$1 = "function" === typeof Symbol && Symbol.for, c$1 = b$1 ? Symbol.for("react.element") : 60103, d$1 = b$1 ? Symbol.for("react.portal") : 60106, e$1 = b$1 ? Symbol.for("react.fragment") : 60107, f$1 = b$1 ? Symbol.for("react.strict_mode") : 60108, g$1 = b$1 ? Symbol.for("react.profiler") : 60114, h$1 = b$1 ? Symbol.for("react.provider") : 60109, k$1 = b$1 ? Symbol.for("react.context") : 60110, l$1 = b$1 ? Symbol.for("react.async_mode") : 60111, m$1 = b$1 ? Symbol.for("react.concurrent_mode") : 60111, n$1 = b$1 ? Symbol.for("react.forward_ref") : 60112, p$1 = b$1 ? Symbol.for("react.suspense") : 60113, q$1 = b$1 ?
-  Symbol.for("react.suspense_list") : 60120, r$1 = b$1 ? Symbol.for("react.memo") : 60115, t = b$1 ? Symbol.for("react.lazy") : 60116, v$1 = b$1 ? Symbol.for("react.block") : 60121, w$1 = b$1 ? Symbol.for("react.fundamental") : 60117, x$1 = b$1 ? Symbol.for("react.responder") : 60118, y$1 = b$1 ? Symbol.for("react.scope") : 60119;
-function z$1(a) { if ("object" === typeof a && null !== a) { var u = a.$$typeof; switch (u) { case c$1: switch (a = a.type, a) { case l$1: case m$1: case e$1: case g$1: case f$1: case p$1: return a; default: switch (a = a && a.$$typeof, a) { case k$1: case n$1: case t: case r$1: case h$1: return a; default: return u } }case d$1: return u } } } function A$1(a) { return z$1(a) === m$1 } reactIs_production_min$1.AsyncMode = l$1; reactIs_production_min$1.ConcurrentMode = m$1; reactIs_production_min$1.ContextConsumer = k$1; reactIs_production_min$1.ContextProvider = h$1; reactIs_production_min$1.Element = c$1; reactIs_production_min$1.ForwardRef = n$1; reactIs_production_min$1.Fragment = e$1; reactIs_production_min$1.Lazy = t; reactIs_production_min$1.Memo = r$1; reactIs_production_min$1.Portal = d$1;
-reactIs_production_min$1.Profiler = g$1; reactIs_production_min$1.StrictMode = f$1; reactIs_production_min$1.Suspense = p$1; reactIs_production_min$1.isAsyncMode = function (a) { return A$1(a) || z$1(a) === l$1 }; reactIs_production_min$1.isConcurrentMode = A$1; reactIs_production_min$1.isContextConsumer = function (a) { return z$1(a) === k$1 }; reactIs_production_min$1.isContextProvider = function (a) { return z$1(a) === h$1 }; reactIs_production_min$1.isElement = function (a) { return "object" === typeof a && null !== a && a.$$typeof === c$1 }; reactIs_production_min$1.isForwardRef = function (a) { return z$1(a) === n$1 }; reactIs_production_min$1.isFragment = function (a) { return z$1(a) === e$1 }; reactIs_production_min$1.isLazy = function (a) { return z$1(a) === t };
-reactIs_production_min$1.isMemo = function (a) { return z$1(a) === r$1 }; reactIs_production_min$1.isPortal = function (a) { return z$1(a) === d$1 }; reactIs_production_min$1.isProfiler = function (a) { return z$1(a) === g$1 }; reactIs_production_min$1.isStrictMode = function (a) { return z$1(a) === f$1 }; reactIs_production_min$1.isSuspense = function (a) { return z$1(a) === p$1 };
-reactIs_production_min$1.isValidElementType = function (a) { return "string" === typeof a || "function" === typeof a || a === e$1 || a === m$1 || a === g$1 || a === f$1 || a === p$1 || a === q$1 || "object" === typeof a && null !== a && (a.$$typeof === t || a.$$typeof === r$1 || a.$$typeof === h$1 || a.$$typeof === k$1 || a.$$typeof === n$1 || a.$$typeof === w$1 || a.$$typeof === x$1 || a.$$typeof === y$1 || a.$$typeof === v$1) }; reactIs_production_min$1.typeOf = z$1;
+var b$1="function"===typeof Symbol&&Symbol.for,c$1=b$1?Symbol.for("react.element"):60103,d$1=b$1?Symbol.for("react.portal"):60106,e$1=b$1?Symbol.for("react.fragment"):60107,f$1=b$1?Symbol.for("react.strict_mode"):60108,g$1=b$1?Symbol.for("react.profiler"):60114,h$1=b$1?Symbol.for("react.provider"):60109,k$1=b$1?Symbol.for("react.context"):60110,l$1=b$1?Symbol.for("react.async_mode"):60111,m$1=b$1?Symbol.for("react.concurrent_mode"):60111,n$1=b$1?Symbol.for("react.forward_ref"):60112,p$1=b$1?Symbol.for("react.suspense"):60113,q$1=b$1?
+Symbol.for("react.suspense_list"):60120,r$1=b$1?Symbol.for("react.memo"):60115,t=b$1?Symbol.for("react.lazy"):60116,v$1=b$1?Symbol.for("react.block"):60121,w$1=b$1?Symbol.for("react.fundamental"):60117,x$1=b$1?Symbol.for("react.responder"):60118,y$1=b$1?Symbol.for("react.scope"):60119;
+function z$1(a){if("object"===typeof a&&null!==a){var u=a.$$typeof;switch(u){case c$1:switch(a=a.type,a){case l$1:case m$1:case e$1:case g$1:case f$1:case p$1:return a;default:switch(a=a&&a.$$typeof,a){case k$1:case n$1:case t:case r$1:case h$1:return a;default:return u}}case d$1:return u}}}function A$1(a){return z$1(a)===m$1}reactIs_production_min$1.AsyncMode=l$1;reactIs_production_min$1.ConcurrentMode=m$1;reactIs_production_min$1.ContextConsumer=k$1;reactIs_production_min$1.ContextProvider=h$1;reactIs_production_min$1.Element=c$1;reactIs_production_min$1.ForwardRef=n$1;reactIs_production_min$1.Fragment=e$1;reactIs_production_min$1.Lazy=t;reactIs_production_min$1.Memo=r$1;reactIs_production_min$1.Portal=d$1;
+reactIs_production_min$1.Profiler=g$1;reactIs_production_min$1.StrictMode=f$1;reactIs_production_min$1.Suspense=p$1;reactIs_production_min$1.isAsyncMode=function(a){return A$1(a)||z$1(a)===l$1};reactIs_production_min$1.isConcurrentMode=A$1;reactIs_production_min$1.isContextConsumer=function(a){return z$1(a)===k$1};reactIs_production_min$1.isContextProvider=function(a){return z$1(a)===h$1};reactIs_production_min$1.isElement=function(a){return "object"===typeof a&&null!==a&&a.$$typeof===c$1};reactIs_production_min$1.isForwardRef=function(a){return z$1(a)===n$1};reactIs_production_min$1.isFragment=function(a){return z$1(a)===e$1};reactIs_production_min$1.isLazy=function(a){return z$1(a)===t};
+reactIs_production_min$1.isMemo=function(a){return z$1(a)===r$1};reactIs_production_min$1.isPortal=function(a){return z$1(a)===d$1};reactIs_production_min$1.isProfiler=function(a){return z$1(a)===g$1};reactIs_production_min$1.isStrictMode=function(a){return z$1(a)===f$1};reactIs_production_min$1.isSuspense=function(a){return z$1(a)===p$1};
+reactIs_production_min$1.isValidElementType=function(a){return "string"===typeof a||"function"===typeof a||a===e$1||a===m$1||a===g$1||a===f$1||a===p$1||a===q$1||"object"===typeof a&&null!==a&&(a.$$typeof===t||a.$$typeof===r$1||a.$$typeof===h$1||a.$$typeof===k$1||a.$$typeof===n$1||a.$$typeof===w$1||a.$$typeof===x$1||a.$$typeof===y$1||a.$$typeof===v$1)};reactIs_production_min$1.typeOf=z$1;
 
 var reactIs_development$1 = {};
 
@@ -614,170 +614,170 @@ var reactIs_development$1 = {};
 
 
 if (process.env.NODE_ENV !== "production") {
-  (function () {
+  (function() {
 
-    // The Symbol used to tag the ReactElement-like types. If there is no native Symbol
-    // nor polyfill, then a plain number is used for performance.
-    var hasSymbol = typeof Symbol === 'function' && Symbol.for;
-    var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for('react.element') : 0xeac7;
-    var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for('react.portal') : 0xeaca;
-    var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for('react.fragment') : 0xeacb;
-    var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for('react.strict_mode') : 0xeacc;
-    var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 0xead2;
-    var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 0xeacd;
-    var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace; // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
-    // (unstable) APIs that have been removed. Can we remove the symbols?
+// The Symbol used to tag the ReactElement-like types. If there is no native Symbol
+// nor polyfill, then a plain number is used for performance.
+var hasSymbol = typeof Symbol === 'function' && Symbol.for;
+var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for('react.element') : 0xeac7;
+var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for('react.portal') : 0xeaca;
+var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for('react.fragment') : 0xeacb;
+var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for('react.strict_mode') : 0xeacc;
+var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 0xead2;
+var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 0xeacd;
+var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace; // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
+// (unstable) APIs that have been removed. Can we remove the symbols?
 
-    var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for('react.async_mode') : 0xeacf;
-    var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 0xeacf;
-    var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 0xead0;
-    var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 0xead1;
-    var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol.for('react.suspense_list') : 0xead8;
-    var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 0xead3;
-    var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 0xead4;
-    var REACT_BLOCK_TYPE = hasSymbol ? Symbol.for('react.block') : 0xead9;
-    var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol.for('react.fundamental') : 0xead5;
-    var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for('react.responder') : 0xead6;
-    var REACT_SCOPE_TYPE = hasSymbol ? Symbol.for('react.scope') : 0xead7;
+var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for('react.async_mode') : 0xeacf;
+var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 0xeacf;
+var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 0xead0;
+var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 0xead1;
+var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol.for('react.suspense_list') : 0xead8;
+var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 0xead3;
+var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 0xead4;
+var REACT_BLOCK_TYPE = hasSymbol ? Symbol.for('react.block') : 0xead9;
+var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol.for('react.fundamental') : 0xead5;
+var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for('react.responder') : 0xead6;
+var REACT_SCOPE_TYPE = hasSymbol ? Symbol.for('react.scope') : 0xead7;
 
-    function isValidElementType(type) {
-      return typeof type === 'string' || typeof type === 'function' || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
-        type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE || type.$$typeof === REACT_SCOPE_TYPE || type.$$typeof === REACT_BLOCK_TYPE);
-    }
+function isValidElementType(type) {
+  return typeof type === 'string' || typeof type === 'function' || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
+  type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE || type.$$typeof === REACT_SCOPE_TYPE || type.$$typeof === REACT_BLOCK_TYPE);
+}
 
-    function typeOf(object) {
-      if (typeof object === 'object' && object !== null) {
-        var $$typeof = object.$$typeof;
+function typeOf(object) {
+  if (typeof object === 'object' && object !== null) {
+    var $$typeof = object.$$typeof;
 
-        switch ($$typeof) {
-          case REACT_ELEMENT_TYPE:
-            var type = object.type;
+    switch ($$typeof) {
+      case REACT_ELEMENT_TYPE:
+        var type = object.type;
 
-            switch (type) {
-              case REACT_ASYNC_MODE_TYPE:
-              case REACT_CONCURRENT_MODE_TYPE:
-              case REACT_FRAGMENT_TYPE:
-              case REACT_PROFILER_TYPE:
-              case REACT_STRICT_MODE_TYPE:
-              case REACT_SUSPENSE_TYPE:
-                return type;
+        switch (type) {
+          case REACT_ASYNC_MODE_TYPE:
+          case REACT_CONCURRENT_MODE_TYPE:
+          case REACT_FRAGMENT_TYPE:
+          case REACT_PROFILER_TYPE:
+          case REACT_STRICT_MODE_TYPE:
+          case REACT_SUSPENSE_TYPE:
+            return type;
+
+          default:
+            var $$typeofType = type && type.$$typeof;
+
+            switch ($$typeofType) {
+              case REACT_CONTEXT_TYPE:
+              case REACT_FORWARD_REF_TYPE:
+              case REACT_LAZY_TYPE:
+              case REACT_MEMO_TYPE:
+              case REACT_PROVIDER_TYPE:
+                return $$typeofType;
 
               default:
-                var $$typeofType = type && type.$$typeof;
-
-                switch ($$typeofType) {
-                  case REACT_CONTEXT_TYPE:
-                  case REACT_FORWARD_REF_TYPE:
-                  case REACT_LAZY_TYPE:
-                  case REACT_MEMO_TYPE:
-                  case REACT_PROVIDER_TYPE:
-                    return $$typeofType;
-
-                  default:
-                    return $$typeof;
-                }
-
+                return $$typeof;
             }
 
-          case REACT_PORTAL_TYPE:
-            return $$typeof;
         }
-      }
 
-      return undefined;
-    } // AsyncMode is deprecated along with isAsyncMode
+      case REACT_PORTAL_TYPE:
+        return $$typeof;
+    }
+  }
 
-    var AsyncMode = REACT_ASYNC_MODE_TYPE;
-    var ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
-    var ContextConsumer = REACT_CONTEXT_TYPE;
-    var ContextProvider = REACT_PROVIDER_TYPE;
-    var Element = REACT_ELEMENT_TYPE;
-    var ForwardRef = REACT_FORWARD_REF_TYPE;
-    var Fragment = REACT_FRAGMENT_TYPE;
-    var Lazy = REACT_LAZY_TYPE;
-    var Memo = REACT_MEMO_TYPE;
-    var Portal = REACT_PORTAL_TYPE;
-    var Profiler = REACT_PROFILER_TYPE;
-    var StrictMode = REACT_STRICT_MODE_TYPE;
-    var Suspense = REACT_SUSPENSE_TYPE;
-    var hasWarnedAboutDeprecatedIsAsyncMode = false; // AsyncMode should be deprecated
+  return undefined;
+} // AsyncMode is deprecated along with isAsyncMode
 
-    function isAsyncMode(object) {
-      {
-        if (!hasWarnedAboutDeprecatedIsAsyncMode) {
-          hasWarnedAboutDeprecatedIsAsyncMode = true; // Using console['warn'] to evade Babel and ESLint
+var AsyncMode = REACT_ASYNC_MODE_TYPE;
+var ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
+var ContextConsumer = REACT_CONTEXT_TYPE;
+var ContextProvider = REACT_PROVIDER_TYPE;
+var Element = REACT_ELEMENT_TYPE;
+var ForwardRef = REACT_FORWARD_REF_TYPE;
+var Fragment = REACT_FRAGMENT_TYPE;
+var Lazy = REACT_LAZY_TYPE;
+var Memo = REACT_MEMO_TYPE;
+var Portal = REACT_PORTAL_TYPE;
+var Profiler = REACT_PROFILER_TYPE;
+var StrictMode = REACT_STRICT_MODE_TYPE;
+var Suspense = REACT_SUSPENSE_TYPE;
+var hasWarnedAboutDeprecatedIsAsyncMode = false; // AsyncMode should be deprecated
 
-          console['warn']('The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 17+. Update your code to use ' + 'ReactIs.isConcurrentMode() instead. It has the exact same API.');
-        }
-      }
+function isAsyncMode(object) {
+  {
+    if (!hasWarnedAboutDeprecatedIsAsyncMode) {
+      hasWarnedAboutDeprecatedIsAsyncMode = true; // Using console['warn'] to evade Babel and ESLint
 
-      return isConcurrentMode(object) || typeOf(object) === REACT_ASYNC_MODE_TYPE;
+      console['warn']('The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 17+. Update your code to use ' + 'ReactIs.isConcurrentMode() instead. It has the exact same API.');
     }
-    function isConcurrentMode(object) {
-      return typeOf(object) === REACT_CONCURRENT_MODE_TYPE;
-    }
-    function isContextConsumer(object) {
-      return typeOf(object) === REACT_CONTEXT_TYPE;
-    }
-    function isContextProvider(object) {
-      return typeOf(object) === REACT_PROVIDER_TYPE;
-    }
-    function isElement(object) {
-      return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
-    }
-    function isForwardRef(object) {
-      return typeOf(object) === REACT_FORWARD_REF_TYPE;
-    }
-    function isFragment(object) {
-      return typeOf(object) === REACT_FRAGMENT_TYPE;
-    }
-    function isLazy(object) {
-      return typeOf(object) === REACT_LAZY_TYPE;
-    }
-    function isMemo(object) {
-      return typeOf(object) === REACT_MEMO_TYPE;
-    }
-    function isPortal(object) {
-      return typeOf(object) === REACT_PORTAL_TYPE;
-    }
-    function isProfiler(object) {
-      return typeOf(object) === REACT_PROFILER_TYPE;
-    }
-    function isStrictMode(object) {
-      return typeOf(object) === REACT_STRICT_MODE_TYPE;
-    }
-    function isSuspense(object) {
-      return typeOf(object) === REACT_SUSPENSE_TYPE;
-    }
+  }
 
-    reactIs_development$1.AsyncMode = AsyncMode;
-    reactIs_development$1.ConcurrentMode = ConcurrentMode;
-    reactIs_development$1.ContextConsumer = ContextConsumer;
-    reactIs_development$1.ContextProvider = ContextProvider;
-    reactIs_development$1.Element = Element;
-    reactIs_development$1.ForwardRef = ForwardRef;
-    reactIs_development$1.Fragment = Fragment;
-    reactIs_development$1.Lazy = Lazy;
-    reactIs_development$1.Memo = Memo;
-    reactIs_development$1.Portal = Portal;
-    reactIs_development$1.Profiler = Profiler;
-    reactIs_development$1.StrictMode = StrictMode;
-    reactIs_development$1.Suspense = Suspense;
-    reactIs_development$1.isAsyncMode = isAsyncMode;
-    reactIs_development$1.isConcurrentMode = isConcurrentMode;
-    reactIs_development$1.isContextConsumer = isContextConsumer;
-    reactIs_development$1.isContextProvider = isContextProvider;
-    reactIs_development$1.isElement = isElement;
-    reactIs_development$1.isForwardRef = isForwardRef;
-    reactIs_development$1.isFragment = isFragment;
-    reactIs_development$1.isLazy = isLazy;
-    reactIs_development$1.isMemo = isMemo;
-    reactIs_development$1.isPortal = isPortal;
-    reactIs_development$1.isProfiler = isProfiler;
-    reactIs_development$1.isStrictMode = isStrictMode;
-    reactIs_development$1.isSuspense = isSuspense;
-    reactIs_development$1.isValidElementType = isValidElementType;
-    reactIs_development$1.typeOf = typeOf;
+  return isConcurrentMode(object) || typeOf(object) === REACT_ASYNC_MODE_TYPE;
+}
+function isConcurrentMode(object) {
+  return typeOf(object) === REACT_CONCURRENT_MODE_TYPE;
+}
+function isContextConsumer(object) {
+  return typeOf(object) === REACT_CONTEXT_TYPE;
+}
+function isContextProvider(object) {
+  return typeOf(object) === REACT_PROVIDER_TYPE;
+}
+function isElement(object) {
+  return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+}
+function isForwardRef(object) {
+  return typeOf(object) === REACT_FORWARD_REF_TYPE;
+}
+function isFragment(object) {
+  return typeOf(object) === REACT_FRAGMENT_TYPE;
+}
+function isLazy(object) {
+  return typeOf(object) === REACT_LAZY_TYPE;
+}
+function isMemo(object) {
+  return typeOf(object) === REACT_MEMO_TYPE;
+}
+function isPortal(object) {
+  return typeOf(object) === REACT_PORTAL_TYPE;
+}
+function isProfiler(object) {
+  return typeOf(object) === REACT_PROFILER_TYPE;
+}
+function isStrictMode(object) {
+  return typeOf(object) === REACT_STRICT_MODE_TYPE;
+}
+function isSuspense(object) {
+  return typeOf(object) === REACT_SUSPENSE_TYPE;
+}
+
+reactIs_development$1.AsyncMode = AsyncMode;
+reactIs_development$1.ConcurrentMode = ConcurrentMode;
+reactIs_development$1.ContextConsumer = ContextConsumer;
+reactIs_development$1.ContextProvider = ContextProvider;
+reactIs_development$1.Element = Element;
+reactIs_development$1.ForwardRef = ForwardRef;
+reactIs_development$1.Fragment = Fragment;
+reactIs_development$1.Lazy = Lazy;
+reactIs_development$1.Memo = Memo;
+reactIs_development$1.Portal = Portal;
+reactIs_development$1.Profiler = Profiler;
+reactIs_development$1.StrictMode = StrictMode;
+reactIs_development$1.Suspense = Suspense;
+reactIs_development$1.isAsyncMode = isAsyncMode;
+reactIs_development$1.isConcurrentMode = isConcurrentMode;
+reactIs_development$1.isContextConsumer = isContextConsumer;
+reactIs_development$1.isContextProvider = isContextProvider;
+reactIs_development$1.isElement = isElement;
+reactIs_development$1.isForwardRef = isForwardRef;
+reactIs_development$1.isFragment = isFragment;
+reactIs_development$1.isLazy = isLazy;
+reactIs_development$1.isMemo = isMemo;
+reactIs_development$1.isPortal = isPortal;
+reactIs_development$1.isProfiler = isProfiler;
+reactIs_development$1.isStrictMode = isStrictMode;
+reactIs_development$1.isSuspense = isSuspense;
+reactIs_development$1.isValidElementType = isValidElementType;
+reactIs_development$1.typeOf = typeOf;
   })();
 }
 
@@ -798,82 +798,82 @@ var hasOwnProperty = Object.prototype.hasOwnProperty;
 var propIsEnumerable = Object.prototype.propertyIsEnumerable;
 
 function toObject(val) {
-  if (val === null || val === undefined) {
-    throw new TypeError('Object.assign cannot be called with null or undefined');
-  }
+	if (val === null || val === undefined) {
+		throw new TypeError('Object.assign cannot be called with null or undefined');
+	}
 
-  return Object(val);
+	return Object(val);
 }
 
 function shouldUseNative() {
-  try {
-    if (!Object.assign) {
-      return false;
-    }
+	try {
+		if (!Object.assign) {
+			return false;
+		}
 
-    // Detect buggy property enumeration order in older V8 versions.
+		// Detect buggy property enumeration order in older V8 versions.
 
-    // https://bugs.chromium.org/p/v8/issues/detail?id=4118
-    var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
-    test1[5] = 'de';
-    if (Object.getOwnPropertyNames(test1)[0] === '5') {
-      return false;
-    }
+		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
+		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
+		test1[5] = 'de';
+		if (Object.getOwnPropertyNames(test1)[0] === '5') {
+			return false;
+		}
 
-    // https://bugs.chromium.org/p/v8/issues/detail?id=3056
-    var test2 = {};
-    for (var i = 0; i < 10; i++) {
-      test2['_' + String.fromCharCode(i)] = i;
-    }
-    var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
-      return test2[n];
-    });
-    if (order2.join('') !== '0123456789') {
-      return false;
-    }
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test2 = {};
+		for (var i = 0; i < 10; i++) {
+			test2['_' + String.fromCharCode(i)] = i;
+		}
+		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
+			return test2[n];
+		});
+		if (order2.join('') !== '0123456789') {
+			return false;
+		}
 
-    // https://bugs.chromium.org/p/v8/issues/detail?id=3056
-    var test3 = {};
-    'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
-      test3[letter] = letter;
-    });
-    if (Object.keys(Object.assign({}, test3)).join('') !==
-      'abcdefghijklmnopqrst') {
-      return false;
-    }
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test3 = {};
+		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
+			test3[letter] = letter;
+		});
+		if (Object.keys(Object.assign({}, test3)).join('') !==
+				'abcdefghijklmnopqrst') {
+			return false;
+		}
 
-    return true;
-  } catch (err) {
-    // We don't expect any of the above to throw, but better to be safe.
-    return false;
-  }
+		return true;
+	} catch (err) {
+		// We don't expect any of the above to throw, but better to be safe.
+		return false;
+	}
 }
 
 var objectAssign = shouldUseNative() ? Object.assign : function (target, source) {
-  var from;
-  var to = toObject(target);
-  var symbols;
+	var from;
+	var to = toObject(target);
+	var symbols;
 
-  for (var s = 1; s < arguments.length; s++) {
-    from = Object(arguments[s]);
+	for (var s = 1; s < arguments.length; s++) {
+		from = Object(arguments[s]);
 
-    for (var key in from) {
-      if (hasOwnProperty.call(from, key)) {
-        to[key] = from[key];
-      }
-    }
+		for (var key in from) {
+			if (hasOwnProperty.call(from, key)) {
+				to[key] = from[key];
+			}
+		}
 
-    if (getOwnPropertySymbols) {
-      symbols = getOwnPropertySymbols(from);
-      for (var i = 0; i < symbols.length; i++) {
-        if (propIsEnumerable.call(from, symbols[i])) {
-          to[symbols[i]] = from[symbols[i]];
-        }
-      }
-    }
-  }
+		if (getOwnPropertySymbols) {
+			symbols = getOwnPropertySymbols(from);
+			for (var i = 0; i < symbols.length; i++) {
+				if (propIsEnumerable.call(from, symbols[i])) {
+					to[symbols[i]] = from[symbols[i]];
+				}
+			}
+		}
+	}
 
-  return to;
+	return to;
 };
 
 /**
@@ -896,14 +896,14 @@ var has$2 = Function.call.bind(Object.prototype.hasOwnProperty);
  * LICENSE file in the root directory of this source tree.
  */
 
-var printWarning$1 = function () { };
+var printWarning$1 = function() {};
 
 if (process.env.NODE_ENV !== 'production') {
   var ReactPropTypesSecret$2 = ReactPropTypesSecret_1;
   var loggedTypeFailures = {};
   var has$1 = has$2;
 
-  printWarning$1 = function (text) {
+  printWarning$1 = function(text) {
     var message = 'Warning: ' + text;
     if (typeof console !== 'undefined') {
       console.error(message);
@@ -983,7 +983,7 @@ function checkPropTypes$1(typeSpecs, values, location, componentName, getStack) 
  *
  * @private
  */
-checkPropTypes$1.resetWarningCache = function () {
+checkPropTypes$1.resetWarningCache = function() {
   if (process.env.NODE_ENV !== 'production') {
     loggedTypeFailures = {};
   }
@@ -1005,10 +1005,10 @@ var ReactPropTypesSecret$1 = ReactPropTypesSecret_1;
 var has = has$2;
 var checkPropTypes = checkPropTypes_1;
 
-var printWarning = function () { };
+var printWarning = function() {};
 
 if (process.env.NODE_ENV !== 'production') {
-  printWarning = function (text) {
+  printWarning = function(text) {
     var message = 'Warning: ' + text;
     if (typeof console !== 'undefined') {
       console.error(message);
@@ -1018,7 +1018,7 @@ if (process.env.NODE_ENV !== 'production') {
       // This error was thrown as a convenience so that you can use this stack
       // to find the callsite that caused this warning to fire.
       throw new Error(message);
-    } catch (x) { }
+    } catch (x) {}
   };
 }
 
@@ -1026,7 +1026,7 @@ function emptyFunctionThatReturnsNull() {
   return null;
 }
 
-var factoryWithTypeCheckers = function (isValidElement, throwOnDirectAccess) {
+var factoryWithTypeCheckers = function(isValidElement, throwOnDirectAccess) {
   /* global Symbol */
   var ITERATOR_SYMBOL = typeof Symbol === 'function' && Symbol.iterator;
   var FAUX_ITERATOR_SYMBOL = '@@iterator'; // Before Symbol spec.
@@ -1153,7 +1153,7 @@ var factoryWithTypeCheckers = function (isValidElement, throwOnDirectAccess) {
    */
   function PropTypeError(message, data) {
     this.message = message;
-    this.data = data && typeof data === 'object' ? data : {};
+    this.data = data && typeof data === 'object' ? data: {};
     this.stack = '';
   }
   // Make `instanceof Error` still work for returned errors.
@@ -1229,7 +1229,7 @@ var factoryWithTypeCheckers = function (isValidElement, throwOnDirectAccess) {
 
         return new PropTypeError(
           'Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'),
-          { expectedType: expectedType }
+          {expectedType: expectedType}
         );
       }
       return null;
@@ -1385,7 +1385,7 @@ var factoryWithTypeCheckers = function (isValidElement, throwOnDirectAccess) {
           expectedTypes.push(checkerResult.data.expectedType);
         }
       }
-      var expectedTypesMessage = (expectedTypes.length > 0) ? ', expected one of type [' + expectedTypes.join(', ') + ']' : '';
+      var expectedTypesMessage = (expectedTypes.length > 0) ? ', expected one of type [' + expectedTypes.join(', ') + ']': '';
       return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`' + expectedTypesMessage + '.'));
     }
     return createChainableTypeChecker(validate);
@@ -1609,11 +1609,11 @@ var factoryWithTypeCheckers = function (isValidElement, throwOnDirectAccess) {
 
 var ReactPropTypesSecret = ReactPropTypesSecret_1;
 
-function emptyFunction() { }
-function emptyFunctionWithReset() { }
+function emptyFunction() {}
+function emptyFunctionWithReset() {}
 emptyFunctionWithReset.resetWarningCache = emptyFunction;
 
-var factoryWithThrowingShims = function () {
+var factoryWithThrowingShims = function() {
   function shim(props, propName, componentName, location, propFullName, secret) {
     if (secret === ReactPropTypesSecret) {
       // It is still safe when called from React.
@@ -1626,7 +1626,7 @@ var factoryWithThrowingShims = function () {
     );
     err.name = 'Invariant Violation';
     throw err;
-  } shim.isRequired = shim;
+  }  shim.isRequired = shim;
   function getShim() {
     return shim;
   }  // Important!
@@ -1773,7 +1773,7 @@ function createListenerCollection() {
 }
 
 var nullListeners = {
-  notify: function notify() { },
+  notify: function notify() {},
   get: function get() {
     return [];
   }
@@ -1843,8 +1843,8 @@ var useIsomorphicLayoutEffect = typeof window !== 'undefined' && typeof window.d
 
 function Provider$1(_ref) {
   var store = _ref.store,
-    context = _ref.context,
-    children = _ref.children;
+      context = _ref.context,
+      children = _ref.children;
   var contextValue = React$1.useMemo(function () {
     var subscription = createSubscription(store);
     subscription.onStateChange = subscription.notifyNestedSubs;
@@ -1917,12 +1917,12 @@ var reactIs_production_min = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var b = 60103, c = 60106, d = 60107, e = 60108, f = 60114, g = 60109, h = 60110, k = 60112, l = 60113, m = 60120, n = 60115, p = 60116, q = 60121, r = 60122, u = 60117, v = 60129, w = 60131;
-if ("function" === typeof Symbol && Symbol.for) { var x = Symbol.for; b = x("react.element"); c = x("react.portal"); d = x("react.fragment"); e = x("react.strict_mode"); f = x("react.profiler"); g = x("react.provider"); h = x("react.context"); k = x("react.forward_ref"); l = x("react.suspense"); m = x("react.suspense_list"); n = x("react.memo"); p = x("react.lazy"); q = x("react.block"); r = x("react.server.block"); u = x("react.fundamental"); v = x("react.debug_trace_mode"); w = x("react.legacy_hidden"); }
-function y(a) { if ("object" === typeof a && null !== a) { var t = a.$$typeof; switch (t) { case b: switch (a = a.type, a) { case d: case f: case e: case l: case m: return a; default: switch (a = a && a.$$typeof, a) { case h: case k: case p: case n: case g: return a; default: return t } }case c: return t } } } var z = g, A = b, B = k, C = d, D = p, E = n, F = c, G = f, H = e, I = l; reactIs_production_min.ContextConsumer = h; reactIs_production_min.ContextProvider = z; reactIs_production_min.Element = A; reactIs_production_min.ForwardRef = B; reactIs_production_min.Fragment = C; reactIs_production_min.Lazy = D; reactIs_production_min.Memo = E; reactIs_production_min.Portal = F; reactIs_production_min.Profiler = G; reactIs_production_min.StrictMode = H;
-reactIs_production_min.Suspense = I; reactIs_production_min.isAsyncMode = function () { return !1 }; reactIs_production_min.isConcurrentMode = function () { return !1 }; reactIs_production_min.isContextConsumer = function (a) { return y(a) === h }; reactIs_production_min.isContextProvider = function (a) { return y(a) === g }; reactIs_production_min.isElement = function (a) { return "object" === typeof a && null !== a && a.$$typeof === b }; reactIs_production_min.isForwardRef = function (a) { return y(a) === k }; reactIs_production_min.isFragment = function (a) { return y(a) === d }; reactIs_production_min.isLazy = function (a) { return y(a) === p }; reactIs_production_min.isMemo = function (a) { return y(a) === n };
-reactIs_production_min.isPortal = function (a) { return y(a) === c }; reactIs_production_min.isProfiler = function (a) { return y(a) === f }; reactIs_production_min.isStrictMode = function (a) { return y(a) === e }; reactIs_production_min.isSuspense = function (a) { return y(a) === l }; reactIs_production_min.isValidElementType = function (a) { return "string" === typeof a || "function" === typeof a || a === d || a === f || a === v || a === e || a === l || a === m || a === w || "object" === typeof a && null !== a && (a.$$typeof === p || a.$$typeof === n || a.$$typeof === g || a.$$typeof === h || a.$$typeof === k || a.$$typeof === u || a.$$typeof === q || a[0] === r) ? !0 : !1 };
-reactIs_production_min.typeOf = y;
+var b=60103,c=60106,d=60107,e=60108,f=60114,g=60109,h=60110,k=60112,l=60113,m=60120,n=60115,p=60116,q=60121,r=60122,u=60117,v=60129,w=60131;
+if("function"===typeof Symbol&&Symbol.for){var x=Symbol.for;b=x("react.element");c=x("react.portal");d=x("react.fragment");e=x("react.strict_mode");f=x("react.profiler");g=x("react.provider");h=x("react.context");k=x("react.forward_ref");l=x("react.suspense");m=x("react.suspense_list");n=x("react.memo");p=x("react.lazy");q=x("react.block");r=x("react.server.block");u=x("react.fundamental");v=x("react.debug_trace_mode");w=x("react.legacy_hidden");}
+function y(a){if("object"===typeof a&&null!==a){var t=a.$$typeof;switch(t){case b:switch(a=a.type,a){case d:case f:case e:case l:case m:return a;default:switch(a=a&&a.$$typeof,a){case h:case k:case p:case n:case g:return a;default:return t}}case c:return t}}}var z=g,A=b,B=k,C=d,D=p,E=n,F=c,G=f,H=e,I=l;reactIs_production_min.ContextConsumer=h;reactIs_production_min.ContextProvider=z;reactIs_production_min.Element=A;reactIs_production_min.ForwardRef=B;reactIs_production_min.Fragment=C;reactIs_production_min.Lazy=D;reactIs_production_min.Memo=E;reactIs_production_min.Portal=F;reactIs_production_min.Profiler=G;reactIs_production_min.StrictMode=H;
+reactIs_production_min.Suspense=I;reactIs_production_min.isAsyncMode=function(){return !1};reactIs_production_min.isConcurrentMode=function(){return !1};reactIs_production_min.isContextConsumer=function(a){return y(a)===h};reactIs_production_min.isContextProvider=function(a){return y(a)===g};reactIs_production_min.isElement=function(a){return "object"===typeof a&&null!==a&&a.$$typeof===b};reactIs_production_min.isForwardRef=function(a){return y(a)===k};reactIs_production_min.isFragment=function(a){return y(a)===d};reactIs_production_min.isLazy=function(a){return y(a)===p};reactIs_production_min.isMemo=function(a){return y(a)===n};
+reactIs_production_min.isPortal=function(a){return y(a)===c};reactIs_production_min.isProfiler=function(a){return y(a)===f};reactIs_production_min.isStrictMode=function(a){return y(a)===e};reactIs_production_min.isSuspense=function(a){return y(a)===l};reactIs_production_min.isValidElementType=function(a){return "string"===typeof a||"function"===typeof a||a===d||a===f||a===v||a===e||a===l||a===m||a===w||"object"===typeof a&&null!==a&&(a.$$typeof===p||a.$$typeof===n||a.$$typeof===g||a.$$typeof===h||a.$$typeof===k||a.$$typeof===u||a.$$typeof===q||a[0]===r)?!0:!1};
+reactIs_production_min.typeOf=y;
 
 var reactIs_development = {};
 
@@ -1936,218 +1936,218 @@ var reactIs_development = {};
  */
 
 if (process.env.NODE_ENV !== "production") {
-  (function () {
+  (function() {
 
-    // ATTENTION
-    // When adding new symbols to this file,
-    // Please consider also adding to 'react-devtools-shared/src/backend/ReactSymbols'
-    // The Symbol used to tag the ReactElement-like types. If there is no native Symbol
-    // nor polyfill, then a plain number is used for performance.
-    var REACT_ELEMENT_TYPE = 0xeac7;
-    var REACT_PORTAL_TYPE = 0xeaca;
-    var REACT_FRAGMENT_TYPE = 0xeacb;
-    var REACT_STRICT_MODE_TYPE = 0xeacc;
-    var REACT_PROFILER_TYPE = 0xead2;
-    var REACT_PROVIDER_TYPE = 0xeacd;
-    var REACT_CONTEXT_TYPE = 0xeace;
-    var REACT_FORWARD_REF_TYPE = 0xead0;
-    var REACT_SUSPENSE_TYPE = 0xead1;
-    var REACT_SUSPENSE_LIST_TYPE = 0xead8;
-    var REACT_MEMO_TYPE = 0xead3;
-    var REACT_LAZY_TYPE = 0xead4;
-    var REACT_BLOCK_TYPE = 0xead9;
-    var REACT_SERVER_BLOCK_TYPE = 0xeada;
-    var REACT_FUNDAMENTAL_TYPE = 0xead5;
-    var REACT_DEBUG_TRACING_MODE_TYPE = 0xeae1;
-    var REACT_LEGACY_HIDDEN_TYPE = 0xeae3;
+// ATTENTION
+// When adding new symbols to this file,
+// Please consider also adding to 'react-devtools-shared/src/backend/ReactSymbols'
+// The Symbol used to tag the ReactElement-like types. If there is no native Symbol
+// nor polyfill, then a plain number is used for performance.
+var REACT_ELEMENT_TYPE = 0xeac7;
+var REACT_PORTAL_TYPE = 0xeaca;
+var REACT_FRAGMENT_TYPE = 0xeacb;
+var REACT_STRICT_MODE_TYPE = 0xeacc;
+var REACT_PROFILER_TYPE = 0xead2;
+var REACT_PROVIDER_TYPE = 0xeacd;
+var REACT_CONTEXT_TYPE = 0xeace;
+var REACT_FORWARD_REF_TYPE = 0xead0;
+var REACT_SUSPENSE_TYPE = 0xead1;
+var REACT_SUSPENSE_LIST_TYPE = 0xead8;
+var REACT_MEMO_TYPE = 0xead3;
+var REACT_LAZY_TYPE = 0xead4;
+var REACT_BLOCK_TYPE = 0xead9;
+var REACT_SERVER_BLOCK_TYPE = 0xeada;
+var REACT_FUNDAMENTAL_TYPE = 0xead5;
+var REACT_DEBUG_TRACING_MODE_TYPE = 0xeae1;
+var REACT_LEGACY_HIDDEN_TYPE = 0xeae3;
 
-    if (typeof Symbol === 'function' && Symbol.for) {
-      var symbolFor = Symbol.for;
-      REACT_ELEMENT_TYPE = symbolFor('react.element');
-      REACT_PORTAL_TYPE = symbolFor('react.portal');
-      REACT_FRAGMENT_TYPE = symbolFor('react.fragment');
-      REACT_STRICT_MODE_TYPE = symbolFor('react.strict_mode');
-      REACT_PROFILER_TYPE = symbolFor('react.profiler');
-      REACT_PROVIDER_TYPE = symbolFor('react.provider');
-      REACT_CONTEXT_TYPE = symbolFor('react.context');
-      REACT_FORWARD_REF_TYPE = symbolFor('react.forward_ref');
-      REACT_SUSPENSE_TYPE = symbolFor('react.suspense');
-      REACT_SUSPENSE_LIST_TYPE = symbolFor('react.suspense_list');
-      REACT_MEMO_TYPE = symbolFor('react.memo');
-      REACT_LAZY_TYPE = symbolFor('react.lazy');
-      REACT_BLOCK_TYPE = symbolFor('react.block');
-      REACT_SERVER_BLOCK_TYPE = symbolFor('react.server.block');
-      REACT_FUNDAMENTAL_TYPE = symbolFor('react.fundamental');
-      symbolFor('react.scope');
-      symbolFor('react.opaque.id');
-      REACT_DEBUG_TRACING_MODE_TYPE = symbolFor('react.debug_trace_mode');
-      symbolFor('react.offscreen');
-      REACT_LEGACY_HIDDEN_TYPE = symbolFor('react.legacy_hidden');
+if (typeof Symbol === 'function' && Symbol.for) {
+  var symbolFor = Symbol.for;
+  REACT_ELEMENT_TYPE = symbolFor('react.element');
+  REACT_PORTAL_TYPE = symbolFor('react.portal');
+  REACT_FRAGMENT_TYPE = symbolFor('react.fragment');
+  REACT_STRICT_MODE_TYPE = symbolFor('react.strict_mode');
+  REACT_PROFILER_TYPE = symbolFor('react.profiler');
+  REACT_PROVIDER_TYPE = symbolFor('react.provider');
+  REACT_CONTEXT_TYPE = symbolFor('react.context');
+  REACT_FORWARD_REF_TYPE = symbolFor('react.forward_ref');
+  REACT_SUSPENSE_TYPE = symbolFor('react.suspense');
+  REACT_SUSPENSE_LIST_TYPE = symbolFor('react.suspense_list');
+  REACT_MEMO_TYPE = symbolFor('react.memo');
+  REACT_LAZY_TYPE = symbolFor('react.lazy');
+  REACT_BLOCK_TYPE = symbolFor('react.block');
+  REACT_SERVER_BLOCK_TYPE = symbolFor('react.server.block');
+  REACT_FUNDAMENTAL_TYPE = symbolFor('react.fundamental');
+  symbolFor('react.scope');
+  symbolFor('react.opaque.id');
+  REACT_DEBUG_TRACING_MODE_TYPE = symbolFor('react.debug_trace_mode');
+  symbolFor('react.offscreen');
+  REACT_LEGACY_HIDDEN_TYPE = symbolFor('react.legacy_hidden');
+}
+
+// Filter certain DOM attributes (e.g. src, href) if their values are empty strings.
+
+var enableScopeAPI = false; // Experimental Create Event Handle API.
+
+function isValidElementType(type) {
+  if (typeof type === 'string' || typeof type === 'function') {
+    return true;
+  } // Note: typeof might be other than 'symbol' or 'number' (e.g. if it's a polyfill).
+
+
+  if (type === REACT_FRAGMENT_TYPE || type === REACT_PROFILER_TYPE || type === REACT_DEBUG_TRACING_MODE_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || type === REACT_LEGACY_HIDDEN_TYPE || enableScopeAPI ) {
+    return true;
+  }
+
+  if (typeof type === 'object' && type !== null) {
+    if (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_BLOCK_TYPE || type[0] === REACT_SERVER_BLOCK_TYPE) {
+      return true;
     }
+  }
 
-    // Filter certain DOM attributes (e.g. src, href) if their values are empty strings.
+  return false;
+}
 
-    var enableScopeAPI = false; // Experimental Create Event Handle API.
+function typeOf(object) {
+  if (typeof object === 'object' && object !== null) {
+    var $$typeof = object.$$typeof;
 
-    function isValidElementType(type) {
-      if (typeof type === 'string' || typeof type === 'function') {
-        return true;
-      } // Note: typeof might be other than 'symbol' or 'number' (e.g. if it's a polyfill).
+    switch ($$typeof) {
+      case REACT_ELEMENT_TYPE:
+        var type = object.type;
 
+        switch (type) {
+          case REACT_FRAGMENT_TYPE:
+          case REACT_PROFILER_TYPE:
+          case REACT_STRICT_MODE_TYPE:
+          case REACT_SUSPENSE_TYPE:
+          case REACT_SUSPENSE_LIST_TYPE:
+            return type;
 
-      if (type === REACT_FRAGMENT_TYPE || type === REACT_PROFILER_TYPE || type === REACT_DEBUG_TRACING_MODE_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || type === REACT_LEGACY_HIDDEN_TYPE || enableScopeAPI) {
-        return true;
-      }
+          default:
+            var $$typeofType = type && type.$$typeof;
 
-      if (typeof type === 'object' && type !== null) {
-        if (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_BLOCK_TYPE || type[0] === REACT_SERVER_BLOCK_TYPE) {
-          return true;
-        }
-      }
-
-      return false;
-    }
-
-    function typeOf(object) {
-      if (typeof object === 'object' && object !== null) {
-        var $$typeof = object.$$typeof;
-
-        switch ($$typeof) {
-          case REACT_ELEMENT_TYPE:
-            var type = object.type;
-
-            switch (type) {
-              case REACT_FRAGMENT_TYPE:
-              case REACT_PROFILER_TYPE:
-              case REACT_STRICT_MODE_TYPE:
-              case REACT_SUSPENSE_TYPE:
-              case REACT_SUSPENSE_LIST_TYPE:
-                return type;
+            switch ($$typeofType) {
+              case REACT_CONTEXT_TYPE:
+              case REACT_FORWARD_REF_TYPE:
+              case REACT_LAZY_TYPE:
+              case REACT_MEMO_TYPE:
+              case REACT_PROVIDER_TYPE:
+                return $$typeofType;
 
               default:
-                var $$typeofType = type && type.$$typeof;
-
-                switch ($$typeofType) {
-                  case REACT_CONTEXT_TYPE:
-                  case REACT_FORWARD_REF_TYPE:
-                  case REACT_LAZY_TYPE:
-                  case REACT_MEMO_TYPE:
-                  case REACT_PROVIDER_TYPE:
-                    return $$typeofType;
-
-                  default:
-                    return $$typeof;
-                }
-
+                return $$typeof;
             }
 
-          case REACT_PORTAL_TYPE:
-            return $$typeof;
         }
-      }
 
-      return undefined;
+      case REACT_PORTAL_TYPE:
+        return $$typeof;
     }
-    var ContextConsumer = REACT_CONTEXT_TYPE;
-    var ContextProvider = REACT_PROVIDER_TYPE;
-    var Element = REACT_ELEMENT_TYPE;
-    var ForwardRef = REACT_FORWARD_REF_TYPE;
-    var Fragment = REACT_FRAGMENT_TYPE;
-    var Lazy = REACT_LAZY_TYPE;
-    var Memo = REACT_MEMO_TYPE;
-    var Portal = REACT_PORTAL_TYPE;
-    var Profiler = REACT_PROFILER_TYPE;
-    var StrictMode = REACT_STRICT_MODE_TYPE;
-    var Suspense = REACT_SUSPENSE_TYPE;
-    var hasWarnedAboutDeprecatedIsAsyncMode = false;
-    var hasWarnedAboutDeprecatedIsConcurrentMode = false; // AsyncMode should be deprecated
+  }
 
-    function isAsyncMode(object) {
-      {
-        if (!hasWarnedAboutDeprecatedIsAsyncMode) {
-          hasWarnedAboutDeprecatedIsAsyncMode = true; // Using console['warn'] to evade Babel and ESLint
+  return undefined;
+}
+var ContextConsumer = REACT_CONTEXT_TYPE;
+var ContextProvider = REACT_PROVIDER_TYPE;
+var Element = REACT_ELEMENT_TYPE;
+var ForwardRef = REACT_FORWARD_REF_TYPE;
+var Fragment = REACT_FRAGMENT_TYPE;
+var Lazy = REACT_LAZY_TYPE;
+var Memo = REACT_MEMO_TYPE;
+var Portal = REACT_PORTAL_TYPE;
+var Profiler = REACT_PROFILER_TYPE;
+var StrictMode = REACT_STRICT_MODE_TYPE;
+var Suspense = REACT_SUSPENSE_TYPE;
+var hasWarnedAboutDeprecatedIsAsyncMode = false;
+var hasWarnedAboutDeprecatedIsConcurrentMode = false; // AsyncMode should be deprecated
 
-          console['warn']('The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 18+.');
-        }
-      }
+function isAsyncMode(object) {
+  {
+    if (!hasWarnedAboutDeprecatedIsAsyncMode) {
+      hasWarnedAboutDeprecatedIsAsyncMode = true; // Using console['warn'] to evade Babel and ESLint
 
-      return false;
+      console['warn']('The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 18+.');
     }
-    function isConcurrentMode(object) {
-      {
-        if (!hasWarnedAboutDeprecatedIsConcurrentMode) {
-          hasWarnedAboutDeprecatedIsConcurrentMode = true; // Using console['warn'] to evade Babel and ESLint
+  }
 
-          console['warn']('The ReactIs.isConcurrentMode() alias has been deprecated, ' + 'and will be removed in React 18+.');
-        }
-      }
+  return false;
+}
+function isConcurrentMode(object) {
+  {
+    if (!hasWarnedAboutDeprecatedIsConcurrentMode) {
+      hasWarnedAboutDeprecatedIsConcurrentMode = true; // Using console['warn'] to evade Babel and ESLint
 
-      return false;
+      console['warn']('The ReactIs.isConcurrentMode() alias has been deprecated, ' + 'and will be removed in React 18+.');
     }
-    function isContextConsumer(object) {
-      return typeOf(object) === REACT_CONTEXT_TYPE;
-    }
-    function isContextProvider(object) {
-      return typeOf(object) === REACT_PROVIDER_TYPE;
-    }
-    function isElement(object) {
-      return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
-    }
-    function isForwardRef(object) {
-      return typeOf(object) === REACT_FORWARD_REF_TYPE;
-    }
-    function isFragment(object) {
-      return typeOf(object) === REACT_FRAGMENT_TYPE;
-    }
-    function isLazy(object) {
-      return typeOf(object) === REACT_LAZY_TYPE;
-    }
-    function isMemo(object) {
-      return typeOf(object) === REACT_MEMO_TYPE;
-    }
-    function isPortal(object) {
-      return typeOf(object) === REACT_PORTAL_TYPE;
-    }
-    function isProfiler(object) {
-      return typeOf(object) === REACT_PROFILER_TYPE;
-    }
-    function isStrictMode(object) {
-      return typeOf(object) === REACT_STRICT_MODE_TYPE;
-    }
-    function isSuspense(object) {
-      return typeOf(object) === REACT_SUSPENSE_TYPE;
-    }
+  }
 
-    reactIs_development.ContextConsumer = ContextConsumer;
-    reactIs_development.ContextProvider = ContextProvider;
-    reactIs_development.Element = Element;
-    reactIs_development.ForwardRef = ForwardRef;
-    reactIs_development.Fragment = Fragment;
-    reactIs_development.Lazy = Lazy;
-    reactIs_development.Memo = Memo;
-    reactIs_development.Portal = Portal;
-    reactIs_development.Profiler = Profiler;
-    reactIs_development.StrictMode = StrictMode;
-    reactIs_development.Suspense = Suspense;
-    reactIs_development.isAsyncMode = isAsyncMode;
-    reactIs_development.isConcurrentMode = isConcurrentMode;
-    reactIs_development.isContextConsumer = isContextConsumer;
-    reactIs_development.isContextProvider = isContextProvider;
-    reactIs_development.isElement = isElement;
-    reactIs_development.isForwardRef = isForwardRef;
-    reactIs_development.isFragment = isFragment;
-    reactIs_development.isLazy = isLazy;
-    reactIs_development.isMemo = isMemo;
-    reactIs_development.isPortal = isPortal;
-    reactIs_development.isProfiler = isProfiler;
-    reactIs_development.isStrictMode = isStrictMode;
-    reactIs_development.isSuspense = isSuspense;
-    reactIs_development.isValidElementType = isValidElementType;
-    reactIs_development.typeOf = typeOf;
+  return false;
+}
+function isContextConsumer(object) {
+  return typeOf(object) === REACT_CONTEXT_TYPE;
+}
+function isContextProvider(object) {
+  return typeOf(object) === REACT_PROVIDER_TYPE;
+}
+function isElement(object) {
+  return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+}
+function isForwardRef(object) {
+  return typeOf(object) === REACT_FORWARD_REF_TYPE;
+}
+function isFragment(object) {
+  return typeOf(object) === REACT_FRAGMENT_TYPE;
+}
+function isLazy(object) {
+  return typeOf(object) === REACT_LAZY_TYPE;
+}
+function isMemo(object) {
+  return typeOf(object) === REACT_MEMO_TYPE;
+}
+function isPortal(object) {
+  return typeOf(object) === REACT_PORTAL_TYPE;
+}
+function isProfiler(object) {
+  return typeOf(object) === REACT_PROFILER_TYPE;
+}
+function isStrictMode(object) {
+  return typeOf(object) === REACT_STRICT_MODE_TYPE;
+}
+function isSuspense(object) {
+  return typeOf(object) === REACT_SUSPENSE_TYPE;
+}
+
+reactIs_development.ContextConsumer = ContextConsumer;
+reactIs_development.ContextProvider = ContextProvider;
+reactIs_development.Element = Element;
+reactIs_development.ForwardRef = ForwardRef;
+reactIs_development.Fragment = Fragment;
+reactIs_development.Lazy = Lazy;
+reactIs_development.Memo = Memo;
+reactIs_development.Portal = Portal;
+reactIs_development.Profiler = Profiler;
+reactIs_development.StrictMode = StrictMode;
+reactIs_development.Suspense = Suspense;
+reactIs_development.isAsyncMode = isAsyncMode;
+reactIs_development.isConcurrentMode = isConcurrentMode;
+reactIs_development.isContextConsumer = isContextConsumer;
+reactIs_development.isContextProvider = isContextProvider;
+reactIs_development.isElement = isElement;
+reactIs_development.isForwardRef = isForwardRef;
+reactIs_development.isFragment = isFragment;
+reactIs_development.isLazy = isLazy;
+reactIs_development.isMemo = isMemo;
+reactIs_development.isPortal = isPortal;
+reactIs_development.isProfiler = isProfiler;
+reactIs_development.isStrictMode = isStrictMode;
+reactIs_development.isSuspense = isSuspense;
+reactIs_development.isValidElementType = isValidElementType;
+reactIs_development.typeOf = typeOf;
   })();
 }
 
-if (process.env.NODE_ENV === 'production');
+if (process.env.NODE_ENV === 'production') ;
 
 /**
  * A hook to access the value of the `ReactReduxContext`. This is a low-level
@@ -2193,7 +2193,7 @@ function createStoreHook(context) {
   };
   return function useStore() {
     var _useReduxContext = useReduxContext$1(),
-      store = _useReduxContext.store;
+        store = _useReduxContext.store;
 
     return store;
   };
@@ -2266,7 +2266,7 @@ function useSelectorWithStoreAndSubscription(selector, equalityFn, store, contex
   var _useReducer = React$1.useReducer(function (s) {
     return s + 1;
   }, 0),
-    forceRender = _useReducer[1];
+      forceRender = _useReducer[1];
 
   var subscription = React$1.useMemo(function () {
     return createSubscription(store, contextSub);
@@ -2377,8 +2377,8 @@ function createSelectorHook(context) {
     }
 
     var _useReduxContext = useReduxContext$1(),
-      store = _useReduxContext.store,
-      contextSub = _useReduxContext.subscription;
+        store = _useReduxContext.store,
+        contextSub = _useReduxContext.subscription;
 
     var selectedState = useSelectorWithStoreAndSubscription(selector, equalityFn, store, contextSub);
     React$1.useDebugValue(selectedState);
@@ -2755,9 +2755,9 @@ var getHostForElement = function getHostForElement(element) {
 
 var useKeyPress = (function (keyCode) {
   var _useState = React$1.useState(false),
-    _useState2 = _slicedToArray$1(_useState, 2),
-    keyPressed = _useState2[0],
-    setKeyPressed = _useState2[1];
+      _useState2 = _slicedToArray$1(_useState, 2),
+      keyPressed = _useState2[0],
+      setKeyPressed = _useState2[1];
 
   React$1.useEffect(function () {
     if (typeof keyCode !== 'undefined') {
@@ -2840,9 +2840,9 @@ var removeElements = function removeElements(elementsToRemove, elements) {
 
 var getEdgeId = function getEdgeId(_ref) {
   var source = _ref.source,
-    sourceHandle = _ref.sourceHandle,
-    target = _ref.target,
-    targetHandle = _ref.targetHandle;
+      sourceHandle = _ref.sourceHandle,
+      target = _ref.target,
+      targetHandle = _ref.targetHandle;
   return "reactflow__edge-".concat(source).concat(sourceHandle, "-").concat(target).concat(targetHandle);
 };
 
@@ -2904,16 +2904,16 @@ var updateEdge = function updateEdge(oldEdge, newConnection, elements) {
 };
 var pointToRendererPoint = function pointToRendererPoint(_ref2, _ref3, snapToGrid, _ref4) {
   var x = _ref2.x,
-    y = _ref2.y;
+      y = _ref2.y;
 
   var _ref5 = _slicedToArray$1(_ref3, 3),
-    tx = _ref5[0],
-    ty = _ref5[1],
-    tScale = _ref5[2];
+      tx = _ref5[0],
+      ty = _ref5[1],
+      tScale = _ref5[2];
 
   var _ref6 = _slicedToArray$1(_ref4, 2),
-    snapX = _ref6[0],
-    snapY = _ref6[1];
+      snapX = _ref6[0],
+      snapY = _ref6[1];
 
   var position = {
     x: (x - tx) / tScale,
@@ -2932,9 +2932,9 @@ var pointToRendererPoint = function pointToRendererPoint(_ref2, _ref3, snapToGri
 var onLoadProject = function onLoadProject(currentStore) {
   return function (position) {
     var _currentStore$getStat = currentStore.getState(),
-      transform = _currentStore$getStat.transform,
-      snapToGrid = _currentStore$getStat.snapToGrid,
-      snapGrid = _currentStore$getStat.snapGrid;
+        transform = _currentStore$getStat.transform,
+        snapToGrid = _currentStore$getStat.snapToGrid,
+        snapGrid = _currentStore$getStat.snapGrid;
 
     return pointToRendererPoint(position, transform, snapToGrid, snapGrid);
   };
@@ -2976,9 +2976,9 @@ var getBoundsOfBoxes = function getBoundsOfBoxes(box1, box2) {
 
 var rectToBox = function rectToBox(_ref7) {
   var x = _ref7.x,
-    y = _ref7.y,
-    width = _ref7.width,
-    height = _ref7.height;
+      y = _ref7.y,
+      width = _ref7.width,
+      height = _ref7.height;
   return {
     x: x,
     y: y,
@@ -2988,9 +2988,9 @@ var rectToBox = function rectToBox(_ref7) {
 };
 var boxToRect = function boxToRect(_ref8) {
   var x = _ref8.x,
-    y = _ref8.y,
-    x2 = _ref8.x2,
-    y2 = _ref8.y2;
+      y = _ref8.y,
+      x2 = _ref8.x2,
+      y2 = _ref8.y2;
   return {
     x: x,
     y: y,
@@ -3006,8 +3006,8 @@ var getRectOfNodes = function getRectOfNodes(nodes) {
     var _ref9$__rf = _ref9.__rf;
     _ref9$__rf = _ref9$__rf === void 0 ? {} : _ref9$__rf;
     var position = _ref9$__rf.position,
-      width = _ref9$__rf.width,
-      height = _ref9$__rf.height;
+        width = _ref9$__rf.width,
+        height = _ref9$__rf.height;
     return getBoundsOfBoxes(currBox, rectToBox(_objectSpread$d(_objectSpread$d({}, position), {}, {
       width: width,
       height: height
@@ -3022,10 +3022,10 @@ var getRectOfNodes = function getRectOfNodes(nodes) {
 };
 var getNodesInside = function getNodesInside(nodes, rect) {
   var _ref13 = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [0, 0, 1],
-    _ref14 = _slicedToArray$1(_ref13, 3),
-    tx = _ref14[0],
-    ty = _ref14[1],
-    tScale = _ref14[2];
+      _ref14 = _slicedToArray$1(_ref13, 3),
+      tx = _ref14[0],
+      ty = _ref14[1],
+      tScale = _ref14[2];
 
   var partially = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
   var excludeNonSelectableNodes = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
@@ -3037,12 +3037,12 @@ var getNodesInside = function getNodesInside(nodes, rect) {
   });
   return nodes.filter(function (_ref15) {
     var _ref15$selectable = _ref15.selectable,
-      selectable = _ref15$selectable === void 0 ? true : _ref15$selectable,
-      _ref15$__rf = _ref15.__rf,
-      position = _ref15$__rf.position,
-      width = _ref15$__rf.width,
-      height = _ref15$__rf.height,
-      isDragging = _ref15$__rf.isDragging;
+        selectable = _ref15$selectable === void 0 ? true : _ref15$selectable,
+        _ref15$__rf = _ref15.__rf,
+        position = _ref15$__rf.position,
+        width = _ref15$__rf.width,
+        height = _ref15$__rf.height,
+        isDragging = _ref15$__rf.isDragging;
 
     if (excludeNonSelectableNodes && !selectable) {
       return false;
@@ -3093,10 +3093,10 @@ var parseElements = function parseElements(nodes, edges) {
 var onLoadGetElements = function onLoadGetElements(currentStore) {
   return function () {
     var _currentStore$getStat2 = currentStore.getState(),
-      _currentStore$getStat3 = _currentStore$getStat2.nodes,
-      nodes = _currentStore$getStat3 === void 0 ? [] : _currentStore$getStat3,
-      _currentStore$getStat4 = _currentStore$getStat2.edges,
-      edges = _currentStore$getStat4 === void 0 ? [] : _currentStore$getStat4;
+        _currentStore$getStat3 = _currentStore$getStat2.nodes,
+        nodes = _currentStore$getStat3 === void 0 ? [] : _currentStore$getStat3,
+        _currentStore$getStat4 = _currentStore$getStat2.edges,
+        edges = _currentStore$getStat4 === void 0 ? [] : _currentStore$getStat4;
 
     return parseElements(nodes, edges);
   };
@@ -3104,11 +3104,11 @@ var onLoadGetElements = function onLoadGetElements(currentStore) {
 var onLoadToObject = function onLoadToObject(currentStore) {
   return function () {
     var _currentStore$getStat5 = currentStore.getState(),
-      _currentStore$getStat6 = _currentStore$getStat5.nodes,
-      nodes = _currentStore$getStat6 === void 0 ? [] : _currentStore$getStat6,
-      _currentStore$getStat7 = _currentStore$getStat5.edges,
-      edges = _currentStore$getStat7 === void 0 ? [] : _currentStore$getStat7,
-      transform = _currentStore$getStat5.transform;
+        _currentStore$getStat6 = _currentStore$getStat5.nodes,
+        nodes = _currentStore$getStat6 === void 0 ? [] : _currentStore$getStat6,
+        _currentStore$getStat7 = _currentStore$getStat5.edges,
+        edges = _currentStore$getStat7 === void 0 ? [] : _currentStore$getStat7,
+        transform = _currentStore$getStat5.transform;
 
     return {
       elements: parseElements(nodes, edges),
@@ -3132,8 +3132,8 @@ var getTransformForBounds = function getTransformForBounds(bounds, width, height
 
 var useGlobalKeyHandler = (function (_ref) {
   var deleteKeyCode = _ref.deleteKeyCode,
-    multiSelectionKeyCode = _ref.multiSelectionKeyCode,
-    onElementsRemove = _ref.onElementsRemove;
+      multiSelectionKeyCode = _ref.multiSelectionKeyCode,
+      onElementsRemove = _ref.onElementsRemove;
   var store = useStore();
   var unsetNodesSelection = useStoreActions(function (actions) {
     return actions.unsetNodesSelection;
@@ -3148,8 +3148,8 @@ var useGlobalKeyHandler = (function (_ref) {
   var multiSelectionKeyPressed = useKeyPress(multiSelectionKeyCode);
   React$1.useEffect(function () {
     var _store$getState = store.getState(),
-      edges = _store$getState.edges,
-      selectedElements = _store$getState.selectedElements;
+        edges = _store$getState.edges,
+        selectedElements = _store$getState.selectedElements;
 
     if (onElementsRemove && deleteKeyPressed && selectedElements) {
       var selectedNodes = selectedElements.filter(isNode);
@@ -3167,7 +3167,7 @@ var useGlobalKeyHandler = (function (_ref) {
   }, [multiSelectionKeyPressed]);
 });
 
-var noop = { value: () => { } };
+var noop = {value: () => {}};
 
 function dispatch() {
   for (var i = 0, n = arguments.length, _ = {}, t; i < n; ++i) {
@@ -3182,22 +3182,22 @@ function Dispatch(_) {
 }
 
 function parseTypenames$1(typenames, types) {
-  return typenames.trim().split(/^|\s+/).map(function (t) {
+  return typenames.trim().split(/^|\s+/).map(function(t) {
     var name = "", i = t.indexOf(".");
     if (i >= 0) name = t.slice(i + 1), t = t.slice(0, i);
     if (t && !types.hasOwnProperty(t)) throw new Error("unknown type: " + t);
-    return { type: t, name: name };
+    return {type: t, name: name};
   });
 }
 
 Dispatch.prototype = dispatch.prototype = {
   constructor: Dispatch,
-  on: function (typename, callback) {
+  on: function(typename, callback) {
     var _ = this._,
-      T = parseTypenames$1(typename + "", _),
-      t,
-      i = -1,
-      n = T.length;
+        T = parseTypenames$1(typename + "", _),
+        t,
+        i = -1,
+        n = T.length;
 
     // If no callback was specified, return the callback of the given type and name.
     if (arguments.length < 2) {
@@ -3215,17 +3215,17 @@ Dispatch.prototype = dispatch.prototype = {
 
     return this;
   },
-  copy: function () {
+  copy: function() {
     var copy = {}, _ = this._;
     for (var t in _) copy[t] = _[t].slice();
     return new Dispatch(copy);
   },
-  call: function (type, that) {
+  call: function(type, that) {
     if ((n = arguments.length - 2) > 0) for (var args = new Array(n), i = 0, n, t; i < n; ++i) args[i] = arguments[i + 2];
     if (!this._.hasOwnProperty(type)) throw new Error("unknown type: " + type);
     for (t = this._[type], i = 0, n = t.length; i < n; ++i) t[i].value.apply(that, args);
   },
-  apply: function (type, that, args) {
+  apply: function(type, that, args) {
     if (!this._.hasOwnProperty(type)) throw new Error("unknown type: " + type);
     for (var t = this._[type], i = 0, n = t.length; i < n; ++i) t[i].value.apply(that, args);
   }
@@ -3246,7 +3246,7 @@ function set$1(type, name, callback) {
       break;
     }
   }
-  if (callback != null) type.push({ name: name, value: callback });
+  if (callback != null) type.push({name: name, value: callback});
   return type;
 }
 
@@ -3263,21 +3263,21 @@ var namespaces = {
 function namespace(name) {
   var prefix = name += "", i = prefix.indexOf(":");
   if (i >= 0 && (prefix = name.slice(0, i)) !== "xmlns") name = name.slice(i + 1);
-  return namespaces.hasOwnProperty(prefix) ? { space: namespaces[prefix], local: name } : name; // eslint-disable-line no-prototype-builtins
+  return namespaces.hasOwnProperty(prefix) ? {space: namespaces[prefix], local: name} : name; // eslint-disable-line no-prototype-builtins
 }
 
 function creatorInherit(name) {
-  return function () {
+  return function() {
     var document = this.ownerDocument,
-      uri = this.namespaceURI;
+        uri = this.namespaceURI;
     return uri === xhtml && document.documentElement.namespaceURI === xhtml
-      ? document.createElement(name)
-      : document.createElementNS(uri, name);
+        ? document.createElement(name)
+        : document.createElementNS(uri, name);
   };
 }
 
 function creatorFixed(fullname) {
-  return function () {
+  return function() {
     return this.ownerDocument.createElementNS(fullname.space, fullname.local);
   };
 }
@@ -3285,14 +3285,14 @@ function creatorFixed(fullname) {
 function creator(name) {
   var fullname = namespace(name);
   return (fullname.local
-    ? creatorFixed
-    : creatorInherit)(fullname);
+      ? creatorFixed
+      : creatorInherit)(fullname);
 }
 
-function none() { }
+function none() {}
 
 function selector(selector) {
-  return selector == null ? none : function () {
+  return selector == null ? none : function() {
     return this.querySelector(selector);
   };
 }
@@ -3327,13 +3327,13 @@ function empty() {
 }
 
 function selectorAll(selector) {
-  return selector == null ? empty : function () {
+  return selector == null ? empty : function() {
     return this.querySelectorAll(selector);
   };
 }
 
 function arrayAll(select) {
-  return function () {
+  return function() {
     return array(select.apply(this, arguments));
   };
 }
@@ -3355,13 +3355,13 @@ function selection_selectAll(select) {
 }
 
 function matcher(selector) {
-  return function () {
+  return function() {
     return this.matches(selector);
   };
 }
 
 function childMatcher(selector) {
-  return function (node) {
+  return function(node) {
     return node.matches(selector);
   };
 }
@@ -3369,7 +3369,7 @@ function childMatcher(selector) {
 var find = Array.prototype.find;
 
 function childFind(match) {
-  return function () {
+  return function() {
     return find.call(this.children, match);
   };
 }
@@ -3380,7 +3380,7 @@ function childFirst() {
 
 function selection_selectChild(match) {
   return this.select(match == null ? childFirst
-    : childFind(typeof match === "function" ? match : childMatcher(match)));
+      : childFind(typeof match === "function" ? match : childMatcher(match)));
 }
 
 var filter = Array.prototype.filter;
@@ -3390,14 +3390,14 @@ function children() {
 }
 
 function childrenFilter(match) {
-  return function () {
+  return function() {
     return filter.call(this.children, match);
   };
 }
 
 function selection_selectChildren(match) {
   return this.selectAll(match == null ? children
-    : childrenFilter(typeof match === "function" ? match : childMatcher(match)));
+      : childrenFilter(typeof match === "function" ? match : childMatcher(match)));
 }
 
 function selection_filter(match) {
@@ -3432,23 +3432,23 @@ function EnterNode(parent, datum) {
 
 EnterNode.prototype = {
   constructor: EnterNode,
-  appendChild: function (child) { return this._parent.insertBefore(child, this._next); },
-  insertBefore: function (child, next) { return this._parent.insertBefore(child, next); },
-  querySelector: function (selector) { return this._parent.querySelector(selector); },
-  querySelectorAll: function (selector) { return this._parent.querySelectorAll(selector); }
+  appendChild: function(child) { return this._parent.insertBefore(child, this._next); },
+  insertBefore: function(child, next) { return this._parent.insertBefore(child, next); },
+  querySelector: function(selector) { return this._parent.querySelector(selector); },
+  querySelectorAll: function(selector) { return this._parent.querySelectorAll(selector); }
 };
 
 function constant$2(x) {
-  return function () {
+  return function() {
     return x;
   };
 }
 
 function bindIndex(parent, group, enter, update, exit, data) {
   var i = 0,
-    node,
-    groupLength = group.length,
-    dataLength = data.length;
+      node,
+      groupLength = group.length,
+      dataLength = data.length;
 
   // Put any non-null nodes that fit into update.
   // Put any null nodes into enter.
@@ -3472,12 +3472,12 @@ function bindIndex(parent, group, enter, update, exit, data) {
 
 function bindKey(parent, group, enter, update, exit, data, key) {
   var i,
-    node,
-    nodeByKeyValue = new Map,
-    groupLength = group.length,
-    dataLength = data.length,
-    keyValues = new Array(groupLength),
-    keyValue;
+      node,
+      nodeByKeyValue = new Map,
+      groupLength = group.length,
+      dataLength = data.length,
+      keyValues = new Array(groupLength),
+      keyValue;
 
   // Compute the key for each node.
   // If multiple nodes have the same key, the duplicates are added to exit.
@@ -3522,20 +3522,20 @@ function selection_data(value, key) {
   if (!arguments.length) return Array.from(this, datum);
 
   var bind = key ? bindKey : bindIndex,
-    parents = this._parents,
-    groups = this._groups;
+      parents = this._parents,
+      groups = this._groups;
 
   if (typeof value !== "function") value = constant$2(value);
 
   for (var m = groups.length, update = new Array(m), enter = new Array(m), exit = new Array(m), j = 0; j < m; ++j) {
     var parent = parents[j],
-      group = groups[j],
-      groupLength = group.length,
-      data = arraylike(value.call(parent, parent && parent.__data__, j, parents)),
-      dataLength = data.length,
-      enterGroup = enter[j] = new Array(dataLength),
-      updateGroup = update[j] = new Array(dataLength),
-      exitGroup = exit[j] = new Array(groupLength);
+        group = groups[j],
+        groupLength = group.length,
+        data = arraylike(value.call(parent, parent && parent.__data__, j, parents)),
+        dataLength = data.length,
+        enterGroup = enter[j] = new Array(dataLength),
+        updateGroup = update[j] = new Array(dataLength),
+        exitGroup = exit[j] = new Array(groupLength);
 
     bind(parent, group, enterGroup, updateGroup, exitGroup, data, key);
 
@@ -3689,31 +3689,31 @@ function selection_each(callback) {
 }
 
 function attrRemove$1(name) {
-  return function () {
+  return function() {
     this.removeAttribute(name);
   };
 }
 
 function attrRemoveNS$1(fullname) {
-  return function () {
+  return function() {
     this.removeAttributeNS(fullname.space, fullname.local);
   };
 }
 
 function attrConstant$1(name, value) {
-  return function () {
+  return function() {
     this.setAttribute(name, value);
   };
 }
 
 function attrConstantNS$1(fullname, value) {
-  return function () {
+  return function() {
     this.setAttributeNS(fullname.space, fullname.local, value);
   };
 }
 
 function attrFunction$1(name, value) {
-  return function () {
+  return function() {
     var v = value.apply(this, arguments);
     if (v == null) this.removeAttribute(name);
     else this.setAttribute(name, v);
@@ -3721,7 +3721,7 @@ function attrFunction$1(name, value) {
 }
 
 function attrFunctionNS$1(fullname, value) {
-  return function () {
+  return function() {
     var v = value.apply(this, arguments);
     if (v == null) this.removeAttributeNS(fullname.space, fullname.local);
     else this.setAttributeNS(fullname.space, fullname.local, v);
@@ -3734,36 +3734,36 @@ function selection_attr(name, value) {
   if (arguments.length < 2) {
     var node = this.node();
     return fullname.local
-      ? node.getAttributeNS(fullname.space, fullname.local)
-      : node.getAttribute(fullname);
+        ? node.getAttributeNS(fullname.space, fullname.local)
+        : node.getAttribute(fullname);
   }
 
   return this.each((value == null
-    ? (fullname.local ? attrRemoveNS$1 : attrRemove$1) : (typeof value === "function"
+      ? (fullname.local ? attrRemoveNS$1 : attrRemove$1) : (typeof value === "function"
       ? (fullname.local ? attrFunctionNS$1 : attrFunction$1)
       : (fullname.local ? attrConstantNS$1 : attrConstant$1)))(fullname, value));
 }
 
 function defaultView(node) {
   return (node.ownerDocument && node.ownerDocument.defaultView) // node is a Node
-    || (node.document && node) // node is a Window
-    || node.defaultView; // node is a Document
+      || (node.document && node) // node is a Window
+      || node.defaultView; // node is a Document
 }
 
 function styleRemove$1(name) {
-  return function () {
+  return function() {
     this.style.removeProperty(name);
   };
 }
 
 function styleConstant$1(name, value, priority) {
-  return function () {
+  return function() {
     this.style.setProperty(name, value, priority);
   };
 }
 
 function styleFunction$1(name, value, priority) {
-  return function () {
+  return function() {
     var v = value.apply(this, arguments);
     if (v == null) this.style.removeProperty(name);
     else this.style.setProperty(name, v, priority);
@@ -3772,32 +3772,32 @@ function styleFunction$1(name, value, priority) {
 
 function selection_style(name, value, priority) {
   return arguments.length > 1
-    ? this.each((value == null
-      ? styleRemove$1 : typeof value === "function"
-        ? styleFunction$1
-        : styleConstant$1)(name, value, priority == null ? "" : priority))
-    : styleValue(this.node(), name);
+      ? this.each((value == null
+            ? styleRemove$1 : typeof value === "function"
+            ? styleFunction$1
+            : styleConstant$1)(name, value, priority == null ? "" : priority))
+      : styleValue(this.node(), name);
 }
 
 function styleValue(node, name) {
   return node.style.getPropertyValue(name)
-    || defaultView(node).getComputedStyle(node, null).getPropertyValue(name);
+      || defaultView(node).getComputedStyle(node, null).getPropertyValue(name);
 }
 
 function propertyRemove(name) {
-  return function () {
+  return function() {
     delete this[name];
   };
 }
 
 function propertyConstant(name, value) {
-  return function () {
+  return function() {
     this[name] = value;
   };
 }
 
 function propertyFunction(name, value) {
-  return function () {
+  return function() {
     var v = value.apply(this, arguments);
     if (v == null) delete this[name];
     else this[name] = v;
@@ -3806,11 +3806,11 @@ function propertyFunction(name, value) {
 
 function selection_property(name, value) {
   return arguments.length > 1
-    ? this.each((value == null
-      ? propertyRemove : typeof value === "function"
-        ? propertyFunction
-        : propertyConstant)(name, value))
-    : this.node()[name];
+      ? this.each((value == null
+          ? propertyRemove : typeof value === "function"
+          ? propertyFunction
+          : propertyConstant)(name, value))
+      : this.node()[name];
 }
 
 function classArray(string) {
@@ -3827,21 +3827,21 @@ function ClassList(node) {
 }
 
 ClassList.prototype = {
-  add: function (name) {
+  add: function(name) {
     var i = this._names.indexOf(name);
     if (i < 0) {
       this._names.push(name);
       this._node.setAttribute("class", this._names.join(" "));
     }
   },
-  remove: function (name) {
+  remove: function(name) {
     var i = this._names.indexOf(name);
     if (i >= 0) {
       this._names.splice(i, 1);
       this._node.setAttribute("class", this._names.join(" "));
     }
   },
-  contains: function (name) {
+  contains: function(name) {
     return this._names.indexOf(name) >= 0;
   }
 };
@@ -3857,19 +3857,19 @@ function classedRemove(node, names) {
 }
 
 function classedTrue(names) {
-  return function () {
+  return function() {
     classedAdd(this, names);
   };
 }
 
 function classedFalse(names) {
-  return function () {
+  return function() {
     classedRemove(this, names);
   };
 }
 
 function classedFunction(names, value) {
-  return function () {
+  return function() {
     (value.apply(this, arguments) ? classedAdd : classedRemove)(this, names);
   };
 }
@@ -3884,7 +3884,7 @@ function selection_classed(name, value) {
   }
 
   return this.each((typeof value === "function"
-    ? classedFunction : value
+      ? classedFunction : value
       ? classedTrue
       : classedFalse)(names, value));
 }
@@ -3894,13 +3894,13 @@ function textRemove() {
 }
 
 function textConstant$1(value) {
-  return function () {
+  return function() {
     this.textContent = value;
   };
 }
 
 function textFunction$1(value) {
-  return function () {
+  return function() {
     var v = value.apply(this, arguments);
     this.textContent = v == null ? "" : v;
   };
@@ -3908,11 +3908,11 @@ function textFunction$1(value) {
 
 function selection_text(value) {
   return arguments.length
-    ? this.each(value == null
-      ? textRemove : (typeof value === "function"
-        ? textFunction$1
-        : textConstant$1)(value))
-    : this.node().textContent;
+      ? this.each(value == null
+          ? textRemove : (typeof value === "function"
+          ? textFunction$1
+          : textConstant$1)(value))
+      : this.node().textContent;
 }
 
 function htmlRemove() {
@@ -3920,13 +3920,13 @@ function htmlRemove() {
 }
 
 function htmlConstant(value) {
-  return function () {
+  return function() {
     this.innerHTML = value;
   };
 }
 
 function htmlFunction(value) {
-  return function () {
+  return function() {
     var v = value.apply(this, arguments);
     this.innerHTML = v == null ? "" : v;
   };
@@ -3934,11 +3934,11 @@ function htmlFunction(value) {
 
 function selection_html(value) {
   return arguments.length
-    ? this.each(value == null
-      ? htmlRemove : (typeof value === "function"
-        ? htmlFunction
-        : htmlConstant)(value))
-    : this.node().innerHTML;
+      ? this.each(value == null
+          ? htmlRemove : (typeof value === "function"
+          ? htmlFunction
+          : htmlConstant)(value))
+      : this.node().innerHTML;
 }
 
 function raise() {
@@ -3959,7 +3959,7 @@ function selection_lower() {
 
 function selection_append(name) {
   var create = typeof name === "function" ? name : creator(name);
-  return this.select(function () {
+  return this.select(function() {
     return this.appendChild(create.apply(this, arguments));
   });
 }
@@ -3970,8 +3970,8 @@ function constantNull() {
 
 function selection_insert(name, before) {
   var create = typeof name === "function" ? name : creator(name),
-    select = before == null ? constantNull : typeof before === "function" ? before : selector(before);
-  return this.select(function () {
+      select = before == null ? constantNull : typeof before === "function" ? before : selector(before);
+  return this.select(function() {
     return this.insertBefore(create.apply(this, arguments), select.apply(this, arguments) || null);
   });
 }
@@ -4001,26 +4001,26 @@ function selection_clone(deep) {
 
 function selection_datum(value) {
   return arguments.length
-    ? this.property("__data__", value)
-    : this.node().__data__;
+      ? this.property("__data__", value)
+      : this.node().__data__;
 }
 
 function contextListener(listener) {
-  return function (event) {
+  return function(event) {
     listener.call(this, event, this.__data__);
   };
 }
 
 function parseTypenames(typenames) {
-  return typenames.trim().split(/^|\s+/).map(function (t) {
+  return typenames.trim().split(/^|\s+/).map(function(t) {
     var name = "", i = t.indexOf(".");
     if (i >= 0) name = t.slice(i + 1), t = t.slice(0, i);
-    return { type: t, name: name };
+    return {type: t, name: name};
   });
 }
 
 function onRemove(typename) {
-  return function () {
+  return function() {
     var on = this.__on;
     if (!on) return;
     for (var j = 0, i = -1, m = on.length, o; j < m; ++j) {
@@ -4036,7 +4036,7 @@ function onRemove(typename) {
 }
 
 function onAdd(typename, value, options) {
-  return function () {
+  return function() {
     var on = this.__on, o, listener = contextListener(value);
     if (on) for (var j = 0, m = on.length; j < m; ++j) {
       if ((o = on[j]).type === typename.type && o.name === typename.name) {
@@ -4047,7 +4047,7 @@ function onAdd(typename, value, options) {
       }
     }
     this.addEventListener(typename.type, listener, options);
-    o = { type: typename.type, name: typename.name, value: value, listener: listener, options: options };
+    o = {type: typename.type, name: typename.name, value: value, listener: listener, options: options};
     if (!on) this.__on = [o];
     else on.push(o);
   };
@@ -4075,7 +4075,7 @@ function selection_on(typename, value, options) {
 
 function dispatchEvent(node, type, params) {
   var window = defaultView(node),
-    event = window.CustomEvent;
+      event = window.CustomEvent;
 
   if (typeof event === "function") {
     event = new event(type, params);
@@ -4089,21 +4089,21 @@ function dispatchEvent(node, type, params) {
 }
 
 function dispatchConstant(type, params) {
-  return function () {
+  return function() {
     return dispatchEvent(this, type, params);
   };
 }
 
 function dispatchFunction(type, params) {
-  return function () {
+  return function() {
     return dispatchEvent(this, type, params.apply(this, arguments));
   };
 }
 
 function selection_dispatch(type, params) {
   return this.each((typeof params === "function"
-    ? dispatchFunction
-    : dispatchConstant)(type, params));
+      ? dispatchFunction
+      : dispatchConstant)(type, params));
 }
 
 function* selection_iterator() {
@@ -4170,8 +4170,8 @@ Selection$1.prototype = selection.prototype = {
 
 function select(selector) {
   return typeof selector === "string"
-    ? new Selection$1([[document.querySelector(selector)]], [document.documentElement])
-    : new Selection$1([[selector]], root);
+      ? new Selection$1([[document.querySelector(selector)]], [document.documentElement])
+      : new Selection$1([[selector]], root);
 }
 
 function sourceEvent(event) {
@@ -4200,7 +4200,7 @@ function pointer(event, node) {
 }
 
 // These are typically used in conjunction with noevent to ensure that we can
-const nonpassivecapture = { capture: true, passive: false };
+const nonpassivecapture = {capture: true, passive: false};
 
 function noevent$1(event) {
   event.preventDefault();
@@ -4209,7 +4209,7 @@ function noevent$1(event) {
 
 function dragDisable(view) {
   var root = view.document.documentElement,
-    selection = select(view).on("dragstart.drag", noevent$1, nonpassivecapture);
+      selection = select(view).on("dragstart.drag", noevent$1, nonpassivecapture);
   if ("onselectstart" in root) {
     selection.on("selectstart.drag", noevent$1, nonpassivecapture);
   } else {
@@ -4220,10 +4220,10 @@ function dragDisable(view) {
 
 function yesdrag(view, noclick) {
   var root = view.document.documentElement,
-    selection = select(view).on("dragstart.drag", null);
+      selection = select(view).on("dragstart.drag", null);
   if (noclick) {
     selection.on("click.drag", noevent$1, nonpassivecapture);
-    setTimeout(function () { selection.on("click.drag", null); }, 0);
+    setTimeout(function() { selection.on("click.drag", null); }, 0);
   }
   if ("onselectstart" in root) {
     selection.on("selectstart.drag", null);
@@ -4244,21 +4244,21 @@ function extend(parent, definition) {
   return prototype;
 }
 
-function Color() { }
+function Color() {}
 
 var darker = 0.7;
 var brighter = 1 / darker;
 
 var reI = "\\s*([+-]?\\d+)\\s*",
-  reN = "\\s*([+-]?\\d*\\.?\\d+(?:[eE][+-]?\\d+)?)\\s*",
-  reP = "\\s*([+-]?\\d*\\.?\\d+(?:[eE][+-]?\\d+)?)%\\s*",
-  reHex = /^#([0-9a-f]{3,8})$/,
-  reRgbInteger = new RegExp("^rgb\\(" + [reI, reI, reI] + "\\)$"),
-  reRgbPercent = new RegExp("^rgb\\(" + [reP, reP, reP] + "\\)$"),
-  reRgbaInteger = new RegExp("^rgba\\(" + [reI, reI, reI, reN] + "\\)$"),
-  reRgbaPercent = new RegExp("^rgba\\(" + [reP, reP, reP, reN] + "\\)$"),
-  reHslPercent = new RegExp("^hsl\\(" + [reN, reP, reP] + "\\)$"),
-  reHslaPercent = new RegExp("^hsla\\(" + [reN, reP, reP, reN] + "\\)$");
+    reN = "\\s*([+-]?\\d*\\.?\\d+(?:[eE][+-]?\\d+)?)\\s*",
+    reP = "\\s*([+-]?\\d*\\.?\\d+(?:[eE][+-]?\\d+)?)%\\s*",
+    reHex = /^#([0-9a-f]{3,8})$/,
+    reRgbInteger = new RegExp("^rgb\\(" + [reI, reI, reI] + "\\)$"),
+    reRgbPercent = new RegExp("^rgb\\(" + [reP, reP, reP] + "\\)$"),
+    reRgbaInteger = new RegExp("^rgba\\(" + [reI, reI, reI, reN] + "\\)$"),
+    reRgbaPercent = new RegExp("^rgba\\(" + [reP, reP, reP, reN] + "\\)$"),
+    reHslPercent = new RegExp("^hsl\\(" + [reN, reP, reP] + "\\)$"),
+    reHslaPercent = new RegExp("^hsla\\(" + [reN, reP, reP, reN] + "\\)$");
 
 var named = {
   aliceblue: 0xf0f8ff,
@@ -4412,10 +4412,10 @@ var named = {
 };
 
 define(Color, color, {
-  copy: function (channels) {
+  copy: function(channels) {
     return Object.assign(new this.constructor, this, channels);
   },
-  displayable: function () {
+  displayable: function() {
     return this.rgb().displayable();
   },
   hex: color_formatHex, // Deprecated! Use color.formatHex.
@@ -4441,19 +4441,19 @@ function color(format) {
   var m, l;
   format = (format + "").trim().toLowerCase();
   return (m = reHex.exec(format)) ? (l = m[1].length, m = parseInt(m[1], 16), l === 6 ? rgbn(m) // #ff0000
-    : l === 3 ? new Rgb((m >> 8 & 0xf) | (m >> 4 & 0xf0), (m >> 4 & 0xf) | (m & 0xf0), ((m & 0xf) << 4) | (m & 0xf), 1) // #f00
+      : l === 3 ? new Rgb((m >> 8 & 0xf) | (m >> 4 & 0xf0), (m >> 4 & 0xf) | (m & 0xf0), ((m & 0xf) << 4) | (m & 0xf), 1) // #f00
       : l === 8 ? rgba(m >> 24 & 0xff, m >> 16 & 0xff, m >> 8 & 0xff, (m & 0xff) / 0xff) // #ff000000
-        : l === 4 ? rgba((m >> 12 & 0xf) | (m >> 8 & 0xf0), (m >> 8 & 0xf) | (m >> 4 & 0xf0), (m >> 4 & 0xf) | (m & 0xf0), (((m & 0xf) << 4) | (m & 0xf)) / 0xff) // #f000
-          : null) // invalid hex
-    : (m = reRgbInteger.exec(format)) ? new Rgb(m[1], m[2], m[3], 1) // rgb(255, 0, 0)
+      : l === 4 ? rgba((m >> 12 & 0xf) | (m >> 8 & 0xf0), (m >> 8 & 0xf) | (m >> 4 & 0xf0), (m >> 4 & 0xf) | (m & 0xf0), (((m & 0xf) << 4) | (m & 0xf)) / 0xff) // #f000
+      : null) // invalid hex
+      : (m = reRgbInteger.exec(format)) ? new Rgb(m[1], m[2], m[3], 1) // rgb(255, 0, 0)
       : (m = reRgbPercent.exec(format)) ? new Rgb(m[1] * 255 / 100, m[2] * 255 / 100, m[3] * 255 / 100, 1) // rgb(100%, 0%, 0%)
-        : (m = reRgbaInteger.exec(format)) ? rgba(m[1], m[2], m[3], m[4]) // rgba(255, 0, 0, 1)
-          : (m = reRgbaPercent.exec(format)) ? rgba(m[1] * 255 / 100, m[2] * 255 / 100, m[3] * 255 / 100, m[4]) // rgb(100%, 0%, 0%, 1)
-            : (m = reHslPercent.exec(format)) ? hsla(m[1], m[2] / 100, m[3] / 100, 1) // hsl(120, 50%, 50%)
-              : (m = reHslaPercent.exec(format)) ? hsla(m[1], m[2] / 100, m[3] / 100, m[4]) // hsla(120, 50%, 50%, 1)
-                : named.hasOwnProperty(format) ? rgbn(named[format]) // eslint-disable-line no-prototype-builtins
-                  : format === "transparent" ? new Rgb(NaN, NaN, NaN, 0)
-                    : null;
+      : (m = reRgbaInteger.exec(format)) ? rgba(m[1], m[2], m[3], m[4]) // rgba(255, 0, 0, 1)
+      : (m = reRgbaPercent.exec(format)) ? rgba(m[1] * 255 / 100, m[2] * 255 / 100, m[3] * 255 / 100, m[4]) // rgb(100%, 0%, 0%, 1)
+      : (m = reHslPercent.exec(format)) ? hsla(m[1], m[2] / 100, m[3] / 100, 1) // hsl(120, 50%, 50%)
+      : (m = reHslaPercent.exec(format)) ? hsla(m[1], m[2] / 100, m[3] / 100, m[4]) // hsla(120, 50%, 50%, 1)
+      : named.hasOwnProperty(format) ? rgbn(named[format]) // eslint-disable-line no-prototype-builtins
+      : format === "transparent" ? new Rgb(NaN, NaN, NaN, 0)
+      : null;
 }
 
 function rgbn(n) {
@@ -4484,22 +4484,22 @@ function Rgb(r, g, b, opacity) {
 }
 
 define(Rgb, rgb, extend(Color, {
-  brighter: function (k) {
+  brighter: function(k) {
     k = k == null ? brighter : Math.pow(brighter, k);
     return new Rgb(this.r * k, this.g * k, this.b * k, this.opacity);
   },
-  darker: function (k) {
+  darker: function(k) {
     k = k == null ? darker : Math.pow(darker, k);
     return new Rgb(this.r * k, this.g * k, this.b * k, this.opacity);
   },
-  rgb: function () {
+  rgb: function() {
     return this;
   },
-  displayable: function () {
+  displayable: function() {
     return (-0.5 <= this.r && this.r < 255.5)
-      && (-0.5 <= this.g && this.g < 255.5)
-      && (-0.5 <= this.b && this.b < 255.5)
-      && (0 <= this.opacity && this.opacity <= 1);
+        && (-0.5 <= this.g && this.g < 255.5)
+        && (-0.5 <= this.b && this.b < 255.5)
+        && (0 <= this.opacity && this.opacity <= 1);
   },
   hex: rgb_formatHex, // Deprecated! Use color.formatHex.
   formatHex: rgb_formatHex,
@@ -4514,10 +4514,10 @@ function rgb_formatHex() {
 function rgb_formatRgb() {
   var a = this.opacity; a = isNaN(a) ? 1 : Math.max(0, Math.min(1, a));
   return (a === 1 ? "rgb(" : "rgba(")
-    + Math.max(0, Math.min(255, Math.round(this.r) || 0)) + ", "
-    + Math.max(0, Math.min(255, Math.round(this.g) || 0)) + ", "
-    + Math.max(0, Math.min(255, Math.round(this.b) || 0))
-    + (a === 1 ? ")" : ", " + a + ")");
+      + Math.max(0, Math.min(255, Math.round(this.r) || 0)) + ", "
+      + Math.max(0, Math.min(255, Math.round(this.g) || 0)) + ", "
+      + Math.max(0, Math.min(255, Math.round(this.b) || 0))
+      + (a === 1 ? ")" : ", " + a + ")");
 }
 
 function hex(value) {
@@ -4539,13 +4539,13 @@ function hslConvert(o) {
   if (o instanceof Hsl) return o;
   o = o.rgb();
   var r = o.r / 255,
-    g = o.g / 255,
-    b = o.b / 255,
-    min = Math.min(r, g, b),
-    max = Math.max(r, g, b),
-    h = NaN,
-    s = max - min,
-    l = (max + min) / 2;
+      g = o.g / 255,
+      b = o.b / 255,
+      min = Math.min(r, g, b),
+      max = Math.max(r, g, b),
+      h = NaN,
+      s = max - min,
+      l = (max + min) / 2;
   if (s) {
     if (r === max) h = (g - b) / s + (g < b) * 6;
     else if (g === max) h = (b - r) / s + 2;
@@ -4570,20 +4570,20 @@ function Hsl(h, s, l, opacity) {
 }
 
 define(Hsl, hsl, extend(Color, {
-  brighter: function (k) {
+  brighter: function(k) {
     k = k == null ? brighter : Math.pow(brighter, k);
     return new Hsl(this.h, this.s, this.l * k, this.opacity);
   },
-  darker: function (k) {
+  darker: function(k) {
     k = k == null ? darker : Math.pow(darker, k);
     return new Hsl(this.h, this.s, this.l * k, this.opacity);
   },
-  rgb: function () {
+  rgb: function() {
     var h = this.h % 360 + (this.h < 0) * 360,
-      s = isNaN(h) || isNaN(this.s) ? 0 : this.s,
-      l = this.l,
-      m2 = l + (l < 0.5 ? l : 1 - l) * s,
-      m1 = 2 * l - m2;
+        s = isNaN(h) || isNaN(this.s) ? 0 : this.s,
+        l = this.l,
+        m2 = l + (l < 0.5 ? l : 1 - l) * s,
+        m1 = 2 * l - m2;
     return new Rgb(
       hsl2rgb(h >= 240 ? h - 240 : h + 120, m1, m2),
       hsl2rgb(h, m1, m2),
@@ -4591,45 +4591,45 @@ define(Hsl, hsl, extend(Color, {
       this.opacity
     );
   },
-  displayable: function () {
+  displayable: function() {
     return (0 <= this.s && this.s <= 1 || isNaN(this.s))
-      && (0 <= this.l && this.l <= 1)
-      && (0 <= this.opacity && this.opacity <= 1);
+        && (0 <= this.l && this.l <= 1)
+        && (0 <= this.opacity && this.opacity <= 1);
   },
-  formatHsl: function () {
+  formatHsl: function() {
     var a = this.opacity; a = isNaN(a) ? 1 : Math.max(0, Math.min(1, a));
     return (a === 1 ? "hsl(" : "hsla(")
-      + (this.h || 0) + ", "
-      + (this.s || 0) * 100 + "%, "
-      + (this.l || 0) * 100 + "%"
-      + (a === 1 ? ")" : ", " + a + ")");
+        + (this.h || 0) + ", "
+        + (this.s || 0) * 100 + "%, "
+        + (this.l || 0) * 100 + "%"
+        + (a === 1 ? ")" : ", " + a + ")");
   }
 }));
 
 /* From FvD 13.37, CSS Color Module Level 3 */
 function hsl2rgb(h, m1, m2) {
   return (h < 60 ? m1 + (m2 - m1) * h / 60
-    : h < 180 ? m2
+      : h < 180 ? m2
       : h < 240 ? m1 + (m2 - m1) * (240 - h) / 60
-        : m1) * 255;
+      : m1) * 255;
 }
 
 var constant$1 = x => () => x;
 
 function linear(a, d) {
-  return function (t) {
+  return function(t) {
     return a + t * d;
   };
 }
 
 function exponential(a, b, y) {
-  return a = Math.pow(a, y), b = Math.pow(b, y) - a, y = 1 / y, function (t) {
+  return a = Math.pow(a, y), b = Math.pow(b, y) - a, y = 1 / y, function(t) {
     return Math.pow(a + t * b, y);
   };
 }
 
 function gamma(y) {
-  return (y = +y) === 1 ? nogamma : function (a, b) {
+  return (y = +y) === 1 ? nogamma : function(a, b) {
     return b - a ? exponential(a, b, y) : constant$1(isNaN(a) ? b : a);
   };
 }
@@ -4644,10 +4644,10 @@ var interpolateRgb = (function rgbGamma(y) {
 
   function rgb$1(start, end) {
     var r = color((start = rgb(start)).r, (end = rgb(end)).r),
-      g = color(start.g, end.g),
-      b = color(start.b, end.b),
-      opacity = nogamma(start.opacity, end.opacity);
-    return function (t) {
+        g = color(start.g, end.g),
+        b = color(start.b, end.b),
+        opacity = nogamma(start.opacity, end.opacity);
+    return function(t) {
       start.r = r(t);
       start.g = g(t);
       start.b = b(t);
@@ -4662,41 +4662,41 @@ var interpolateRgb = (function rgbGamma(y) {
 })(1);
 
 function interpolateNumber(a, b) {
-  return a = +a, b = +b, function (t) {
+  return a = +a, b = +b, function(t) {
     return a * (1 - t) + b * t;
   };
 }
 
 var reA = /[-+]?(?:\d+\.?\d*|\.?\d+)(?:[eE][-+]?\d+)?/g,
-  reB = new RegExp(reA.source, "g");
+    reB = new RegExp(reA.source, "g");
 
 function zero(b) {
-  return function () {
+  return function() {
     return b;
   };
 }
 
 function one(b) {
-  return function (t) {
+  return function(t) {
     return b(t) + "";
   };
 }
 
 function interpolateString(a, b) {
   var bi = reA.lastIndex = reB.lastIndex = 0, // scan index for next number in b
-    am, // current match in a
-    bm, // current match in b
-    bs, // string preceding current number in b, if any
-    i = -1, // index in s
-    s = [], // string constants and placeholders
-    q = []; // number interpolators
+      am, // current match in a
+      bm, // current match in b
+      bs, // string preceding current number in b, if any
+      i = -1, // index in s
+      s = [], // string constants and placeholders
+      q = []; // number interpolators
 
   // Coerce inputs to strings.
   a = a + "", b = b + "";
 
   // Interpolate pairs of numbers in a & b.
   while ((am = reA.exec(a))
-    && (bm = reB.exec(b))) {
+      && (bm = reB.exec(b))) {
     if ((bs = bm.index) > bi) { // a string precedes the next number in b
       bs = b.slice(bi, bs);
       if (s[i]) s[i] += bs; // coalesce with previous string
@@ -4707,7 +4707,7 @@ function interpolateString(a, b) {
       else s[++i] = bm;
     } else { // interpolate non-matching numbers
       s[++i] = null;
-      q.push({ i: i, x: interpolateNumber(am, bm) });
+      q.push({i: i, x: interpolateNumber(am, bm)});
     }
     bi = reB.lastIndex;
   }
@@ -4722,12 +4722,12 @@ function interpolateString(a, b) {
   // Special optimization for only a single match.
   // Otherwise, interpolate each of the numbers and rejoin the string.
   return s.length < 2 ? (q[0]
-    ? one(q[0].x)
-    : zero(b))
-    : (b = q.length, function (t) {
-      for (var i = 0, o; i < b; ++i) s[(o = q[i]).i] = o.x(t);
-      return s.join("");
-    });
+      ? one(q[0].x)
+      : zero(b))
+      : (b = q.length, function(t) {
+          for (var i = 0, o; i < b; ++i) s[(o = q[i]).i] = o.x(t);
+          return s.join("");
+        });
 }
 
 var degrees = 180 / Math.PI;
@@ -4783,7 +4783,7 @@ function interpolateTransform(parse, pxComma, pxParen, degParen) {
   function translate(xa, ya, xb, yb, s, q) {
     if (xa !== xb || ya !== yb) {
       var i = s.push("translate(", null, pxComma, null, pxParen);
-      q.push({ i: i - 4, x: interpolateNumber(xa, xb) }, { i: i - 2, x: interpolateNumber(ya, yb) });
+      q.push({i: i - 4, x: interpolateNumber(xa, xb)}, {i: i - 2, x: interpolateNumber(ya, yb)});
     } else if (xb || yb) {
       s.push("translate(" + xb + pxComma + yb + pxParen);
     }
@@ -4792,7 +4792,7 @@ function interpolateTransform(parse, pxComma, pxParen, degParen) {
   function rotate(a, b, s, q) {
     if (a !== b) {
       if (a - b > 180) b += 360; else if (b - a > 180) a += 360; // shortest path
-      q.push({ i: s.push(pop(s) + "rotate(", null, degParen) - 2, x: interpolateNumber(a, b) });
+      q.push({i: s.push(pop(s) + "rotate(", null, degParen) - 2, x: interpolateNumber(a, b)});
     } else if (b) {
       s.push(pop(s) + "rotate(" + b + degParen);
     }
@@ -4800,7 +4800,7 @@ function interpolateTransform(parse, pxComma, pxParen, degParen) {
 
   function skewX(a, b, s, q) {
     if (a !== b) {
-      q.push({ i: s.push(pop(s) + "skewX(", null, degParen) - 2, x: interpolateNumber(a, b) });
+      q.push({i: s.push(pop(s) + "skewX(", null, degParen) - 2, x: interpolateNumber(a, b)});
     } else if (b) {
       s.push(pop(s) + "skewX(" + b + degParen);
     }
@@ -4809,22 +4809,22 @@ function interpolateTransform(parse, pxComma, pxParen, degParen) {
   function scale(xa, ya, xb, yb, s, q) {
     if (xa !== xb || ya !== yb) {
       var i = s.push(pop(s) + "scale(", null, ",", null, ")");
-      q.push({ i: i - 4, x: interpolateNumber(xa, xb) }, { i: i - 2, x: interpolateNumber(ya, yb) });
+      q.push({i: i - 4, x: interpolateNumber(xa, xb)}, {i: i - 2, x: interpolateNumber(ya, yb)});
     } else if (xb !== 1 || yb !== 1) {
       s.push(pop(s) + "scale(" + xb + "," + yb + ")");
     }
   }
 
-  return function (a, b) {
+  return function(a, b) {
     var s = [], // string constants and placeholders
-      q = []; // number interpolators
+        q = []; // number interpolators
     a = parse(a), b = parse(b);
     translate(a.translateX, a.translateY, b.translateX, b.translateY, s, q);
     rotate(a.rotate, b.rotate, s, q);
     skewX(a.skewX, b.skewX, s, q);
     scale(a.scaleX, a.scaleY, b.scaleX, b.scaleY, s, q);
     a = b = null; // gc
-    return function (t) {
+    return function(t) {
       var i = -1, n = q.length, o;
       while (++i < n) s[(o = q[i]).i] = o.x(t);
       return s.join("");
@@ -4855,17 +4855,17 @@ var interpolateZoom = (function zoomRho(rho, rho2, rho4) {
   // p1 = [ux1, uy1, w1]
   function zoom(p0, p1) {
     var ux0 = p0[0], uy0 = p0[1], w0 = p0[2],
-      ux1 = p1[0], uy1 = p1[1], w1 = p1[2],
-      dx = ux1 - ux0,
-      dy = uy1 - uy0,
-      d2 = dx * dx + dy * dy,
-      i,
-      S;
+        ux1 = p1[0], uy1 = p1[1], w1 = p1[2],
+        dx = ux1 - ux0,
+        dy = uy1 - uy0,
+        d2 = dx * dx + dy * dy,
+        i,
+        S;
 
     // Special case for u0 ≅ u1.
     if (d2 < epsilon2) {
       S = Math.log(w1 / w0) / rho;
-      i = function (t) {
+      i = function(t) {
         return [
           ux0 + t * dx,
           uy0 + t * dy,
@@ -4877,15 +4877,15 @@ var interpolateZoom = (function zoomRho(rho, rho2, rho4) {
     // General case.
     else {
       var d1 = Math.sqrt(d2),
-        b0 = (w1 * w1 - w0 * w0 + rho4 * d2) / (2 * w0 * rho2 * d1),
-        b1 = (w1 * w1 - w0 * w0 - rho4 * d2) / (2 * w1 * rho2 * d1),
-        r0 = Math.log(Math.sqrt(b0 * b0 + 1) - b0),
-        r1 = Math.log(Math.sqrt(b1 * b1 + 1) - b1);
+          b0 = (w1 * w1 - w0 * w0 + rho4 * d2) / (2 * w0 * rho2 * d1),
+          b1 = (w1 * w1 - w0 * w0 - rho4 * d2) / (2 * w1 * rho2 * d1),
+          r0 = Math.log(Math.sqrt(b0 * b0 + 1) - b0),
+          r1 = Math.log(Math.sqrt(b1 * b1 + 1) - b1);
       S = (r1 - r0) / rho;
-      i = function (t) {
+      i = function(t) {
         var s = t * S,
-          coshr0 = cosh(r0),
-          u = w0 / (rho2 * d1) * (coshr0 * tanh(rho * s + r0) - sinh(r0));
+            coshr0 = cosh(r0),
+            u = w0 / (rho2 * d1) * (coshr0 * tanh(rho * s + r0) - sinh(r0));
         return [
           ux0 + u * dx,
           uy0 + u * dy,
@@ -4899,7 +4899,7 @@ var interpolateZoom = (function zoomRho(rho, rho2, rho4) {
     return i;
   }
 
-  zoom.rho = function (_) {
+  zoom.rho = function(_) {
     var _1 = Math.max(1e-3, +_), _2 = _1 * _1, _4 = _2 * _2;
     return zoomRho(_1, _2, _4);
   };
@@ -4908,16 +4908,16 @@ var interpolateZoom = (function zoomRho(rho, rho2, rho4) {
 })(Math.SQRT2, 2, 4);
 
 var frame = 0, // is an animation frame pending?
-  timeout$1 = 0, // is a timeout pending?
-  interval = 0, // are any timers active?
-  pokeDelay = 1000, // how frequently we check for clock skew
-  taskHead,
-  taskTail,
-  clockLast = 0,
-  clockNow = 0,
-  clockSkew = 0,
-  clock = typeof performance === "object" && performance.now ? performance : Date,
-  setFrame = typeof window === "object" && window.requestAnimationFrame ? window.requestAnimationFrame.bind(window) : function (f) { setTimeout(f, 17); };
+    timeout$1 = 0, // is a timeout pending?
+    interval = 0, // are any timers active?
+    pokeDelay = 1000, // how frequently we check for clock skew
+    taskHead,
+    taskTail,
+    clockLast = 0,
+    clockNow = 0,
+    clockSkew = 0,
+    clock = typeof performance === "object" && performance.now ? performance : Date,
+    setFrame = typeof window === "object" && window.requestAnimationFrame ? window.requestAnimationFrame.bind(window) : function(f) { setTimeout(f, 17); };
 
 function now() {
   return clockNow || (setFrame(clearNow), clockNow = clock.now() + clockSkew);
@@ -4929,13 +4929,13 @@ function clearNow() {
 
 function Timer() {
   this._call =
-    this._time =
-    this._next = null;
+  this._time =
+  this._next = null;
 }
 
 Timer.prototype = timer.prototype = {
   constructor: Timer,
-  restart: function (callback, delay, time) {
+  restart: function(callback, delay, time) {
     if (typeof callback !== "function") throw new TypeError("callback is not a function");
     time = (time == null ? now() : +time) + (delay == null ? 0 : +delay);
     if (!this._next && taskTail !== this) {
@@ -4947,7 +4947,7 @@ Timer.prototype = timer.prototype = {
     this._time = time;
     sleep();
   },
-  stop: function () {
+  stop: function() {
     if (this._call) {
       this._call = null;
       this._time = Infinity;
@@ -5078,7 +5078,7 @@ function get(node, id) {
 
 function create(node, id, self) {
   var schedules = node.__transition,
-    tween;
+      tween;
 
   // Initialize the self timer when the transition is created.
   // Note the actual delay is not known until the first callback!
@@ -5129,7 +5129,7 @@ function create(node, id, self) {
     // Note the transition may be canceled after start and before the first tick!
     // Note this must be scheduled before the start event; see d3/d3-transition#16!
     // Assuming this is successful, subsequent callbacks go straight to tick.
-    timeout(function () {
+    timeout(function() {
       if (self.state === STARTED) {
         self.state = RUNNING;
         self.timer.restart(tick, self.delay, self.time);
@@ -5156,8 +5156,8 @@ function create(node, id, self) {
 
   function tick(elapsed) {
     var t = elapsed < self.duration ? self.ease.call(null, elapsed / self.duration) : (self.timer.restart(stop), self.state = ENDING, 1),
-      i = -1,
-      n = tween.length;
+        i = -1,
+        n = tween.length;
 
     while (++i < n) {
       tween[i].call(node, t);
@@ -5181,10 +5181,10 @@ function create(node, id, self) {
 
 function interrupt(node, name) {
   var schedules = node.__transition,
-    schedule,
-    active,
-    empty = true,
-    i;
+      schedule,
+      active,
+      empty = true,
+      i;
 
   if (!schedules) return;
 
@@ -5203,16 +5203,16 @@ function interrupt(node, name) {
 }
 
 function selection_interrupt(name) {
-  return this.each(function () {
+  return this.each(function() {
     interrupt(this, name);
   });
 }
 
 function tweenRemove(id, name) {
   var tween0, tween1;
-  return function () {
+  return function() {
     var schedule = set(this, id),
-      tween = schedule.tween;
+        tween = schedule.tween;
 
     // If this node shared tween with the previous node,
     // just assign the updated shared tween and we’re done!
@@ -5235,16 +5235,16 @@ function tweenRemove(id, name) {
 function tweenFunction(id, name, value) {
   var tween0, tween1;
   if (typeof value !== "function") throw new Error;
-  return function () {
+  return function() {
     var schedule = set(this, id),
-      tween = schedule.tween;
+        tween = schedule.tween;
 
     // If this node shared tween with the previous node,
     // just assign the updated shared tween and we’re done!
     // Otherwise, copy-on-write.
     if (tween !== tween0) {
       tween1 = (tween0 = tween).slice();
-      for (var t = { name: name, value: value }, i = 0, n = tween1.length; i < n; ++i) {
+      for (var t = {name: name, value: value}, i = 0, n = tween1.length; i < n; ++i) {
         if (tween1[i].name === name) {
           tween1[i] = t;
           break;
@@ -5278,12 +5278,12 @@ function transition_tween(name, value) {
 function tweenValue(transition, name, value) {
   var id = transition._id;
 
-  transition.each(function () {
+  transition.each(function() {
     var schedule = set(this, id);
     (schedule.value || (schedule.value = {}))[name] = value.apply(this, arguments);
   });
 
-  return function (node) {
+  return function(node) {
     return get(node, id).value[name];
   };
 }
@@ -5291,73 +5291,73 @@ function tweenValue(transition, name, value) {
 function interpolate(a, b) {
   var c;
   return (typeof b === "number" ? interpolateNumber
-    : b instanceof color ? interpolateRgb
+      : b instanceof color ? interpolateRgb
       : (c = color(b)) ? (b = c, interpolateRgb)
-        : interpolateString)(a, b);
+      : interpolateString)(a, b);
 }
 
 function attrRemove(name) {
-  return function () {
+  return function() {
     this.removeAttribute(name);
   };
 }
 
 function attrRemoveNS(fullname) {
-  return function () {
+  return function() {
     this.removeAttributeNS(fullname.space, fullname.local);
   };
 }
 
 function attrConstant(name, interpolate, value1) {
   var string00,
-    string1 = value1 + "",
-    interpolate0;
-  return function () {
+      string1 = value1 + "",
+      interpolate0;
+  return function() {
     var string0 = this.getAttribute(name);
     return string0 === string1 ? null
-      : string0 === string00 ? interpolate0
+        : string0 === string00 ? interpolate0
         : interpolate0 = interpolate(string00 = string0, value1);
   };
 }
 
 function attrConstantNS(fullname, interpolate, value1) {
   var string00,
-    string1 = value1 + "",
-    interpolate0;
-  return function () {
+      string1 = value1 + "",
+      interpolate0;
+  return function() {
     var string0 = this.getAttributeNS(fullname.space, fullname.local);
     return string0 === string1 ? null
-      : string0 === string00 ? interpolate0
+        : string0 === string00 ? interpolate0
         : interpolate0 = interpolate(string00 = string0, value1);
   };
 }
 
 function attrFunction(name, interpolate, value) {
   var string00,
-    string10,
-    interpolate0;
-  return function () {
+      string10,
+      interpolate0;
+  return function() {
     var string0, value1 = value(this), string1;
     if (value1 == null) return void this.removeAttribute(name);
     string0 = this.getAttribute(name);
     string1 = value1 + "";
     return string0 === string1 ? null
-      : string0 === string00 && string1 === string10 ? interpolate0
+        : string0 === string00 && string1 === string10 ? interpolate0
         : (string10 = string1, interpolate0 = interpolate(string00 = string0, value1));
   };
 }
 
 function attrFunctionNS(fullname, interpolate, value) {
   var string00,
-    string10,
-    interpolate0;
-  return function () {
+      string10,
+      interpolate0;
+  return function() {
     var string0, value1 = value(this), string1;
     if (value1 == null) return void this.removeAttributeNS(fullname.space, fullname.local);
     string0 = this.getAttributeNS(fullname.space, fullname.local);
     string1 = value1 + "";
     return string0 === string1 ? null
-      : string0 === string00 && string1 === string10 ? interpolate0
+        : string0 === string00 && string1 === string10 ? interpolate0
         : (string10 = string1, interpolate0 = interpolate(string00 = string0, value1));
   };
 }
@@ -5365,19 +5365,19 @@ function attrFunctionNS(fullname, interpolate, value) {
 function transition_attr(name, value) {
   var fullname = namespace(name), i = fullname === "transform" ? interpolateTransformSvg : interpolate;
   return this.attrTween(name, typeof value === "function"
-    ? (fullname.local ? attrFunctionNS : attrFunction)(fullname, i, tweenValue(this, "attr." + name, value))
-    : value == null ? (fullname.local ? attrRemoveNS : attrRemove)(fullname)
+      ? (fullname.local ? attrFunctionNS : attrFunction)(fullname, i, tweenValue(this, "attr." + name, value))
+      : value == null ? (fullname.local ? attrRemoveNS : attrRemove)(fullname)
       : (fullname.local ? attrConstantNS : attrConstant)(fullname, i, value));
 }
 
 function attrInterpolate(name, i) {
-  return function (t) {
+  return function(t) {
     this.setAttribute(name, i.call(this, t));
   };
 }
 
 function attrInterpolateNS(fullname, i) {
-  return function (t) {
+  return function(t) {
     this.setAttributeNS(fullname.space, fullname.local, i.call(this, t));
   };
 }
@@ -5414,13 +5414,13 @@ function transition_attrTween(name, value) {
 }
 
 function delayFunction(id, value) {
-  return function () {
+  return function() {
     init(this, id).delay = +value.apply(this, arguments);
   };
 }
 
 function delayConstant(id, value) {
-  return value = +value, function () {
+  return value = +value, function() {
     init(this, id).delay = value;
   };
 }
@@ -5429,20 +5429,20 @@ function transition_delay(value) {
   var id = this._id;
 
   return arguments.length
-    ? this.each((typeof value === "function"
-      ? delayFunction
-      : delayConstant)(id, value))
-    : get(this.node(), id).delay;
+      ? this.each((typeof value === "function"
+          ? delayFunction
+          : delayConstant)(id, value))
+      : get(this.node(), id).delay;
 }
 
 function durationFunction(id, value) {
-  return function () {
+  return function() {
     set(this, id).duration = +value.apply(this, arguments);
   };
 }
 
 function durationConstant(id, value) {
-  return value = +value, function () {
+  return value = +value, function() {
     set(this, id).duration = value;
   };
 }
@@ -5451,15 +5451,15 @@ function transition_duration(value) {
   var id = this._id;
 
   return arguments.length
-    ? this.each((typeof value === "function"
-      ? durationFunction
-      : durationConstant)(id, value))
-    : get(this.node(), id).duration;
+      ? this.each((typeof value === "function"
+          ? durationFunction
+          : durationConstant)(id, value))
+      : get(this.node(), id).duration;
 }
 
 function easeConstant(id, value) {
   if (typeof value !== "function") throw new Error;
-  return function () {
+  return function() {
     set(this, id).ease = value;
   };
 }
@@ -5468,12 +5468,12 @@ function transition_ease(value) {
   var id = this._id;
 
   return arguments.length
-    ? this.each(easeConstant(id, value))
-    : get(this.node(), id).ease;
+      ? this.each(easeConstant(id, value))
+      : get(this.node(), id).ease;
 }
 
 function easeVarying(id, value) {
-  return function () {
+  return function() {
     var v = value.apply(this, arguments);
     if (typeof v !== "function") throw new Error;
     set(this, id).ease = v;
@@ -5518,7 +5518,7 @@ function transition_merge(transition) {
 }
 
 function start(name) {
-  return (name + "").trim().split(/^|\s+/).every(function (t) {
+  return (name + "").trim().split(/^|\s+/).every(function(t) {
     var i = t.indexOf(".");
     if (i >= 0) t = t.slice(0, i);
     return !t || t === "start";
@@ -5527,9 +5527,9 @@ function start(name) {
 
 function onFunction(id, name, listener) {
   var on0, on1, sit = start(name) ? init : set;
-  return function () {
+  return function() {
     var schedule = sit(this, id),
-      on = schedule.on;
+        on = schedule.on;
 
     // If this node shared a dispatch with the previous node,
     // just assign the updated shared dispatch and we’re done!
@@ -5544,12 +5544,12 @@ function transition_on(name, listener) {
   var id = this._id;
 
   return arguments.length < 2
-    ? get(this.node(), id).on.on(name)
-    : this.each(onFunction(id, name, listener));
+      ? get(this.node(), id).on.on(name)
+      : this.each(onFunction(id, name, listener));
 }
 
 function removeFunction(id) {
-  return function () {
+  return function() {
     var parent = this.parentNode;
     for (var i in this.__transition) if (+i !== id) return;
     if (parent) parent.removeChild(this);
@@ -5562,7 +5562,7 @@ function transition_remove() {
 
 function transition_select(select) {
   var name = this._name,
-    id = this._id;
+      id = this._id;
 
   if (typeof select !== "function") select = selector(select);
 
@@ -5581,7 +5581,7 @@ function transition_select(select) {
 
 function transition_selectAll(select) {
   var name = this._name,
-    id = this._id;
+      id = this._id;
 
   if (typeof select !== "function") select = selectorAll(select);
 
@@ -5610,56 +5610,56 @@ function transition_selection() {
 
 function styleNull(name, interpolate) {
   var string00,
-    string10,
-    interpolate0;
-  return function () {
+      string10,
+      interpolate0;
+  return function() {
     var string0 = styleValue(this, name),
-      string1 = (this.style.removeProperty(name), styleValue(this, name));
+        string1 = (this.style.removeProperty(name), styleValue(this, name));
     return string0 === string1 ? null
-      : string0 === string00 && string1 === string10 ? interpolate0
+        : string0 === string00 && string1 === string10 ? interpolate0
         : interpolate0 = interpolate(string00 = string0, string10 = string1);
   };
 }
 
 function styleRemove(name) {
-  return function () {
+  return function() {
     this.style.removeProperty(name);
   };
 }
 
 function styleConstant(name, interpolate, value1) {
   var string00,
-    string1 = value1 + "",
-    interpolate0;
-  return function () {
+      string1 = value1 + "",
+      interpolate0;
+  return function() {
     var string0 = styleValue(this, name);
     return string0 === string1 ? null
-      : string0 === string00 ? interpolate0
+        : string0 === string00 ? interpolate0
         : interpolate0 = interpolate(string00 = string0, value1);
   };
 }
 
 function styleFunction(name, interpolate, value) {
   var string00,
-    string10,
-    interpolate0;
-  return function () {
+      string10,
+      interpolate0;
+  return function() {
     var string0 = styleValue(this, name),
-      value1 = value(this),
-      string1 = value1 + "";
+        value1 = value(this),
+        string1 = value1 + "";
     if (value1 == null) string1 = value1 = (this.style.removeProperty(name), styleValue(this, name));
     return string0 === string1 ? null
-      : string0 === string00 && string1 === string10 ? interpolate0
+        : string0 === string00 && string1 === string10 ? interpolate0
         : (string10 = string1, interpolate0 = interpolate(string00 = string0, value1));
   };
 }
 
 function styleMaybeRemove(id, name) {
   var on0, on1, listener0, key = "style." + name, event = "end." + key, remove;
-  return function () {
+  return function() {
     var schedule = set(this, id),
-      on = schedule.on,
-      listener = schedule.value[key] == null ? remove || (remove = styleRemove(name)) : undefined;
+        on = schedule.on,
+        listener = schedule.value[key] == null ? remove || (remove = styleRemove(name)) : undefined;
 
     // If this node shared a dispatch with the previous node,
     // just assign the updated shared dispatch and we’re done!
@@ -5673,18 +5673,18 @@ function styleMaybeRemove(id, name) {
 function transition_style(name, value, priority) {
   var i = (name += "") === "transform" ? interpolateTransformCss : interpolate;
   return value == null ? this
-    .styleTween(name, styleNull(name, i))
-    .on("end.style." + name, styleRemove(name))
+      .styleTween(name, styleNull(name, i))
+      .on("end.style." + name, styleRemove(name))
     : typeof value === "function" ? this
       .styleTween(name, styleFunction(name, i, tweenValue(this, "style." + name, value)))
       .each(styleMaybeRemove(this._id, name))
-      : this
-        .styleTween(name, styleConstant(name, i, value), priority)
-        .on("end.style." + name, null);
+    : this
+      .styleTween(name, styleConstant(name, i, value), priority)
+      .on("end.style." + name, null);
 }
 
 function styleInterpolate(name, i, priority) {
-  return function (t) {
+  return function(t) {
     this.style.setProperty(name, i.call(this, t), priority);
   };
 }
@@ -5709,13 +5709,13 @@ function transition_styleTween(name, value, priority) {
 }
 
 function textConstant(value) {
-  return function () {
+  return function() {
     this.textContent = value;
   };
 }
 
 function textFunction(value) {
-  return function () {
+  return function() {
     var value1 = value(this);
     this.textContent = value1 == null ? "" : value1;
   };
@@ -5723,12 +5723,12 @@ function textFunction(value) {
 
 function transition_text(value) {
   return this.tween("text", typeof value === "function"
-    ? textFunction(tweenValue(this, "text", value))
-    : textConstant(value == null ? "" : value + ""));
+      ? textFunction(tweenValue(this, "text", value))
+      : textConstant(value == null ? "" : value + ""));
 }
 
 function textInterpolate(i) {
-  return function (t) {
+  return function(t) {
     this.textContent = i.call(this, t);
   };
 }
@@ -5754,8 +5754,8 @@ function transition_textTween(value) {
 
 function transition_transition() {
   var name = this._name,
-    id0 = this._id,
-    id1 = newId();
+      id0 = this._id,
+      id1 = newId();
 
   for (var groups = this._groups, m = groups.length, j = 0; j < m; ++j) {
     for (var group = groups[j], n = group.length, node, i = 0; i < n; ++i) {
@@ -5776,13 +5776,13 @@ function transition_transition() {
 
 function transition_end() {
   var on0, on1, that = this, id = that._id, size = that.size();
-  return new Promise(function (resolve, reject) {
-    var cancel = { value: reject },
-      end = { value: function () { if (--size === 0) resolve(); } };
+  return new Promise(function(resolve, reject) {
+    var cancel = {value: reject},
+        end = {value: function() { if (--size === 0) resolve(); }};
 
-    that.each(function () {
+    that.each(function() {
       var schedule = set(this, id),
-        on = schedule.on;
+          on = schedule.on;
 
       // If this node shared a dispatch with the previous node,
       // just assign the updated shared dispatch and we’re done!
@@ -5873,7 +5873,7 @@ function inherit(node, id) {
 
 function selection_transition(name) {
   var id,
-    timing;
+      timing;
 
   if (name instanceof Transition) {
     id = name._id, name = name._name;
@@ -5904,11 +5904,11 @@ function ZoomEvent(type, {
   dispatch
 }) {
   Object.defineProperties(this, {
-    type: { value: type, enumerable: true, configurable: true },
-    sourceEvent: { value: sourceEvent, enumerable: true, configurable: true },
-    target: { value: target, enumerable: true, configurable: true },
-    transform: { value: transform, enumerable: true, configurable: true },
-    _: { value: dispatch }
+    type: {value: type, enumerable: true, configurable: true},
+    sourceEvent: {value: sourceEvent, enumerable: true, configurable: true},
+    target: {value: target, enumerable: true, configurable: true},
+    transform: {value: transform, enumerable: true, configurable: true},
+    _: {value: dispatch}
   });
 }
 
@@ -5920,37 +5920,37 @@ function Transform(k, x, y) {
 
 Transform.prototype = {
   constructor: Transform,
-  scale: function (k) {
+  scale: function(k) {
     return k === 1 ? this : new Transform(this.k * k, this.x, this.y);
   },
-  translate: function (x, y) {
+  translate: function(x, y) {
     return x === 0 & y === 0 ? this : new Transform(this.k, this.x + this.k * x, this.y + this.k * y);
   },
-  apply: function (point) {
+  apply: function(point) {
     return [point[0] * this.k + this.x, point[1] * this.k + this.y];
   },
-  applyX: function (x) {
+  applyX: function(x) {
     return x * this.k + this.x;
   },
-  applyY: function (y) {
+  applyY: function(y) {
     return y * this.k + this.y;
   },
-  invert: function (location) {
+  invert: function(location) {
     return [(location[0] - this.x) / this.k, (location[1] - this.y) / this.k];
   },
-  invertX: function (x) {
+  invertX: function(x) {
     return (x - this.x) / this.k;
   },
-  invertY: function (y) {
+  invertY: function(y) {
     return (y - this.y) / this.k;
   },
-  rescaleX: function (x) {
+  rescaleX: function(x) {
     return x.copy().domain(x.range().map(this.invertX, this).map(x.invert, x));
   },
-  rescaleY: function (y) {
+  rescaleY: function(y) {
     return y.copy().domain(y.range().map(this.invertY, this).map(y.invert, y));
   },
-  toString: function () {
+  toString: function() {
     return "translate(" + this.x + "," + this.y + ") scale(" + this.k + ")";
   }
 };
@@ -5999,9 +5999,9 @@ function defaultTouchable() {
 
 function defaultConstrain(transform, extent, translateExtent) {
   var dx0 = transform.invertX(extent[0][0]) - translateExtent[0][0],
-    dx1 = transform.invertX(extent[1][0]) - translateExtent[1][0],
-    dy0 = transform.invertY(extent[0][1]) - translateExtent[0][1],
-    dy1 = transform.invertY(extent[1][1]) - translateExtent[1][1];
+      dx1 = transform.invertX(extent[1][0]) - translateExtent[1][0],
+      dy0 = transform.invertY(extent[0][1]) - translateExtent[0][1],
+      dy1 = transform.invertY(extent[1][1]) - translateExtent[1][1];
   return transform.translate(
     dx1 > dx0 ? (dx0 + dx1) / 2 : Math.min(0, dx0) || Math.max(0, dx1),
     dy1 > dy0 ? (dy0 + dy1) / 2 : Math.min(0, dy0) || Math.max(0, dy1)
@@ -6010,43 +6010,43 @@ function defaultConstrain(transform, extent, translateExtent) {
 
 function zoom() {
   var filter = defaultFilter,
-    extent = defaultExtent,
-    constrain = defaultConstrain,
-    wheelDelta = defaultWheelDelta,
-    touchable = defaultTouchable,
-    scaleExtent = [0, Infinity],
-    translateExtent = [[-Infinity, -Infinity], [Infinity, Infinity]],
-    duration = 250,
-    interpolate = interpolateZoom,
-    listeners = dispatch("start", "zoom", "end"),
-    touchstarting,
-    touchfirst,
-    touchending,
-    touchDelay = 500,
-    wheelDelay = 150,
-    clickDistance2 = 0,
-    tapDistance = 10;
+      extent = defaultExtent,
+      constrain = defaultConstrain,
+      wheelDelta = defaultWheelDelta,
+      touchable = defaultTouchable,
+      scaleExtent = [0, Infinity],
+      translateExtent = [[-Infinity, -Infinity], [Infinity, Infinity]],
+      duration = 250,
+      interpolate = interpolateZoom,
+      listeners = dispatch("start", "zoom", "end"),
+      touchstarting,
+      touchfirst,
+      touchending,
+      touchDelay = 500,
+      wheelDelay = 150,
+      clickDistance2 = 0,
+      tapDistance = 10;
 
   function zoom(selection) {
     selection
-      .property("__zoom", defaultTransform)
-      .on("wheel.zoom", wheeled, { passive: false })
-      .on("mousedown.zoom", mousedowned)
-      .on("dblclick.zoom", dblclicked)
+        .property("__zoom", defaultTransform)
+        .on("wheel.zoom", wheeled, {passive: false})
+        .on("mousedown.zoom", mousedowned)
+        .on("dblclick.zoom", dblclicked)
       .filter(touchable)
-      .on("touchstart.zoom", touchstarted)
-      .on("touchmove.zoom", touchmoved)
-      .on("touchend.zoom touchcancel.zoom", touchended)
-      .style("-webkit-tap-highlight-color", "rgba(0,0,0,0)");
+        .on("touchstart.zoom", touchstarted)
+        .on("touchmove.zoom", touchmoved)
+        .on("touchend.zoom touchcancel.zoom", touchended)
+        .style("-webkit-tap-highlight-color", "rgba(0,0,0,0)");
   }
 
-  zoom.transform = function (collection, transform, point, event) {
+  zoom.transform = function(collection, transform, point, event) {
     var selection = collection.selection ? collection.selection() : collection;
     selection.property("__zoom", defaultTransform);
     if (collection !== selection) {
       schedule(collection, transform, point, event);
     } else {
-      selection.interrupt().each(function () {
+      selection.interrupt().each(function() {
         gesture(this, arguments)
           .event(event)
           .start()
@@ -6056,27 +6056,27 @@ function zoom() {
     }
   };
 
-  zoom.scaleBy = function (selection, k, p, event) {
-    zoom.scaleTo(selection, function () {
+  zoom.scaleBy = function(selection, k, p, event) {
+    zoom.scaleTo(selection, function() {
       var k0 = this.__zoom.k,
-        k1 = typeof k === "function" ? k.apply(this, arguments) : k;
+          k1 = typeof k === "function" ? k.apply(this, arguments) : k;
       return k0 * k1;
     }, p, event);
   };
 
-  zoom.scaleTo = function (selection, k, p, event) {
-    zoom.transform(selection, function () {
+  zoom.scaleTo = function(selection, k, p, event) {
+    zoom.transform(selection, function() {
       var e = extent.apply(this, arguments),
-        t0 = this.__zoom,
-        p0 = p == null ? centroid(e) : typeof p === "function" ? p.apply(this, arguments) : p,
-        p1 = t0.invert(p0),
-        k1 = typeof k === "function" ? k.apply(this, arguments) : k;
+          t0 = this.__zoom,
+          p0 = p == null ? centroid(e) : typeof p === "function" ? p.apply(this, arguments) : p,
+          p1 = t0.invert(p0),
+          k1 = typeof k === "function" ? k.apply(this, arguments) : k;
       return constrain(translate(scale(t0, k1), p0, p1), e, translateExtent);
     }, p, event);
   };
 
-  zoom.translateBy = function (selection, x, y, event) {
-    zoom.transform(selection, function () {
+  zoom.translateBy = function(selection, x, y, event) {
+    zoom.transform(selection, function() {
       return constrain(this.__zoom.translate(
         typeof x === "function" ? x.apply(this, arguments) : x,
         typeof y === "function" ? y.apply(this, arguments) : y
@@ -6084,11 +6084,11 @@ function zoom() {
     }, null, event);
   };
 
-  zoom.translateTo = function (selection, x, y, p, event) {
-    zoom.transform(selection, function () {
+  zoom.translateTo = function(selection, x, y, p, event) {
+    zoom.transform(selection, function() {
       var e = extent.apply(this, arguments),
-        t = this.__zoom,
-        p0 = p == null ? centroid(e) : typeof p === "function" ? p.apply(this, arguments) : p;
+          t = this.__zoom,
+          p0 = p == null ? centroid(e) : typeof p === "function" ? p.apply(this, arguments) : p;
       return constrain(identity.translate(p0[0], p0[1]).scale(t.k).translate(
         typeof x === "function" ? -x.apply(this, arguments) : -x,
         typeof y === "function" ? -y.apply(this, arguments) : -y
@@ -6112,24 +6112,24 @@ function zoom() {
 
   function schedule(transition, transform, point, event) {
     transition
-      .on("start.zoom", function () { gesture(this, arguments).event(event).start(); })
-      .on("interrupt.zoom end.zoom", function () { gesture(this, arguments).event(event).end(); })
-      .tween("zoom", function () {
-        var that = this,
-          args = arguments,
-          g = gesture(that, args).event(event),
-          e = extent.apply(that, args),
-          p = point == null ? centroid(e) : typeof point === "function" ? point.apply(that, args) : point,
-          w = Math.max(e[1][0] - e[0][0], e[1][1] - e[0][1]),
-          a = that.__zoom,
-          b = typeof transform === "function" ? transform.apply(that, args) : transform,
-          i = interpolate(a.invert(p).concat(w / a.k), b.invert(p).concat(w / b.k));
-        return function (t) {
-          if (t === 1) t = b; // Avoid rounding error on end.
-          else { var l = i(t), k = w / l[2]; t = new Transform(k, p[0] - l[0] * k, p[1] - l[1] * k); }
-          g.zoom(null, t);
-        };
-      });
+        .on("start.zoom", function() { gesture(this, arguments).event(event).start(); })
+        .on("interrupt.zoom end.zoom", function() { gesture(this, arguments).event(event).end(); })
+        .tween("zoom", function() {
+          var that = this,
+              args = arguments,
+              g = gesture(that, args).event(event),
+              e = extent.apply(that, args),
+              p = point == null ? centroid(e) : typeof point === "function" ? point.apply(that, args) : point,
+              w = Math.max(e[1][0] - e[0][0], e[1][1] - e[0][1]),
+              a = that.__zoom,
+              b = typeof transform === "function" ? transform.apply(that, args) : transform,
+              i = interpolate(a.invert(p).concat(w / a.k), b.invert(p).concat(w / b.k));
+          return function(t) {
+            if (t === 1) t = b; // Avoid rounding error on end.
+            else { var l = i(t), k = w / l[2]; t = new Transform(k, p[0] - l[0] * k, p[1] - l[1] * k); }
+            g.zoom(null, t);
+          };
+        });
   }
 
   function gesture(that, args, clean) {
@@ -6146,18 +6146,18 @@ function zoom() {
   }
 
   Gesture.prototype = {
-    event: function (event) {
+    event: function(event) {
       if (event) this.sourceEvent = event;
       return this;
     },
-    start: function () {
+    start: function() {
       if (++this.active === 1) {
         this.that.__zooming = this;
         this.emit("start");
       }
       return this;
     },
-    zoom: function (key, transform) {
+    zoom: function(key, transform) {
       if (this.mouse && key !== "mouse") this.mouse[1] = transform.invert(this.mouse[0]);
       if (this.touch0 && key !== "touch") this.touch0[1] = transform.invert(this.touch0[0]);
       if (this.touch1 && key !== "touch") this.touch1[1] = transform.invert(this.touch1[0]);
@@ -6165,14 +6165,14 @@ function zoom() {
       this.emit("zoom");
       return this;
     },
-    end: function () {
+    end: function() {
       if (--this.active === 0) {
         delete this.that.__zooming;
         this.emit("end");
       }
       return this;
     },
-    emit: function (type) {
+    emit: function(type) {
       var d = select(this.that).datum();
       listeners.call(
         type,
@@ -6192,9 +6192,9 @@ function zoom() {
   function wheeled(event, ...args) {
     if (!filter.apply(this, arguments)) return;
     var g = gesture(this, args).event(event),
-      t = this.__zoom,
-      k = Math.max(scaleExtent[0], Math.min(scaleExtent[1], t.k * Math.pow(2, wheelDelta.apply(this, arguments)))),
-      p = pointer(event);
+        t = this.__zoom,
+        k = Math.max(scaleExtent[0], Math.min(scaleExtent[1], t.k * Math.pow(2, wheelDelta.apply(this, arguments)))),
+        p = pointer(event);
 
     // If the mouse is in the same location as before, reuse it.
     // If there were recent wheel events, reset the wheel idle timeout.
@@ -6228,11 +6228,11 @@ function zoom() {
   function mousedowned(event, ...args) {
     if (touchending || !filter.apply(this, arguments)) return;
     var currentTarget = event.currentTarget,
-      g = gesture(this, args, true).event(event),
-      v = select(event.view).on("mousemove.zoom", mousemoved, true).on("mouseup.zoom", mouseupped, true),
-      p = pointer(event, currentTarget),
-      x0 = event.clientX,
-      y0 = event.clientY;
+        g = gesture(this, args, true).event(event),
+        v = select(event.view).on("mousemove.zoom", mousemoved, true).on("mouseup.zoom", mouseupped, true),
+        p = pointer(event, currentTarget),
+        x0 = event.clientX,
+        y0 = event.clientY;
 
     dragDisable(event.view);
     nopropagation(event);
@@ -6247,7 +6247,7 @@ function zoom() {
         g.moved = dx * dx + dy * dy > clickDistance2;
       }
       g.event(event)
-        .zoom("mouse", constrain(translate(g.that.__zoom, g.mouse[0] = pointer(event, currentTarget), g.mouse[1]), g.extent, translateExtent));
+       .zoom("mouse", constrain(translate(g.that.__zoom, g.mouse[0] = pointer(event, currentTarget), g.mouse[1]), g.extent, translateExtent));
     }
 
     function mouseupped(event) {
@@ -6261,10 +6261,10 @@ function zoom() {
   function dblclicked(event, ...args) {
     if (!filter.apply(this, arguments)) return;
     var t0 = this.__zoom,
-      p0 = pointer(event.changedTouches ? event.changedTouches[0] : event, this),
-      p1 = t0.invert(p0),
-      k1 = t0.k * (event.shiftKey ? 0.5 : 2),
-      t1 = constrain(translate(scale(t0, k1), p0, p1), extent.apply(this, args), translateExtent);
+        p0 = pointer(event.changedTouches ? event.changedTouches[0] : event, this),
+        p1 = t0.invert(p0),
+        k1 = t0.k * (event.shiftKey ? 0.5 : 2),
+        t1 = constrain(translate(scale(t0, k1), p0, p1), extent.apply(this, args), translateExtent);
 
     noevent(event);
     if (duration > 0) select(this).transition().duration(duration).call(schedule, t1, p0, event);
@@ -6274,9 +6274,9 @@ function zoom() {
   function touchstarted(event, ...args) {
     if (!filter.apply(this, arguments)) return;
     var touches = event.touches,
-      n = touches.length,
-      g = gesture(this, args, event.changedTouches.length === n).event(event),
-      started, i, t, p;
+        n = touches.length,
+        g = gesture(this, args, event.changedTouches.length === n).event(event),
+        started, i, t, p;
 
     nopropagation(event);
     for (i = 0; i < n; ++i) {
@@ -6289,7 +6289,7 @@ function zoom() {
     if (touchstarting) touchstarting = clearTimeout(touchstarting);
 
     if (started) {
-      if (g.taps < 2) touchfirst = p[0], touchstarting = setTimeout(function () { touchstarting = null; }, touchDelay);
+      if (g.taps < 2) touchfirst = p[0], touchstarting = setTimeout(function() { touchstarting = null; }, touchDelay);
       interrupt(this);
       g.start();
     }
@@ -6298,8 +6298,8 @@ function zoom() {
   function touchmoved(event, ...args) {
     if (!this.__zooming) return;
     var g = gesture(this, args).event(event),
-      touches = event.changedTouches,
-      n = touches.length, i, t, p, l;
+        touches = event.changedTouches,
+        n = touches.length, i, t, p, l;
 
     noevent(event);
     for (i = 0; i < n; ++i) {
@@ -6310,9 +6310,9 @@ function zoom() {
     t = g.that.__zoom;
     if (g.touch1) {
       var p0 = g.touch0[0], l0 = g.touch0[1],
-        p1 = g.touch1[0], l1 = g.touch1[1],
-        dp = (dp = p1[0] - p0[0]) * dp + (dp = p1[1] - p0[1]) * dp,
-        dl = (dl = l1[0] - l0[0]) * dl + (dl = l1[1] - l0[1]) * dl;
+          p1 = g.touch1[0], l1 = g.touch1[1],
+          dp = (dp = p1[0] - p0[0]) * dp + (dp = p1[1] - p0[1]) * dp,
+          dl = (dl = l1[0] - l0[0]) * dl + (dl = l1[1] - l0[1]) * dl;
       t = scale(t, Math.sqrt(dp / dl));
       p = [(p0[0] + p1[0]) / 2, (p0[1] + p1[1]) / 2];
       l = [(l0[0] + l1[0]) / 2, (l0[1] + l1[1]) / 2];
@@ -6326,12 +6326,12 @@ function zoom() {
   function touchended(event, ...args) {
     if (!this.__zooming) return;
     var g = gesture(this, args).event(event),
-      touches = event.changedTouches,
-      n = touches.length, i, t;
+        touches = event.changedTouches,
+        n = touches.length, i, t;
 
     nopropagation(event);
     if (touchending) clearTimeout(touchending);
-    touchending = setTimeout(function () { touchending = null; }, touchDelay);
+    touchending = setTimeout(function() { touchending = null; }, touchDelay);
     for (i = 0; i < n; ++i) {
       t = touches[i];
       if (g.touch0 && g.touch0[2] === t.identifier) delete g.touch0;
@@ -6352,52 +6352,52 @@ function zoom() {
     }
   }
 
-  zoom.wheelDelta = function (_) {
+  zoom.wheelDelta = function(_) {
     return arguments.length ? (wheelDelta = typeof _ === "function" ? _ : constant(+_), zoom) : wheelDelta;
   };
 
-  zoom.filter = function (_) {
+  zoom.filter = function(_) {
     return arguments.length ? (filter = typeof _ === "function" ? _ : constant(!!_), zoom) : filter;
   };
 
-  zoom.touchable = function (_) {
+  zoom.touchable = function(_) {
     return arguments.length ? (touchable = typeof _ === "function" ? _ : constant(!!_), zoom) : touchable;
   };
 
-  zoom.extent = function (_) {
+  zoom.extent = function(_) {
     return arguments.length ? (extent = typeof _ === "function" ? _ : constant([[+_[0][0], +_[0][1]], [+_[1][0], +_[1][1]]]), zoom) : extent;
   };
 
-  zoom.scaleExtent = function (_) {
+  zoom.scaleExtent = function(_) {
     return arguments.length ? (scaleExtent[0] = +_[0], scaleExtent[1] = +_[1], zoom) : [scaleExtent[0], scaleExtent[1]];
   };
 
-  zoom.translateExtent = function (_) {
+  zoom.translateExtent = function(_) {
     return arguments.length ? (translateExtent[0][0] = +_[0][0], translateExtent[1][0] = +_[1][0], translateExtent[0][1] = +_[0][1], translateExtent[1][1] = +_[1][1], zoom) : [[translateExtent[0][0], translateExtent[0][1]], [translateExtent[1][0], translateExtent[1][1]]];
   };
 
-  zoom.constrain = function (_) {
+  zoom.constrain = function(_) {
     return arguments.length ? (constrain = _, zoom) : constrain;
   };
 
-  zoom.duration = function (_) {
+  zoom.duration = function(_) {
     return arguments.length ? (duration = +_, zoom) : duration;
   };
 
-  zoom.interpolate = function (_) {
+  zoom.interpolate = function(_) {
     return arguments.length ? (interpolate = _, zoom) : interpolate;
   };
 
-  zoom.on = function () {
+  zoom.on = function() {
     var value = listeners.on.apply(listeners, arguments);
     return value === listeners ? zoom : value;
   };
 
-  zoom.clickDistance = function (_) {
+  zoom.clickDistance = function(_) {
     return arguments.length ? (clickDistance2 = (_ = +_) * _, zoom) : Math.sqrt(clickDistance2);
   };
 
-  zoom.tapDistance = function (_) {
+  zoom.tapDistance = function(_) {
     return arguments.length ? (tapDistance = +_, zoom) : tapDistance;
   };
 
@@ -6510,33 +6510,33 @@ var hasNoWheelClass = function hasNoWheelClass(event) {
 
 var ZoomPane = function ZoomPane(_ref) {
   var onMove = _ref.onMove,
-    onMoveStart = _ref.onMoveStart,
-    onMoveEnd = _ref.onMoveEnd,
-    _ref$zoomOnScroll = _ref.zoomOnScroll,
-    zoomOnScroll = _ref$zoomOnScroll === void 0 ? true : _ref$zoomOnScroll,
-    _ref$zoomOnPinch = _ref.zoomOnPinch,
-    zoomOnPinch = _ref$zoomOnPinch === void 0 ? true : _ref$zoomOnPinch,
-    _ref$panOnScroll = _ref.panOnScroll,
-    panOnScroll = _ref$panOnScroll === void 0 ? false : _ref$panOnScroll,
-    _ref$panOnScrollSpeed = _ref.panOnScrollSpeed,
-    panOnScrollSpeed = _ref$panOnScrollSpeed === void 0 ? 0.5 : _ref$panOnScrollSpeed,
-    _ref$panOnScrollMode = _ref.panOnScrollMode,
-    panOnScrollMode = _ref$panOnScrollMode === void 0 ? exports.PanOnScrollMode.Free : _ref$panOnScrollMode,
-    _ref$zoomOnDoubleClic = _ref.zoomOnDoubleClick,
-    zoomOnDoubleClick = _ref$zoomOnDoubleClic === void 0 ? true : _ref$zoomOnDoubleClic,
-    selectionKeyPressed = _ref.selectionKeyPressed,
-    elementsSelectable = _ref.elementsSelectable,
-    _ref$paneMoveable = _ref.paneMoveable,
-    paneMoveable = _ref$paneMoveable === void 0 ? true : _ref$paneMoveable,
-    _ref$defaultPosition = _ref.defaultPosition,
-    defaultPosition = _ref$defaultPosition === void 0 ? [0, 0] : _ref$defaultPosition,
-    _ref$defaultZoom = _ref.defaultZoom,
-    defaultZoom = _ref$defaultZoom === void 0 ? 1 : _ref$defaultZoom,
-    translateExtent = _ref.translateExtent,
-    zoomActivationKeyCode = _ref.zoomActivationKeyCode,
-    _ref$preventScrolling = _ref.preventScrolling,
-    preventScrolling = _ref$preventScrolling === void 0 ? true : _ref$preventScrolling,
-    children = _ref.children;
+      onMoveStart = _ref.onMoveStart,
+      onMoveEnd = _ref.onMoveEnd,
+      _ref$zoomOnScroll = _ref.zoomOnScroll,
+      zoomOnScroll = _ref$zoomOnScroll === void 0 ? true : _ref$zoomOnScroll,
+      _ref$zoomOnPinch = _ref.zoomOnPinch,
+      zoomOnPinch = _ref$zoomOnPinch === void 0 ? true : _ref$zoomOnPinch,
+      _ref$panOnScroll = _ref.panOnScroll,
+      panOnScroll = _ref$panOnScroll === void 0 ? false : _ref$panOnScroll,
+      _ref$panOnScrollSpeed = _ref.panOnScrollSpeed,
+      panOnScrollSpeed = _ref$panOnScrollSpeed === void 0 ? 0.5 : _ref$panOnScrollSpeed,
+      _ref$panOnScrollMode = _ref.panOnScrollMode,
+      panOnScrollMode = _ref$panOnScrollMode === void 0 ? exports.PanOnScrollMode.Free : _ref$panOnScrollMode,
+      _ref$zoomOnDoubleClic = _ref.zoomOnDoubleClick,
+      zoomOnDoubleClick = _ref$zoomOnDoubleClic === void 0 ? true : _ref$zoomOnDoubleClic,
+      selectionKeyPressed = _ref.selectionKeyPressed,
+      elementsSelectable = _ref.elementsSelectable,
+      _ref$paneMoveable = _ref.paneMoveable,
+      paneMoveable = _ref$paneMoveable === void 0 ? true : _ref$paneMoveable,
+      _ref$defaultPosition = _ref.defaultPosition,
+      defaultPosition = _ref$defaultPosition === void 0 ? [0, 0] : _ref$defaultPosition,
+      _ref$defaultZoom = _ref.defaultZoom,
+      defaultZoom = _ref$defaultZoom === void 0 ? 1 : _ref$defaultZoom,
+      translateExtent = _ref.translateExtent,
+      zoomActivationKeyCode = _ref.zoomActivationKeyCode,
+      _ref$preventScrolling = _ref.preventScrolling,
+      preventScrolling = _ref$preventScrolling === void 0 ? true : _ref$preventScrolling,
+      children = _ref.children;
   var zoomPane = React$1.useRef(null);
   var prevTransform = React$1.useRef({
     x: 0,
@@ -6830,49 +6830,49 @@ var UserSelection = /*#__PURE__*/React$1.memo(function (_ref) {
   }, /*#__PURE__*/React__default["default"].createElement(SelectionRect, null));
 });
 
-var cjs = { exports: {} };
+var cjs = {exports: {}};
 
 var Draggable$1 = {};
 
 function toVal(mix) {
-  var k, y, str = '';
+	var k, y, str='';
 
-  if (typeof mix === 'string' || typeof mix === 'number') {
-    str += mix;
-  } else if (typeof mix === 'object') {
-    if (Array.isArray(mix)) {
-      for (k = 0; k < mix.length; k++) {
-        if (mix[k]) {
-          if (y = toVal(mix[k])) {
-            str && (str += ' ');
-            str += y;
-          }
-        }
-      }
-    } else {
-      for (k in mix) {
-        if (mix[k]) {
-          str && (str += ' ');
-          str += k;
-        }
-      }
-    }
-  }
+	if (typeof mix === 'string' || typeof mix === 'number') {
+		str += mix;
+	} else if (typeof mix === 'object') {
+		if (Array.isArray(mix)) {
+			for (k=0; k < mix.length; k++) {
+				if (mix[k]) {
+					if (y = toVal(mix[k])) {
+						str && (str += ' ');
+						str += y;
+					}
+				}
+			}
+		} else {
+			for (k in mix) {
+				if (mix[k]) {
+					str && (str += ' ');
+					str += k;
+				}
+			}
+		}
+	}
 
-  return str;
+	return str;
 }
 
-function clsx_m() {
-  var i = 0, tmp, x, str = '';
-  while (i < arguments.length) {
-    if (tmp = arguments[i++]) {
-      if (x = toVal(tmp)) {
-        str && (str += ' ');
-        str += x;
-      }
-    }
-  }
-  return str;
+function clsx_m () {
+	var i=0, tmp, x, str='';
+	while (i < arguments.length) {
+		if (tmp = arguments[i++]) {
+			if (x = toVal(tmp)) {
+				str && (str += ' ');
+				str += x;
+			}
+		}
+	}
+	return str;
 }
 
 var clsx_m$1 = /*#__PURE__*/Object.freeze({
@@ -6897,46 +6897,51 @@ shims.dontSetMe = dontSetMe;
 
 // @credits https://gist.github.com/rogozhnikoff/a43cfed27c41e4e68cdc
 function findInArray(array
-  /*: Array<any> | TouchList*/
-  , callback
-  /*: Function*/
+/*: Array<any> | TouchList*/
+, callback
+/*: Function*/
 )
-/*: any*/ {
+/*: any*/
+{
   for (var i = 0, length = array.length; i < length; i++) {
     if (callback.apply(callback, [array[i], i, array])) return array[i];
   }
 }
 
 function isFunction(func
-  /*: any*/
+/*: any*/
 )
-/*: boolean %checks*/ {
+/*: boolean %checks*/
+{
   // $FlowIgnore[method-unbinding]
   return typeof func === 'function' || Object.prototype.toString.call(func) === '[object Function]';
 }
 
 function isNum(num
-  /*: any*/
+/*: any*/
 )
-/*: boolean %checks*/ {
+/*: boolean %checks*/
+{
   return typeof num === 'number' && !isNaN(num);
 }
 
 function int(a
-  /*: string*/
+/*: string*/
 )
-/*: number*/ {
+/*: number*/
+{
   return parseInt(a, 10);
 }
 
 function dontSetMe(props
-  /*: Object*/
-  , propName
-  /*: string*/
-  , componentName
-  /*: string*/
+/*: Object*/
+, propName
+/*: string*/
+, componentName
+/*: string*/
 )
-/*: ?Error*/ {
+/*: ?Error*/
+{
   if (props[propName]) {
     return new Error("Invalid prop ".concat(propName, " passed to ").concat(componentName, " - do not set this, set it on the child."));
   }
@@ -6954,12 +6959,13 @@ getPrefix$1.default = void 0;
 var prefixes = ['Moz', 'Webkit', 'O', 'ms'];
 
 function getPrefix()
-/*: string*/ {
+/*: string*/
+{
   var _window$document, _window$document$docu;
 
   var prop
-    /*: string*/
-    = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'transform';
+  /*: string*/
+  = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'transform';
   // Ensure we're running in an environment where there is actually a global
   // `window` obj
   if (typeof window === 'undefined') return ''; // If we're in a pseudo-browser server-side environment, this access
@@ -6977,27 +6983,30 @@ function getPrefix()
 }
 
 function browserPrefixToKey(prop
-  /*: string*/
-  , prefix
-  /*: string*/
+/*: string*/
+, prefix
+/*: string*/
 )
-/*: string*/ {
+/*: string*/
+{
   return prefix ? "".concat(prefix).concat(kebabToTitleCase(prop)) : prop;
 }
 
 function browserPrefixToStyle(prop
-  /*: string*/
-  , prefix
-  /*: string*/
+/*: string*/
+, prefix
+/*: string*/
 )
-/*: string*/ {
+/*: string*/
+{
   return prefix ? "-".concat(prefix.toLowerCase(), "-").concat(prop) : prop;
 }
 
 function kebabToTitleCase(str
-  /*: string*/
+/*: string*/
 )
-/*: string*/ {
+/*: string*/
+{
   var out = '';
   var shouldCapitalize = true;
 
@@ -7019,7 +7028,7 @@ function kebabToTitleCase(str
 
 
 var _default = (getPrefix()
-  /*: string*/
+/*: string*/
 );
 
 getPrefix$1.default = _default;
@@ -7065,11 +7074,12 @@ function _defineProperty$1(obj, key, value) { if (key in obj) { Object.definePro
 var matchesSelectorFunc = '';
 
 function matchesSelector(el
-  /*: Node*/
-  , selector
-  /*: string*/
+/*: Node*/
+, selector
+/*: string*/
 )
-/*: boolean*/ {
+/*: boolean*/
+{
   if (!matchesSelectorFunc) {
     matchesSelectorFunc = (0, _shims$2.findInArray)(['matches', 'webkitMatchesSelector', 'mozMatchesSelector', 'msMatchesSelector', 'oMatchesSelector'], function (method) {
       // $FlowIgnore: Doesn't think elements are indexable
@@ -7086,13 +7096,14 @@ function matchesSelector(el
 
 
 function matchesSelectorAndParentsTo(el
-  /*: Node*/
-  , selector
-  /*: string*/
-  , baseNode
-  /*: Node*/
+/*: Node*/
+, selector
+/*: string*/
+, baseNode
+/*: Node*/
 )
-/*: boolean*/ {
+/*: boolean*/
+{
   var node = el;
 
   do {
@@ -7105,15 +7116,16 @@ function matchesSelectorAndParentsTo(el
 }
 
 function addEvent(el
-  /*: ?Node*/
-  , event
-  /*: string*/
-  , handler
-  /*: Function*/
-  , inputOptions
-  /*: Object*/
+/*: ?Node*/
+, event
+/*: string*/
+, handler
+/*: Function*/
+, inputOptions
+/*: Object*/
 )
-/*: void*/ {
+/*: void*/
+{
   if (!el) return;
 
   var options = _objectSpread$c({
@@ -7132,15 +7144,16 @@ function addEvent(el
 }
 
 function removeEvent(el
-  /*: ?Node*/
-  , event
-  /*: string*/
-  , handler
-  /*: Function*/
-  , inputOptions
-  /*: Object*/
+/*: ?Node*/
+, event
+/*: string*/
+, handler
+/*: Function*/
+, inputOptions
+/*: Object*/
 )
-/*: void*/ {
+/*: void*/
+{
   if (!el) return;
 
   var options = _objectSpread$c({
@@ -7159,9 +7172,10 @@ function removeEvent(el
 }
 
 function outerHeight(node
-  /*: HTMLElement*/
+/*: HTMLElement*/
 )
-/*: number*/ {
+/*: number*/
+{
   // This is deliberately excluding margin for our calculations, since we are using
   // offsetTop which is including margin. See getBoundPosition
   var height = node.clientHeight;
@@ -7172,9 +7186,10 @@ function outerHeight(node
 }
 
 function outerWidth(node
-  /*: HTMLElement*/
+/*: HTMLElement*/
 )
-/*: number*/ {
+/*: number*/
+{
   // This is deliberately excluding margin for our calculations, since we are using
   // offsetLeft which is including margin. See getBoundPosition
   var width = node.clientWidth;
@@ -7185,9 +7200,10 @@ function outerWidth(node
 }
 
 function innerHeight(node
-  /*: HTMLElement*/
+/*: HTMLElement*/
 )
-/*: number*/ {
+/*: number*/
+{
   var height = node.clientHeight;
   var computedStyle = node.ownerDocument.defaultView.getComputedStyle(node);
   height -= (0, _shims$2.int)(computedStyle.paddingTop);
@@ -7196,9 +7212,10 @@ function innerHeight(node
 }
 
 function innerWidth(node
-  /*: HTMLElement*/
+/*: HTMLElement*/
 )
-/*: number*/ {
+/*: number*/
+{
   var width = node.clientWidth;
   var computedStyle = node.ownerDocument.defaultView.getComputedStyle(node);
   width -= (0, _shims$2.int)(computedStyle.paddingLeft);
@@ -7212,13 +7229,14 @@ function innerWidth(node
 
 // Get from offsetParent
 function offsetXYFromParent(evt
-  /*: EventWithOffset*/
-  , offsetParent
-  /*: HTMLElement*/
-  , scale
-  /*: number*/
+/*: EventWithOffset*/
+, offsetParent
+/*: HTMLElement*/
+, scale
+/*: number*/
 )
-/*: ControlPosition*/ {
+/*: ControlPosition*/
+{
   var isBody = offsetParent === offsetParent.ownerDocument.body;
   var offsetParentRect = isBody ? {
     left: 0,
@@ -7233,33 +7251,36 @@ function offsetXYFromParent(evt
 }
 
 function createCSSTransform(controlPos
-  /*: ControlPosition*/
-  , positionOffset
-  /*: PositionOffsetControlPosition*/
+/*: ControlPosition*/
+, positionOffset
+/*: PositionOffsetControlPosition*/
 )
-/*: Object*/ {
+/*: Object*/
+{
   var translation = getTranslation(controlPos, positionOffset, 'px');
   return _defineProperty$1({}, (0, _getPrefix.browserPrefixToKey)('transform', _getPrefix.default), translation);
 }
 
 function createSVGTransform(controlPos
-  /*: ControlPosition*/
-  , positionOffset
-  /*: PositionOffsetControlPosition*/
+/*: ControlPosition*/
+, positionOffset
+/*: PositionOffsetControlPosition*/
 )
-/*: string*/ {
+/*: string*/
+{
   var translation = getTranslation(controlPos, positionOffset, '');
   return translation;
 }
 
 function getTranslation(_ref2, positionOffset
-  /*: PositionOffsetControlPosition*/
-  , unitSuffix
-  /*: string*/
+/*: PositionOffsetControlPosition*/
+, unitSuffix
+/*: string*/
 )
-/*: string*/ {
+/*: string*/
+{
   var x = _ref2.x,
-    y = _ref2.y;
+      y = _ref2.y;
   var translation = "translate(".concat(x).concat(unitSuffix, ",").concat(y).concat(unitSuffix, ")");
 
   if (positionOffset) {
@@ -7272,11 +7293,12 @@ function getTranslation(_ref2, positionOffset
 }
 
 function getTouch(e
-  /*: MouseTouchEvent*/
-  , identifier
-  /*: number*/
+/*: MouseTouchEvent*/
+, identifier
+/*: number*/
 )
-/*: ?{clientX: number, clientY: number}*/ {
+/*: ?{clientX: number, clientY: number}*/
+{
   return e.targetTouches && (0, _shims$2.findInArray)(e.targetTouches, function (t) {
     return identifier === t.identifier;
   }) || e.changedTouches && (0, _shims$2.findInArray)(e.changedTouches, function (t) {
@@ -7285,9 +7307,10 @@ function getTouch(e
 }
 
 function getTouchIdentifier(e
-  /*: MouseTouchEvent*/
+/*: MouseTouchEvent*/
 )
-/*: ?number*/ {
+/*: ?number*/
+{
   if (e.targetTouches && e.targetTouches[0]) return e.targetTouches[0].identifier;
   if (e.changedTouches && e.changedTouches[0]) return e.changedTouches[0].identifier;
 } // User-select Hacks:
@@ -7297,7 +7320,7 @@ function getTouchIdentifier(e
 
 
 function addUserSelectStyles(doc
-  /*: ?Document*/
+/*: ?Document*/
 ) {
   if (!doc) return;
   var styleEl = doc.getElementById('react-draggable-style-el');
@@ -7315,7 +7338,7 @@ function addUserSelectStyles(doc
 }
 
 function removeUserSelectStyles(doc
-  /*: ?Document*/
+/*: ?Document*/
 ) {
   if (!doc) return;
 
@@ -7339,9 +7362,9 @@ function removeUserSelectStyles(doc
 }
 
 function addClassName(el
-  /*: HTMLElement*/
-  , className
-  /*: string*/
+/*: HTMLElement*/
+, className
+/*: string*/
 ) {
   if (el.classList) {
     el.classList.add(className);
@@ -7353,9 +7376,9 @@ function addClassName(el
 }
 
 function removeClassName(el
-  /*: HTMLElement*/
-  , className
-  /*: string*/
+/*: HTMLElement*/
+, className
+/*: string*/
 ) {
   if (el.classList) {
     el.classList.remove(className);
@@ -7382,13 +7405,14 @@ var _shims$1 = shims;
 var _domFns$1 = domFns;
 
 function getBoundPosition(draggable
-  /*: Draggable*/
-  , x
-  /*: number*/
-  , y
-  /*: number*/
+/*: Draggable*/
+, x
+/*: number*/
+, y
+/*: number*/
 )
-/*: [number, number]*/ {
+/*: [number, number]*/
+{
   // If no bounds, short-circuit and move on
   if (!draggable.props.bounds) return [x, y]; // Clone new bounds
 
@@ -7412,8 +7436,8 @@ function getBoundPosition(draggable
     }
 
     var boundNodeEl
-      /*: HTMLElement*/
-      = boundNode; // for Flow, can't seem to refine correctly
+    /*: HTMLElement*/
+    = boundNode; // for Flow, can't seem to refine correctly
 
     var nodeStyle = ownerWindow.getComputedStyle(node);
     var boundNodeStyle = ownerWindow.getComputedStyle(boundNodeEl); // Compute bounds. This is a pain with padding and offsets but this gets it exactly right.
@@ -7436,41 +7460,45 @@ function getBoundPosition(draggable
 }
 
 function snapToGrid(grid
-  /*: [number, number]*/
-  , pendingX
-  /*: number*/
-  , pendingY
-  /*: number*/
+/*: [number, number]*/
+, pendingX
+/*: number*/
+, pendingY
+/*: number*/
 )
-/*: [number, number]*/ {
+/*: [number, number]*/
+{
   var x = Math.round(pendingX / grid[0]) * grid[0];
   var y = Math.round(pendingY / grid[1]) * grid[1];
   return [x, y];
 }
 
 function canDragX(draggable
-  /*: Draggable*/
+/*: Draggable*/
 )
-/*: boolean*/ {
+/*: boolean*/
+{
   return draggable.props.axis === 'both' || draggable.props.axis === 'x';
 }
 
 function canDragY(draggable
-  /*: Draggable*/
+/*: Draggable*/
 )
-/*: boolean*/ {
+/*: boolean*/
+{
   return draggable.props.axis === 'both' || draggable.props.axis === 'y';
 } // Get {x, y} positions from event.
 
 
 function getControlPosition(e
-  /*: MouseTouchEvent*/
-  , touchIdentifier
-  /*: ?number*/
-  , draggableCore
-  /*: DraggableCore*/
+/*: MouseTouchEvent*/
+, touchIdentifier
+/*: ?number*/
+, draggableCore
+/*: DraggableCore*/
 )
-/*: ?ControlPosition*/ {
+/*: ?ControlPosition*/
+{
   var touchObj = typeof touchIdentifier === 'number' ? (0, _domFns$1.getTouch)(e, touchIdentifier) : null;
   if (typeof touchIdentifier === 'number' && !touchObj) return null; // not the right touch
 
@@ -7482,13 +7510,14 @@ function getControlPosition(e
 
 
 function createCoreData(draggable
-  /*: DraggableCore*/
-  , x
-  /*: number*/
-  , y
-  /*: number*/
+/*: DraggableCore*/
+, x
+/*: number*/
+, y
+/*: number*/
 )
-/*: DraggableData*/ {
+/*: DraggableData*/
+{
   var state = draggable.state;
   var isStart = !(0, _shims$1.isNum)(state.lastX);
   var node = findDOMNode(draggable);
@@ -7520,11 +7549,12 @@ function createCoreData(draggable
 
 
 function createDraggableData(draggable
-  /*: Draggable*/
-  , coreData
-  /*: DraggableData*/
+/*: Draggable*/
+, coreData
+/*: DraggableData*/
 )
-/*: DraggableData*/ {
+/*: DraggableData*/
+{
   var scale = draggable.props.scale;
   return {
     node: coreData.node,
@@ -7539,9 +7569,10 @@ function createDraggableData(draggable
 
 
 function cloneBounds(bounds
-  /*: Bounds*/
+/*: Bounds*/
 )
-/*: Bounds*/ {
+/*: Bounds*/
+{
   return {
     left: bounds.left,
     top: bounds.top,
@@ -7551,9 +7582,10 @@ function cloneBounds(bounds
 }
 
 function findDOMNode(draggable
-  /*: Draggable | DraggableCore*/
+/*: Draggable | DraggableCore*/
 )
-/*: HTMLElement*/ {
+/*: HTMLElement*/
+{
   var node = draggable.findDOMNode();
 
   if (!node) {
@@ -7632,7 +7664,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () { })); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
@@ -7762,7 +7794,7 @@ var DraggableCore$1 = /*#__PURE__*/function (_React$Component) {
       if (position == null) return; // not possible but satisfies flow
 
       var x = position.x,
-        y = position.y; // Create an event object with all the data parents need to make a decision here.
+          y = position.y; // Create an event object with all the data parents need to make a decision here.
 
       var coreEvent = (0, _positionFns.createCoreData)(_assertThisInitialized(_this), x, y);
       (0, _log.default)('DraggableCore: handleDragStart: %j', coreEvent); // Call event handler. If it returns explicit false, cancel.
@@ -7796,11 +7828,11 @@ var DraggableCore$1 = /*#__PURE__*/function (_React$Component) {
       var position = (0, _positionFns.getControlPosition)(e, _this.state.touchIdentifier, _assertThisInitialized(_this));
       if (position == null) return;
       var x = position.x,
-        y = position.y; // Snap to grid if prop has been provided
+          y = position.y; // Snap to grid if prop has been provided
 
       if (Array.isArray(_this.props.grid)) {
         var deltaX = x - _this.state.lastX,
-          deltaY = y - _this.state.lastY;
+            deltaY = y - _this.state.lastY;
 
         var _snapToGrid = (0, _positionFns.snapToGrid)(_this.props.grid, deltaX, deltaY);
 
@@ -7825,9 +7857,9 @@ var DraggableCore$1 = /*#__PURE__*/function (_React$Component) {
         } catch (err) {
           // Old browsers
           var event = ((document.createEvent('MouseEvents')
-            /*: any*/
+          /*: any*/
           )
-            /*: MouseTouchEvent*/
+          /*: MouseTouchEvent*/
           ); // I see why this insanity was deprecated
           // $FlowIgnore
 
@@ -7850,7 +7882,7 @@ var DraggableCore$1 = /*#__PURE__*/function (_React$Component) {
       var position = (0, _positionFns.getControlPosition)(e, _this.state.touchIdentifier, _assertThisInitialized(_this));
       if (position == null) return;
       var x = position.x,
-        y = position.y;
+          y = position.y;
       var coreEvent = (0, _positionFns.createCoreData)(_assertThisInitialized(_this), x, y); // Call event handler
 
       var shouldContinue = _this.props.onStop(e, coreEvent);
@@ -7945,7 +7977,8 @@ var DraggableCore$1 = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "findDOMNode",
     value: function findDOMNode()
-    /*: ?HTMLElement*/ {
+    /*: ?HTMLElement*/
+    {
       var _this$props$nodeRef$c, _this$props, _this$props$nodeRef;
 
       return (_this$props$nodeRef$c = (_this$props = this.props) === null || _this$props === void 0 ? void 0 : (_this$props$nodeRef = _this$props.nodeRef) === null || _this$props$nodeRef === void 0 ? void 0 : _this$props$nodeRef.current) !== null && _this$props$nodeRef$c !== void 0 ? _this$props$nodeRef$c : _reactDom.default.findDOMNode(this);
@@ -7953,7 +7986,8 @@ var DraggableCore$1 = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render()
-    /*: React.Element<any>*/ {
+    /*: React.Element<any>*/
+    {
       // Reuse the child provided
       // This makes it flexible to use whatever element is wanted (div, ul, etc)
       return /*#__PURE__*/React.cloneElement(React.Children.only(this.props.children), {
@@ -8003,9 +8037,9 @@ _defineProperty(DraggableCore$1, "propTypes", {
    * instead of using the parent node.
    */
   offsetParent: function offsetParent(props
-    /*: DraggableCoreProps*/
-    , propName
-    /*: $Keys<DraggableCoreProps>*/
+  /*: DraggableCoreProps*/
+  , propName
+  /*: $Keys<DraggableCoreProps>*/
   ) {
     if (props[propName] && props[propName].nodeType !== 1) {
       throw new Error('Draggable\'s offsetParent must be a DOM Node.');
@@ -8122,472 +8156,475 @@ _defineProperty(DraggableCore$1, "defaultProps", {
   // by default only accept left click
   disabled: false,
   enableUserSelectHack: true,
-  onStart: function onStart() { },
-  onDrag: function onDrag() { },
-  onStop: function onStop() { },
-  onMouseDown: function onMouseDown() { },
+  onStart: function onStart() {},
+  onDrag: function onDrag() {},
+  onStop: function onStop() {},
+  onMouseDown: function onMouseDown() {},
   scale: 1
 });
 
 (function (exports) {
 
-  function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  Object.defineProperty(exports, "DraggableCore", {
-    enumerable: true,
-    get: function get() {
-      return _DraggableCore.default;
-    }
-  });
-  exports.default = void 0;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "DraggableCore", {
+  enumerable: true,
+  get: function get() {
+    return _DraggableCore.default;
+  }
+});
+exports.default = void 0;
 
-  var React = _interopRequireWildcard(React__default["default"]);
+var React = _interopRequireWildcard(React__default["default"]);
 
-  var _propTypes = _interopRequireDefault(propTypes.exports);
+var _propTypes = _interopRequireDefault(propTypes.exports);
 
-  var _reactDom = _interopRequireDefault(require$$2__default["default"]);
+var _reactDom = _interopRequireDefault(require$$2__default["default"]);
 
-  var _clsx2 = _interopRequireDefault(require$$3);
+var _clsx2 = _interopRequireDefault(require$$3);
 
-  var _domFns = domFns;
+var _domFns = domFns;
 
-  var _positionFns = positionFns;
+var _positionFns = positionFns;
 
-  var _shims = shims;
+var _shims = shims;
 
-  var _DraggableCore = _interopRequireDefault(DraggableCore$2);
+var _DraggableCore = _interopRequireDefault(DraggableCore$2);
 
-  var _log = _interopRequireDefault(log$1);
+var _log = _interopRequireDefault(log$1);
 
-  var _excluded = ["axis", "bounds", "children", "defaultPosition", "defaultClassName", "defaultClassNameDragging", "defaultClassNameDragged", "position", "positionOffset", "scale"];
+var _excluded = ["axis", "bounds", "children", "defaultPosition", "defaultClassName", "defaultClassNameDragging", "defaultClassNameDragged", "position", "positionOffset", "scale"];
 
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-  function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
-  function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-  function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-  function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
-  function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-  function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
-  function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
-  function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
-  function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-  function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
-  function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-  function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
-  function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
-  function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-  function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-  function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
 
-  function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
-  function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () { })); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
-  function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-  function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-  //
-  // Define <Draggable>
-  //
-  var Draggable = /*#__PURE__*/function (_React$Component) {
-    _inherits(Draggable, _React$Component);
+//
+// Define <Draggable>
+//
+var Draggable = /*#__PURE__*/function (_React$Component) {
+  _inherits(Draggable, _React$Component);
 
-    var _super = _createSuper(Draggable);
+  var _super = _createSuper(Draggable);
 
-    function Draggable(props
-      /*: DraggableProps*/
-    ) {
-      var _this;
+  function Draggable(props
+  /*: DraggableProps*/
+  ) {
+    var _this;
 
-      _classCallCheck(this, Draggable);
+    _classCallCheck(this, Draggable);
 
-      _this = _super.call(this, props);
+    _this = _super.call(this, props);
 
-      _defineProperty(_assertThisInitialized(_this), "onDragStart", function (e, coreData) {
-        (0, _log.default)('Draggable: onDragStart: %j', coreData); // Short-circuit if user's callback killed it.
+    _defineProperty(_assertThisInitialized(_this), "onDragStart", function (e, coreData) {
+      (0, _log.default)('Draggable: onDragStart: %j', coreData); // Short-circuit if user's callback killed it.
 
-        var shouldStart = _this.props.onStart(e, (0, _positionFns.createDraggableData)(_assertThisInitialized(_this), coreData)); // Kills start event on core as well, so move handlers are never bound.
+      var shouldStart = _this.props.onStart(e, (0, _positionFns.createDraggableData)(_assertThisInitialized(_this), coreData)); // Kills start event on core as well, so move handlers are never bound.
 
 
-        if (shouldStart === false) return false;
+      if (shouldStart === false) return false;
 
-        _this.setState({
-          dragging: true,
-          dragged: true
-        });
+      _this.setState({
+        dragging: true,
+        dragged: true
       });
+    });
 
-      _defineProperty(_assertThisInitialized(_this), "onDrag", function (e, coreData) {
-        if (!_this.state.dragging) return false;
-        (0, _log.default)('Draggable: onDrag: %j', coreData);
-        var uiData = (0, _positionFns.createDraggableData)(_assertThisInitialized(_this), coreData);
-        var newState
-          /*: $Shape<DraggableState>*/
-          = {
-          x: uiData.x,
-          y: uiData.y
-        }; // Keep within bounds.
+    _defineProperty(_assertThisInitialized(_this), "onDrag", function (e, coreData) {
+      if (!_this.state.dragging) return false;
+      (0, _log.default)('Draggable: onDrag: %j', coreData);
+      var uiData = (0, _positionFns.createDraggableData)(_assertThisInitialized(_this), coreData);
+      var newState
+      /*: $Shape<DraggableState>*/
+      = {
+        x: uiData.x,
+        y: uiData.y
+      }; // Keep within bounds.
 
-        if (_this.props.bounds) {
-          // Save original x and y.
-          var x = newState.x,
+      if (_this.props.bounds) {
+        // Save original x and y.
+        var x = newState.x,
             y = newState.y; // Add slack to the values used to calculate bound position. This will ensure that if
-          // we start removing slack, the element won't react to it right away until it's been
-          // completely removed.
+        // we start removing slack, the element won't react to it right away until it's been
+        // completely removed.
 
-          newState.x += _this.state.slackX;
-          newState.y += _this.state.slackY; // Get bound position. This will ceil/floor the x and y within the boundaries.
+        newState.x += _this.state.slackX;
+        newState.y += _this.state.slackY; // Get bound position. This will ceil/floor the x and y within the boundaries.
 
-          var _getBoundPosition = (0, _positionFns.getBoundPosition)(_assertThisInitialized(_this), newState.x, newState.y),
+        var _getBoundPosition = (0, _positionFns.getBoundPosition)(_assertThisInitialized(_this), newState.x, newState.y),
             _getBoundPosition2 = _slicedToArray(_getBoundPosition, 2),
             newStateX = _getBoundPosition2[0],
             newStateY = _getBoundPosition2[1];
 
-          newState.x = newStateX;
-          newState.y = newStateY; // Recalculate slack by noting how much was shaved by the boundPosition handler.
+        newState.x = newStateX;
+        newState.y = newStateY; // Recalculate slack by noting how much was shaved by the boundPosition handler.
 
-          newState.slackX = _this.state.slackX + (x - newState.x);
-          newState.slackY = _this.state.slackY + (y - newState.y); // Update the event we fire to reflect what really happened after bounds took effect.
+        newState.slackX = _this.state.slackX + (x - newState.x);
+        newState.slackY = _this.state.slackY + (y - newState.y); // Update the event we fire to reflect what really happened after bounds took effect.
 
-          uiData.x = newState.x;
-          uiData.y = newState.y;
-          uiData.deltaX = newState.x - _this.state.x;
-          uiData.deltaY = newState.y - _this.state.y;
-        } // Short-circuit if user's callback killed it.
+        uiData.x = newState.x;
+        uiData.y = newState.y;
+        uiData.deltaX = newState.x - _this.state.x;
+        uiData.deltaY = newState.y - _this.state.y;
+      } // Short-circuit if user's callback killed it.
 
 
-        var shouldUpdate = _this.props.onDrag(e, uiData);
+      var shouldUpdate = _this.props.onDrag(e, uiData);
 
-        if (shouldUpdate === false) return false;
+      if (shouldUpdate === false) return false;
 
-        _this.setState(newState);
-      });
+      _this.setState(newState);
+    });
 
-      _defineProperty(_assertThisInitialized(_this), "onDragStop", function (e, coreData) {
-        if (!_this.state.dragging) return false; // Short-circuit if user's callback killed it.
+    _defineProperty(_assertThisInitialized(_this), "onDragStop", function (e, coreData) {
+      if (!_this.state.dragging) return false; // Short-circuit if user's callback killed it.
 
-        var shouldContinue = _this.props.onStop(e, (0, _positionFns.createDraggableData)(_assertThisInitialized(_this), coreData));
+      var shouldContinue = _this.props.onStop(e, (0, _positionFns.createDraggableData)(_assertThisInitialized(_this), coreData));
 
-        if (shouldContinue === false) return false;
-        (0, _log.default)('Draggable: onDragStop: %j', coreData);
-        var newState
-          /*: $Shape<DraggableState>*/
-          = {
-          dragging: false,
-          slackX: 0,
-          slackY: 0
-        }; // If this is a controlled component, the result of this operation will be to
-        // revert back to the old position. We expect a handler on `onDragStop`, at the least.
+      if (shouldContinue === false) return false;
+      (0, _log.default)('Draggable: onDragStop: %j', coreData);
+      var newState
+      /*: $Shape<DraggableState>*/
+      = {
+        dragging: false,
+        slackX: 0,
+        slackY: 0
+      }; // If this is a controlled component, the result of this operation will be to
+      // revert back to the old position. We expect a handler on `onDragStop`, at the least.
 
-        var controlled = Boolean(_this.props.position);
+      var controlled = Boolean(_this.props.position);
 
-        if (controlled) {
-          var _this$props$position = _this.props.position,
+      if (controlled) {
+        var _this$props$position = _this.props.position,
             x = _this$props$position.x,
             y = _this$props$position.y;
-          newState.x = x;
-          newState.y = y;
-        }
-
-        _this.setState(newState);
-      });
-
-      _this.state = {
-        // Whether or not we are currently dragging.
-        dragging: false,
-        // Whether or not we have been dragged before.
-        dragged: false,
-        // Current transform x and y.
-        x: props.position ? props.position.x : props.defaultPosition.x,
-        y: props.position ? props.position.y : props.defaultPosition.y,
-        prevPropsPosition: _objectSpread({}, props.position),
-        // Used for compensating for out-of-bounds drags
-        slackX: 0,
-        slackY: 0,
-        // Can only determine if SVG after mounting
-        isElementSVG: false
-      };
-
-      if (props.position && !(props.onDrag || props.onStop)) {
-        // eslint-disable-next-line no-console
-        console.warn('A `position` was applied to this <Draggable>, without drag handlers. This will make this ' + 'component effectively undraggable. Please attach `onDrag` or `onStop` handlers so you can adjust the ' + '`position` of this element.');
+        newState.x = x;
+        newState.y = y;
       }
 
-      return _this;
+      _this.setState(newState);
+    });
+
+    _this.state = {
+      // Whether or not we are currently dragging.
+      dragging: false,
+      // Whether or not we have been dragged before.
+      dragged: false,
+      // Current transform x and y.
+      x: props.position ? props.position.x : props.defaultPosition.x,
+      y: props.position ? props.position.y : props.defaultPosition.y,
+      prevPropsPosition: _objectSpread({}, props.position),
+      // Used for compensating for out-of-bounds drags
+      slackX: 0,
+      slackY: 0,
+      // Can only determine if SVG after mounting
+      isElementSVG: false
+    };
+
+    if (props.position && !(props.onDrag || props.onStop)) {
+      // eslint-disable-next-line no-console
+      console.warn('A `position` was applied to this <Draggable>, without drag handlers. This will make this ' + 'component effectively undraggable. Please attach `onDrag` or `onStop` handlers so you can adjust the ' + '`position` of this element.');
     }
 
-    _createClass(Draggable, [{
-      key: "componentDidMount",
-      value: function componentDidMount() {
-        // Check to see if the element passed is an instanceof SVGElement
-        if (typeof window.SVGElement !== 'undefined' && this.findDOMNode() instanceof window.SVGElement) {
-          this.setState({
-            isElementSVG: true
-          });
-        }
-      }
-    }, {
-      key: "componentWillUnmount",
-      value: function componentWillUnmount() {
+    return _this;
+  }
+
+  _createClass(Draggable, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      // Check to see if the element passed is an instanceof SVGElement
+      if (typeof window.SVGElement !== 'undefined' && this.findDOMNode() instanceof window.SVGElement) {
         this.setState({
-          dragging: false
-        }); // prevents invariant if unmounted while dragging
-      } // React Strict Mode compatibility: if `nodeRef` is passed, we will use it instead of trying to find
-      // the underlying DOM node ourselves. See the README for more information.
-
-    }, {
-      key: "findDOMNode",
-      value: function findDOMNode()
-    /*: ?HTMLElement*/ {
-        var _this$props$nodeRef$c, _this$props, _this$props$nodeRef;
-
-        return (_this$props$nodeRef$c = (_this$props = this.props) === null || _this$props === void 0 ? void 0 : (_this$props$nodeRef = _this$props.nodeRef) === null || _this$props$nodeRef === void 0 ? void 0 : _this$props$nodeRef.current) !== null && _this$props$nodeRef$c !== void 0 ? _this$props$nodeRef$c : _reactDom.default.findDOMNode(this);
+          isElementSVG: true
+        });
       }
-    }, {
-      key: "render",
-      value: function render()
-    /*: ReactElement<any>*/ {
-        var _clsx;
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      this.setState({
+        dragging: false
+      }); // prevents invariant if unmounted while dragging
+    } // React Strict Mode compatibility: if `nodeRef` is passed, we will use it instead of trying to find
+    // the underlying DOM node ourselves. See the README for more information.
 
-        var _this$props2 = this.props;
-        _this$props2.axis;
-        _this$props2.bounds;
-        var children = _this$props2.children,
+  }, {
+    key: "findDOMNode",
+    value: function findDOMNode()
+    /*: ?HTMLElement*/
+    {
+      var _this$props$nodeRef$c, _this$props, _this$props$nodeRef;
+
+      return (_this$props$nodeRef$c = (_this$props = this.props) === null || _this$props === void 0 ? void 0 : (_this$props$nodeRef = _this$props.nodeRef) === null || _this$props$nodeRef === void 0 ? void 0 : _this$props$nodeRef.current) !== null && _this$props$nodeRef$c !== void 0 ? _this$props$nodeRef$c : _reactDom.default.findDOMNode(this);
+    }
+  }, {
+    key: "render",
+    value: function render()
+    /*: ReactElement<any>*/
+    {
+      var _clsx;
+
+      var _this$props2 = this.props;
+          _this$props2.axis;
+          _this$props2.bounds;
+          var children = _this$props2.children,
           defaultPosition = _this$props2.defaultPosition,
           defaultClassName = _this$props2.defaultClassName,
           defaultClassNameDragging = _this$props2.defaultClassNameDragging,
           defaultClassNameDragged = _this$props2.defaultClassNameDragged,
           position = _this$props2.position,
           positionOffset = _this$props2.positionOffset;
-        _this$props2.scale;
-        var draggableCoreProps = _objectWithoutProperties(_this$props2, _excluded);
+          _this$props2.scale;
+          var draggableCoreProps = _objectWithoutProperties(_this$props2, _excluded);
 
-        var style = {};
-        var svgTransform = null; // If this is controlled, we don't want to move it - unless it's dragging.
+      var style = {};
+      var svgTransform = null; // If this is controlled, we don't want to move it - unless it's dragging.
 
-        var controlled = Boolean(position);
-        var draggable = !controlled || this.state.dragging;
-        var validPosition = position || defaultPosition;
-        var transformOpts = {
-          // Set left if horizontal drag is enabled
-          x: (0, _positionFns.canDragX)(this) && draggable ? this.state.x : validPosition.x,
-          // Set top if vertical drag is enabled
-          y: (0, _positionFns.canDragY)(this) && draggable ? this.state.y : validPosition.y
-        }; // If this element was SVG, we use the `transform` attribute.
+      var controlled = Boolean(position);
+      var draggable = !controlled || this.state.dragging;
+      var validPosition = position || defaultPosition;
+      var transformOpts = {
+        // Set left if horizontal drag is enabled
+        x: (0, _positionFns.canDragX)(this) && draggable ? this.state.x : validPosition.x,
+        // Set top if vertical drag is enabled
+        y: (0, _positionFns.canDragY)(this) && draggable ? this.state.y : validPosition.y
+      }; // If this element was SVG, we use the `transform` attribute.
 
-        if (this.state.isElementSVG) {
-          svgTransform = (0, _domFns.createSVGTransform)(transformOpts, positionOffset);
-        } else {
-          // Add a CSS transform to move the element around. This allows us to move the element around
-          // without worrying about whether or not it is relatively or absolutely positioned.
-          // If the item you are dragging already has a transform set, wrap it in a <span> so <Draggable>
-          // has a clean slate.
-          style = (0, _domFns.createCSSTransform)(transformOpts, positionOffset);
-        } // Mark with class while dragging
+      if (this.state.isElementSVG) {
+        svgTransform = (0, _domFns.createSVGTransform)(transformOpts, positionOffset);
+      } else {
+        // Add a CSS transform to move the element around. This allows us to move the element around
+        // without worrying about whether or not it is relatively or absolutely positioned.
+        // If the item you are dragging already has a transform set, wrap it in a <span> so <Draggable>
+        // has a clean slate.
+        style = (0, _domFns.createCSSTransform)(transformOpts, positionOffset);
+      } // Mark with class while dragging
 
 
-        var className = (0, _clsx2.default)(children.props.className || '', defaultClassName, (_clsx = {}, _defineProperty(_clsx, defaultClassNameDragging, this.state.dragging), _defineProperty(_clsx, defaultClassNameDragged, this.state.dragged), _clsx)); // Reuse the child provided
-        // This makes it flexible to use whatever element is wanted (div, ul, etc)
+      var className = (0, _clsx2.default)(children.props.className || '', defaultClassName, (_clsx = {}, _defineProperty(_clsx, defaultClassNameDragging, this.state.dragging), _defineProperty(_clsx, defaultClassNameDragged, this.state.dragged), _clsx)); // Reuse the child provided
+      // This makes it flexible to use whatever element is wanted (div, ul, etc)
 
-        return /*#__PURE__*/React.createElement(_DraggableCore.default, _extends({}, draggableCoreProps, {
-          onStart: this.onDragStart,
-          onDrag: this.onDrag,
-          onStop: this.onDragStop
-        }), /*#__PURE__*/React.cloneElement(React.Children.only(children), {
-          className: className,
-          style: _objectSpread(_objectSpread({}, children.props.style), style),
-          transform: svgTransform
-        }));
+      return /*#__PURE__*/React.createElement(_DraggableCore.default, _extends({}, draggableCoreProps, {
+        onStart: this.onDragStart,
+        onDrag: this.onDrag,
+        onStop: this.onDragStop
+      }), /*#__PURE__*/React.cloneElement(React.Children.only(children), {
+        className: className,
+        style: _objectSpread(_objectSpread({}, children.props.style), style),
+        transform: svgTransform
+      }));
+    }
+  }], [{
+    key: "getDerivedStateFromProps",
+    value: // React 16.3+
+    // Arity (props, state)
+    function getDerivedStateFromProps(_ref, _ref2)
+    /*: ?$Shape<DraggableState>*/
+    {
+      var position = _ref.position;
+      var prevPropsPosition = _ref2.prevPropsPosition;
+
+      // Set x/y if a new position is provided in props that is different than the previous.
+      if (position && (!prevPropsPosition || position.x !== prevPropsPosition.x || position.y !== prevPropsPosition.y)) {
+        (0, _log.default)('Draggable: getDerivedStateFromProps %j', {
+          position: position,
+          prevPropsPosition: prevPropsPosition
+        });
+        return {
+          x: position.x,
+          y: position.y,
+          prevPropsPosition: _objectSpread({}, position)
+        };
       }
-    }], [{
-      key: "getDerivedStateFromProps",
-      value: // React 16.3+
-        // Arity (props, state)
-        function getDerivedStateFromProps(_ref, _ref2)
-    /*: ?$Shape<DraggableState>*/ {
-          var position = _ref.position;
-          var prevPropsPosition = _ref2.prevPropsPosition;
 
-          // Set x/y if a new position is provided in props that is different than the previous.
-          if (position && (!prevPropsPosition || position.x !== prevPropsPosition.x || position.y !== prevPropsPosition.y)) {
-            (0, _log.default)('Draggable: getDerivedStateFromProps %j', {
-              position: position,
-              prevPropsPosition: prevPropsPosition
-            });
-            return {
-              x: position.x,
-              y: position.y,
-              prevPropsPosition: _objectSpread({}, position)
-            };
-          }
+      return null;
+    }
+  }]);
 
-          return null;
-        }
-    }]);
+  return Draggable;
+}(React.Component);
 
-    return Draggable;
-  }(React.Component);
+exports.default = Draggable;
 
-  exports.default = Draggable;
+_defineProperty(Draggable, "displayName", 'Draggable');
 
-  _defineProperty(Draggable, "displayName", 'Draggable');
+_defineProperty(Draggable, "propTypes", _objectSpread(_objectSpread({}, _DraggableCore.default.propTypes), {}, {
+  /**
+   * `axis` determines which axis the draggable can move.
+   *
+   *  Note that all callbacks will still return data as normal. This only
+   *  controls flushing to the DOM.
+   *
+   * 'both' allows movement horizontally and vertically.
+   * 'x' limits movement to horizontal axis.
+   * 'y' limits movement to vertical axis.
+   * 'none' limits all movement.
+   *
+   * Defaults to 'both'.
+   */
+  axis: _propTypes.default.oneOf(['both', 'x', 'y', 'none']),
 
-  _defineProperty(Draggable, "propTypes", _objectSpread(_objectSpread({}, _DraggableCore.default.propTypes), {}, {
-    /**
-     * `axis` determines which axis the draggable can move.
-     *
-     *  Note that all callbacks will still return data as normal. This only
-     *  controls flushing to the DOM.
-     *
-     * 'both' allows movement horizontally and vertically.
-     * 'x' limits movement to horizontal axis.
-     * 'y' limits movement to vertical axis.
-     * 'none' limits all movement.
-     *
-     * Defaults to 'both'.
-     */
-    axis: _propTypes.default.oneOf(['both', 'x', 'y', 'none']),
+  /**
+   * `bounds` determines the range of movement available to the element.
+   * Available values are:
+   *
+   * 'parent' restricts movement within the Draggable's parent node.
+   *
+   * Alternatively, pass an object with the following properties, all of which are optional:
+   *
+   * {left: LEFT_BOUND, right: RIGHT_BOUND, bottom: BOTTOM_BOUND, top: TOP_BOUND}
+   *
+   * All values are in px.
+   *
+   * Example:
+   *
+   * ```jsx
+   *   let App = React.createClass({
+   *       render: function () {
+   *         return (
+   *            <Draggable bounds={{right: 300, bottom: 300}}>
+   *              <div>Content</div>
+   *           </Draggable>
+   *         );
+   *       }
+   *   });
+   * ```
+   */
+  bounds: _propTypes.default.oneOfType([_propTypes.default.shape({
+    left: _propTypes.default.number,
+    right: _propTypes.default.number,
+    top: _propTypes.default.number,
+    bottom: _propTypes.default.number
+  }), _propTypes.default.string, _propTypes.default.oneOf([false])]),
+  defaultClassName: _propTypes.default.string,
+  defaultClassNameDragging: _propTypes.default.string,
+  defaultClassNameDragged: _propTypes.default.string,
 
-    /**
-     * `bounds` determines the range of movement available to the element.
-     * Available values are:
-     *
-     * 'parent' restricts movement within the Draggable's parent node.
-     *
-     * Alternatively, pass an object with the following properties, all of which are optional:
-     *
-     * {left: LEFT_BOUND, right: RIGHT_BOUND, bottom: BOTTOM_BOUND, top: TOP_BOUND}
-     *
-     * All values are in px.
-     *
-     * Example:
-     *
-     * ```jsx
-     *   let App = React.createClass({
-     *       render: function () {
-     *         return (
-     *            <Draggable bounds={{right: 300, bottom: 300}}>
-     *              <div>Content</div>
-     *           </Draggable>
-     *         );
-     *       }
-     *   });
-     * ```
-     */
-    bounds: _propTypes.default.oneOfType([_propTypes.default.shape({
-      left: _propTypes.default.number,
-      right: _propTypes.default.number,
-      top: _propTypes.default.number,
-      bottom: _propTypes.default.number
-    }), _propTypes.default.string, _propTypes.default.oneOf([false])]),
-    defaultClassName: _propTypes.default.string,
-    defaultClassNameDragging: _propTypes.default.string,
-    defaultClassNameDragged: _propTypes.default.string,
+  /**
+   * `defaultPosition` specifies the x and y that the dragged item should start at
+   *
+   * Example:
+   *
+   * ```jsx
+   *      let App = React.createClass({
+   *          render: function () {
+   *              return (
+   *                  <Draggable defaultPosition={{x: 25, y: 25}}>
+   *                      <div>I start with transformX: 25px and transformY: 25px;</div>
+   *                  </Draggable>
+   *              );
+   *          }
+   *      });
+   * ```
+   */
+  defaultPosition: _propTypes.default.shape({
+    x: _propTypes.default.number,
+    y: _propTypes.default.number
+  }),
+  positionOffset: _propTypes.default.shape({
+    x: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
+    y: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string])
+  }),
 
-    /**
-     * `defaultPosition` specifies the x and y that the dragged item should start at
-     *
-     * Example:
-     *
-     * ```jsx
-     *      let App = React.createClass({
-     *          render: function () {
-     *              return (
-     *                  <Draggable defaultPosition={{x: 25, y: 25}}>
-     *                      <div>I start with transformX: 25px and transformY: 25px;</div>
-     *                  </Draggable>
-     *              );
-     *          }
-     *      });
-     * ```
-     */
-    defaultPosition: _propTypes.default.shape({
-      x: _propTypes.default.number,
-      y: _propTypes.default.number
-    }),
-    positionOffset: _propTypes.default.shape({
-      x: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
-      y: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string])
-    }),
+  /**
+   * `position`, if present, defines the current position of the element.
+   *
+   *  This is similar to how form elements in React work - if no `position` is supplied, the component
+   *  is uncontrolled.
+   *
+   * Example:
+   *
+   * ```jsx
+   *      let App = React.createClass({
+   *          render: function () {
+   *              return (
+   *                  <Draggable position={{x: 25, y: 25}}>
+   *                      <div>I start with transformX: 25px and transformY: 25px;</div>
+   *                  </Draggable>
+   *              );
+   *          }
+   *      });
+   * ```
+   */
+  position: _propTypes.default.shape({
+    x: _propTypes.default.number,
+    y: _propTypes.default.number
+  }),
 
-    /**
-     * `position`, if present, defines the current position of the element.
-     *
-     *  This is similar to how form elements in React work - if no `position` is supplied, the component
-     *  is uncontrolled.
-     *
-     * Example:
-     *
-     * ```jsx
-     *      let App = React.createClass({
-     *          render: function () {
-     *              return (
-     *                  <Draggable position={{x: 25, y: 25}}>
-     *                      <div>I start with transformX: 25px and transformY: 25px;</div>
-     *                  </Draggable>
-     *              );
-     *          }
-     *      });
-     * ```
-     */
-    position: _propTypes.default.shape({
-      x: _propTypes.default.number,
-      y: _propTypes.default.number
-    }),
+  /**
+   * These properties should be defined on the child, not here.
+   */
+  className: _shims.dontSetMe,
+  style: _shims.dontSetMe,
+  transform: _shims.dontSetMe
+}));
 
-    /**
-     * These properties should be defined on the child, not here.
-     */
-    className: _shims.dontSetMe,
-    style: _shims.dontSetMe,
-    transform: _shims.dontSetMe
-  }));
-
-  _defineProperty(Draggable, "defaultProps", _objectSpread(_objectSpread({}, _DraggableCore.default.defaultProps), {}, {
-    axis: 'both',
-    bounds: false,
-    defaultClassName: 'react-draggable',
-    defaultClassNameDragging: 'react-draggable-dragging',
-    defaultClassNameDragged: 'react-draggable-dragged',
-    defaultPosition: {
-      x: 0,
-      y: 0
-    },
-    scale: 1
-  }));
+_defineProperty(Draggable, "defaultProps", _objectSpread(_objectSpread({}, _DraggableCore.default.defaultProps), {}, {
+  axis: 'both',
+  bounds: false,
+  defaultClassName: 'react-draggable',
+  defaultClassNameDragging: 'react-draggable-dragging',
+  defaultClassNameDragged: 'react-draggable-dragged',
+  defaultPosition: {
+    x: 0,
+    y: 0
+  },
+  scale: 1
+}));
 }(Draggable$1));
 
 var _require = Draggable$1,
-  Draggable = _require.default,
-  DraggableCore = _require.DraggableCore; // Previous versions of this lib exported <Draggable> as the root export. As to no-// them, or TypeScript, we export *both* as the root and as 'default'.
+    Draggable = _require.default,
+    DraggableCore = _require.DraggableCore; // Previous versions of this lib exported <Draggable> as the root export. As to no-// them, or TypeScript, we export *both* as the root and as 'default'.
 // See https://github.com/mzabriskie/react-draggable/pull/254
 // and https://github.com/mzabriskie/react-draggable/issues/266
 
@@ -8603,17 +8640,17 @@ function ownKeys$b(object, enumerableOnly) { var keys = Object.keys(object); if 
 function _objectSpread$b(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys$b(Object(source), !0).forEach(function (key) { _defineProperty$2(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys$b(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 var NodesSelection = (function (_ref) {
   var onSelectionDragStart = _ref.onSelectionDragStart,
-    onSelectionDrag = _ref.onSelectionDrag,
-    onSelectionDragStop = _ref.onSelectionDragStop,
-    onSelectionContextMenu = _ref.onSelectionContextMenu;
+      onSelectionDrag = _ref.onSelectionDrag,
+      onSelectionDragStop = _ref.onSelectionDragStop,
+      onSelectionContextMenu = _ref.onSelectionContextMenu;
 
   var _useStoreState = useStoreState(function (state) {
     return state.transform;
   }),
-    _useStoreState2 = _slicedToArray$1(_useStoreState, 3),
-    tX = _useStoreState2[0],
-    tY = _useStoreState2[1],
-    tScale = _useStoreState2[2];
+      _useStoreState2 = _slicedToArray$1(_useStoreState, 3),
+      tX = _useStoreState2[0],
+      tY = _useStoreState2[1],
+      tScale = _useStoreState2[2];
 
   var selectedNodesBbox = useStoreState(function (state) {
     return state.selectedNodesBbox;
@@ -8729,33 +8766,33 @@ var NodesSelection = (function (_ref) {
 
 var FlowRenderer = function FlowRenderer(_ref) {
   var children = _ref.children,
-    onPaneClick = _ref.onPaneClick,
-    onPaneContextMenu = _ref.onPaneContextMenu,
-    onPaneScroll = _ref.onPaneScroll,
-    onElementsRemove = _ref.onElementsRemove,
-    deleteKeyCode = _ref.deleteKeyCode,
-    onMove = _ref.onMove,
-    onMoveStart = _ref.onMoveStart,
-    onMoveEnd = _ref.onMoveEnd,
-    selectionKeyCode = _ref.selectionKeyCode,
-    multiSelectionKeyCode = _ref.multiSelectionKeyCode,
-    zoomActivationKeyCode = _ref.zoomActivationKeyCode,
-    elementsSelectable = _ref.elementsSelectable,
-    zoomOnScroll = _ref.zoomOnScroll,
-    zoomOnPinch = _ref.zoomOnPinch,
-    panOnScroll = _ref.panOnScroll,
-    panOnScrollSpeed = _ref.panOnScrollSpeed,
-    panOnScrollMode = _ref.panOnScrollMode,
-    zoomOnDoubleClick = _ref.zoomOnDoubleClick,
-    paneMoveable = _ref.paneMoveable,
-    defaultPosition = _ref.defaultPosition,
-    defaultZoom = _ref.defaultZoom,
-    translateExtent = _ref.translateExtent,
-    preventScrolling = _ref.preventScrolling,
-    onSelectionDragStart = _ref.onSelectionDragStart,
-    onSelectionDrag = _ref.onSelectionDrag,
-    onSelectionDragStop = _ref.onSelectionDragStop,
-    onSelectionContextMenu = _ref.onSelectionContextMenu;
+      onPaneClick = _ref.onPaneClick,
+      onPaneContextMenu = _ref.onPaneContextMenu,
+      onPaneScroll = _ref.onPaneScroll,
+      onElementsRemove = _ref.onElementsRemove,
+      deleteKeyCode = _ref.deleteKeyCode,
+      onMove = _ref.onMove,
+      onMoveStart = _ref.onMoveStart,
+      onMoveEnd = _ref.onMoveEnd,
+      selectionKeyCode = _ref.selectionKeyCode,
+      multiSelectionKeyCode = _ref.multiSelectionKeyCode,
+      zoomActivationKeyCode = _ref.zoomActivationKeyCode,
+      elementsSelectable = _ref.elementsSelectable,
+      zoomOnScroll = _ref.zoomOnScroll,
+      zoomOnPinch = _ref.zoomOnPinch,
+      panOnScroll = _ref.panOnScroll,
+      panOnScrollSpeed = _ref.panOnScrollSpeed,
+      panOnScrollMode = _ref.panOnScrollMode,
+      zoomOnDoubleClick = _ref.zoomOnDoubleClick,
+      paneMoveable = _ref.paneMoveable,
+      defaultPosition = _ref.defaultPosition,
+      defaultZoom = _ref.defaultZoom,
+      translateExtent = _ref.translateExtent,
+      preventScrolling = _ref.preventScrolling,
+      onSelectionDragStart = _ref.onSelectionDragStart,
+      onSelectionDrag = _ref.onSelectionDrag,
+      onSelectionDragStop = _ref.onSelectionDragStop,
+      onSelectionContextMenu = _ref.onSelectionContextMenu;
   var unsetNodesSelection = useStoreActions(function (actions) {
     return actions.unsetNodesSelection;
   });
@@ -8937,21 +8974,21 @@ function _objectSpread$a(target) { for (var i = 1; i < arguments.length; i++) { 
 
 var EdgeText = function EdgeText(_ref) {
   var x = _ref.x,
-    y = _ref.y,
-    label = _ref.label,
-    _ref$labelStyle = _ref.labelStyle,
-    labelStyle = _ref$labelStyle === void 0 ? {} : _ref$labelStyle,
-    _ref$labelShowBg = _ref.labelShowBg,
-    labelShowBg = _ref$labelShowBg === void 0 ? true : _ref$labelShowBg,
-    _ref$labelBgStyle = _ref.labelBgStyle,
-    labelBgStyle = _ref$labelBgStyle === void 0 ? {} : _ref$labelBgStyle,
-    _ref$labelBgPadding = _ref.labelBgPadding,
-    labelBgPadding = _ref$labelBgPadding === void 0 ? [2, 4] : _ref$labelBgPadding,
-    _ref$labelBgBorderRad = _ref.labelBgBorderRadius,
-    labelBgBorderRadius = _ref$labelBgBorderRad === void 0 ? 2 : _ref$labelBgBorderRad,
-    children = _ref.children,
-    className = _ref.className,
-    rest = _objectWithoutProperties(_ref, _excluded$3);
+      y = _ref.y,
+      label = _ref.label,
+      _ref$labelStyle = _ref.labelStyle,
+      labelStyle = _ref$labelStyle === void 0 ? {} : _ref$labelStyle,
+      _ref$labelShowBg = _ref.labelShowBg,
+      labelShowBg = _ref$labelShowBg === void 0 ? true : _ref$labelShowBg,
+      _ref$labelBgStyle = _ref.labelBgStyle,
+      labelBgStyle = _ref$labelBgStyle === void 0 ? {} : _ref$labelBgStyle,
+      _ref$labelBgPadding = _ref.labelBgPadding,
+      labelBgPadding = _ref$labelBgPadding === void 0 ? [2, 4] : _ref$labelBgPadding,
+      _ref$labelBgBorderRad = _ref.labelBgBorderRadius,
+      labelBgBorderRadius = _ref$labelBgBorderRad === void 0 ? 2 : _ref$labelBgBorderRad,
+      children = _ref.children,
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$3);
 
   var edgeRef = React$1.useRef(null);
 
@@ -8961,9 +8998,9 @@ var EdgeText = function EdgeText(_ref) {
     width: 0,
     height: 0
   }),
-    _useState2 = _slicedToArray$1(_useState, 2),
-    edgeTextBbox = _useState2[0],
-    setEdgeTextBbox = _useState2[1];
+      _useState2 = _slicedToArray$1(_useState, 2),
+      edgeTextBbox = _useState2[0],
+      setEdgeTextBbox = _useState2[1];
 
   var edgeTextClasses = cc(['react-flow__edge-textwrapper', className]);
   React$1.useEffect(function () {
@@ -9015,13 +9052,13 @@ var getMarkerEnd = function getMarkerEnd(arrowHeadType, markerEndId) {
 var LeftOrRight = [exports.Position.Left, exports.Position.Right];
 var getCenter = function getCenter(_ref) {
   var sourceX = _ref.sourceX,
-    sourceY = _ref.sourceY,
-    targetX = _ref.targetX,
-    targetY = _ref.targetY,
-    _ref$sourcePosition = _ref.sourcePosition,
-    sourcePosition = _ref$sourcePosition === void 0 ? exports.Position.Bottom : _ref$sourcePosition,
-    _ref$targetPosition = _ref.targetPosition,
-    targetPosition = _ref$targetPosition === void 0 ? exports.Position.Top : _ref$targetPosition;
+      sourceY = _ref.sourceY,
+      targetX = _ref.targetX,
+      targetY = _ref.targetY,
+      _ref$sourcePosition = _ref.sourcePosition,
+      sourcePosition = _ref$sourcePosition === void 0 ? exports.Position.Bottom : _ref$sourcePosition,
+      _ref$targetPosition = _ref.targetPosition,
+      targetPosition = _ref$targetPosition === void 0 ? exports.Position.Top : _ref$targetPosition;
   var sourceIsLeftOrRight = LeftOrRight.includes(sourcePosition);
   var targetIsLeftOrRight = LeftOrRight.includes(targetPosition); // we expect flows to be horizontal or vertical (all handles left or right respectively top or bottom)
   // a mixed edge is when one the source is on the left and the target is on the top for example.
@@ -9047,50 +9084,17 @@ var getCenter = function getCenter(_ref) {
   return [centerX, centerY, xOffset, yOffset];
 };
 
-
-function getControlWithCurvature({ pos, x1, y1, x2, y2, c }) {
-  let ctX, ctY;
-  switch (pos) {
-    case Position.Left:
-      {
-        ctX = x1 - calculateControlOffset(x1 - x2, c);
-        ctY = y1;
-      }
-      break;
-    case Position.Right:
-      {
-        ctX = x1 + calculateControlOffset(x2 - x1, c);
-        ctY = y1;
-      }
-      break;
-    case Position.Top:
-      {
-        ctX = x1;
-        ctY = y1 - calculateControlOffset(y1 - y2, c);
-      }
-      break;
-    case Position.Bottom:
-      {
-        ctX = x1;
-        ctY = y1 + calculateControlOffset(y2 - y1, c);
-      }
-      break;
-  }
-  return [ctX, ctY];
-}
-
-
 function getBezierPath(_ref) {
   var sourceX = _ref.sourceX,
-    sourceY = _ref.sourceY,
-    _ref$sourcePosition = _ref.sourcePosition,
-    sourcePosition = _ref$sourcePosition === void 0 ? exports.Position.Bottom : _ref$sourcePosition,
-    targetX = _ref.targetX,
-    targetY = _ref.targetY,
-    _ref$targetPosition = _ref.targetPosition,
-    targetPosition = _ref$targetPosition === void 0 ? exports.Position.Top : _ref$targetPosition,
-    centerX = _ref.centerX,
-    centerY = _ref.centerY;
+      sourceY = _ref.sourceY,
+      _ref$sourcePosition = _ref.sourcePosition,
+      sourcePosition = _ref$sourcePosition === void 0 ? exports.Position.Bottom : _ref$sourcePosition,
+      targetX = _ref.targetX,
+      targetY = _ref.targetY,
+      _ref$targetPosition = _ref.targetPosition,
+      targetPosition = _ref$targetPosition === void 0 ? exports.Position.Top : _ref$targetPosition,
+      centerX = _ref.centerX,
+      centerY = _ref.centerY;
 
   var _getCenter = getCenter({
     sourceX: sourceX,
@@ -9098,12 +9102,11 @@ function getBezierPath(_ref) {
     targetX: targetX,
     targetY: targetY
   }),
-    _getCenter2 = _slicedToArray$1(_getCenter, 2),
-    _centerX = _getCenter2[0],
-    _centerY = _getCenter2[1];
+      _getCenter2 = _slicedToArray$1(_getCenter, 2),
+      _centerX = _getCenter2[0],
+      _centerY = _getCenter2[1];
 
-
-  var leftAndRight = [Position.Left, Position.Right];
+  var leftAndRight = [exports.Position.Left, exports.Position.Right];
   var cX = typeof centerX !== 'undefined' ? centerX : _centerX;
   var cY = typeof centerY !== 'undefined' ? centerY : _centerY;
   var path = "M".concat(sourceX, ",").concat(sourceY, " C").concat(sourceX, ",").concat(cY, " ").concat(targetX, ",").concat(cY, " ").concat(targetX, ",").concat(targetY);
@@ -9120,22 +9123,22 @@ function getBezierPath(_ref) {
 }
 var BezierEdge = /*#__PURE__*/React$1.memo(function (_ref2) {
   var sourceX = _ref2.sourceX,
-    sourceY = _ref2.sourceY,
-    targetX = _ref2.targetX,
-    targetY = _ref2.targetY,
-    _ref2$sourcePosition = _ref2.sourcePosition,
-    sourcePosition = _ref2$sourcePosition === void 0 ? exports.Position.Bottom : _ref2$sourcePosition,
-    _ref2$targetPosition = _ref2.targetPosition,
-    targetPosition = _ref2$targetPosition === void 0 ? exports.Position.Top : _ref2$targetPosition,
-    label = _ref2.label,
-    labelStyle = _ref2.labelStyle,
-    labelShowBg = _ref2.labelShowBg,
-    labelBgStyle = _ref2.labelBgStyle,
-    labelBgPadding = _ref2.labelBgPadding,
-    labelBgBorderRadius = _ref2.labelBgBorderRadius,
-    style = _ref2.style,
-    arrowHeadType = _ref2.arrowHeadType,
-    markerEndId = _ref2.markerEndId;
+      sourceY = _ref2.sourceY,
+      targetX = _ref2.targetX,
+      targetY = _ref2.targetY,
+      _ref2$sourcePosition = _ref2.sourcePosition,
+      sourcePosition = _ref2$sourcePosition === void 0 ? exports.Position.Bottom : _ref2$sourcePosition,
+      _ref2$targetPosition = _ref2.targetPosition,
+      targetPosition = _ref2$targetPosition === void 0 ? exports.Position.Top : _ref2$targetPosition,
+      label = _ref2.label,
+      labelStyle = _ref2.labelStyle,
+      labelShowBg = _ref2.labelShowBg,
+      labelBgStyle = _ref2.labelBgStyle,
+      labelBgPadding = _ref2.labelBgPadding,
+      labelBgBorderRadius = _ref2.labelBgBorderRadius,
+      style = _ref2.style,
+      arrowHeadType = _ref2.arrowHeadType,
+      markerEndId = _ref2.markerEndId;
 
   var _getCenter3 = getCenter({
     sourceX: sourceX,
@@ -9145,9 +9148,9 @@ var BezierEdge = /*#__PURE__*/React$1.memo(function (_ref2) {
     sourcePosition: sourcePosition,
     targetPosition: targetPosition
   }),
-    _getCenter4 = _slicedToArray$1(_getCenter3, 2),
-    centerX = _getCenter4[0],
-    centerY = _getCenter4[1];
+      _getCenter4 = _slicedToArray$1(_getCenter3, 2),
+      centerX = _getCenter4[0],
+      centerY = _getCenter4[1];
 
   var path = getBezierPath({
     sourceX: sourceX,
@@ -9214,17 +9217,17 @@ var rightTopCorner = function rightTopCorner(x, y, size) {
 
 function getSmoothStepPath(_ref) {
   var sourceX = _ref.sourceX,
-    sourceY = _ref.sourceY,
-    _ref$sourcePosition = _ref.sourcePosition,
-    sourcePosition = _ref$sourcePosition === void 0 ? exports.Position.Bottom : _ref$sourcePosition,
-    targetX = _ref.targetX,
-    targetY = _ref.targetY,
-    _ref$targetPosition = _ref.targetPosition,
-    targetPosition = _ref$targetPosition === void 0 ? exports.Position.Top : _ref$targetPosition,
-    _ref$borderRadius = _ref.borderRadius,
-    borderRadius = _ref$borderRadius === void 0 ? 5 : _ref$borderRadius,
-    centerX = _ref.centerX,
-    centerY = _ref.centerY;
+      sourceY = _ref.sourceY,
+      _ref$sourcePosition = _ref.sourcePosition,
+      sourcePosition = _ref$sourcePosition === void 0 ? exports.Position.Bottom : _ref$sourcePosition,
+      targetX = _ref.targetX,
+      targetY = _ref.targetY,
+      _ref$targetPosition = _ref.targetPosition,
+      targetPosition = _ref$targetPosition === void 0 ? exports.Position.Top : _ref$targetPosition,
+      _ref$borderRadius = _ref.borderRadius,
+      borderRadius = _ref$borderRadius === void 0 ? 5 : _ref$borderRadius,
+      centerX = _ref.centerX,
+      centerY = _ref.centerY;
 
   var _getCenter = getCenter({
     sourceX: sourceX,
@@ -9232,11 +9235,11 @@ function getSmoothStepPath(_ref) {
     targetX: targetX,
     targetY: targetY
   }),
-    _getCenter2 = _slicedToArray$1(_getCenter, 4),
-    _centerX = _getCenter2[0],
-    _centerY = _getCenter2[1],
-    offsetX = _getCenter2[2],
-    offsetY = _getCenter2[3];
+      _getCenter2 = _slicedToArray$1(_getCenter, 4),
+      _centerX = _getCenter2[0],
+      _centerY = _getCenter2[1],
+      offsetX = _getCenter2[2],
+      offsetY = _getCenter2[3];
 
   var cornerWidth = Math.min(borderRadius, Math.abs(targetX - sourceX));
   var cornerHeight = Math.min(borderRadius, Math.abs(targetY - sourceY));
@@ -9286,24 +9289,24 @@ function getSmoothStepPath(_ref) {
 }
 var SmoothStepEdge = /*#__PURE__*/React$1.memo(function (_ref2) {
   var sourceX = _ref2.sourceX,
-    sourceY = _ref2.sourceY,
-    targetX = _ref2.targetX,
-    targetY = _ref2.targetY,
-    label = _ref2.label,
-    labelStyle = _ref2.labelStyle,
-    labelShowBg = _ref2.labelShowBg,
-    labelBgStyle = _ref2.labelBgStyle,
-    labelBgPadding = _ref2.labelBgPadding,
-    labelBgBorderRadius = _ref2.labelBgBorderRadius,
-    style = _ref2.style,
-    _ref2$sourcePosition = _ref2.sourcePosition,
-    sourcePosition = _ref2$sourcePosition === void 0 ? exports.Position.Bottom : _ref2$sourcePosition,
-    _ref2$targetPosition = _ref2.targetPosition,
-    targetPosition = _ref2$targetPosition === void 0 ? exports.Position.Top : _ref2$targetPosition,
-    arrowHeadType = _ref2.arrowHeadType,
-    markerEndId = _ref2.markerEndId,
-    _ref2$borderRadius = _ref2.borderRadius,
-    borderRadius = _ref2$borderRadius === void 0 ? 5 : _ref2$borderRadius;
+      sourceY = _ref2.sourceY,
+      targetX = _ref2.targetX,
+      targetY = _ref2.targetY,
+      label = _ref2.label,
+      labelStyle = _ref2.labelStyle,
+      labelShowBg = _ref2.labelShowBg,
+      labelBgStyle = _ref2.labelBgStyle,
+      labelBgPadding = _ref2.labelBgPadding,
+      labelBgBorderRadius = _ref2.labelBgBorderRadius,
+      style = _ref2.style,
+      _ref2$sourcePosition = _ref2.sourcePosition,
+      sourcePosition = _ref2$sourcePosition === void 0 ? exports.Position.Bottom : _ref2$sourcePosition,
+      _ref2$targetPosition = _ref2.targetPosition,
+      targetPosition = _ref2$targetPosition === void 0 ? exports.Position.Top : _ref2$targetPosition,
+      arrowHeadType = _ref2.arrowHeadType,
+      markerEndId = _ref2.markerEndId,
+      _ref2$borderRadius = _ref2.borderRadius,
+      borderRadius = _ref2$borderRadius === void 0 ? 5 : _ref2$borderRadius;
 
   var _getCenter3 = getCenter({
     sourceX: sourceX,
@@ -9313,9 +9316,9 @@ var SmoothStepEdge = /*#__PURE__*/React$1.memo(function (_ref2) {
     sourcePosition: sourcePosition,
     targetPosition: targetPosition
   }),
-    _getCenter4 = _slicedToArray$1(_getCenter3, 2),
-    centerX = _getCenter4[0],
-    centerY = _getCenter4[1];
+      _getCenter4 = _slicedToArray$1(_getCenter3, 2),
+      centerX = _getCenter4[0],
+      centerY = _getCenter4[1];
 
   var path = getSmoothStepPath({
     sourceX: sourceX,
@@ -9355,23 +9358,23 @@ var getSourceHandle = function getSourceHandle(handleId, sourceNode, connectionH
 
 var ConnectionLine = (function (_ref) {
   var connectionNodeId = _ref.connectionNodeId,
-    connectionHandleId = _ref.connectionHandleId,
-    connectionHandleType = _ref.connectionHandleType,
-    connectionLineStyle = _ref.connectionLineStyle,
-    connectionPositionX = _ref.connectionPositionX,
-    connectionPositionY = _ref.connectionPositionY,
-    _ref$connectionLineTy = _ref.connectionLineType,
-    connectionLineType = _ref$connectionLineTy === void 0 ? exports.ConnectionLineType.Bezier : _ref$connectionLineTy,
-    _ref$nodes = _ref.nodes,
-    nodes = _ref$nodes === void 0 ? [] : _ref$nodes,
-    transform = _ref.transform,
-    isConnectable = _ref.isConnectable,
-    CustomConnectionLineComponent = _ref.CustomConnectionLineComponent;
+      connectionHandleId = _ref.connectionHandleId,
+      connectionHandleType = _ref.connectionHandleType,
+      connectionLineStyle = _ref.connectionLineStyle,
+      connectionPositionX = _ref.connectionPositionX,
+      connectionPositionY = _ref.connectionPositionY,
+      _ref$connectionLineTy = _ref.connectionLineType,
+      connectionLineType = _ref$connectionLineTy === void 0 ? exports.ConnectionLineType.Bezier : _ref$connectionLineTy,
+      _ref$nodes = _ref.nodes,
+      nodes = _ref$nodes === void 0 ? [] : _ref$nodes,
+      transform = _ref.transform,
+      isConnectable = _ref.isConnectable,
+      CustomConnectionLineComponent = _ref.CustomConnectionLineComponent;
 
   var _useState = React$1.useState(null),
-    _useState2 = _slicedToArray$1(_useState, 2),
-    sourceNode = _useState2[0],
-    setSourceNode = _useState2[1];
+      _useState2 = _slicedToArray$1(_useState, 2),
+      sourceNode = _useState2[0],
+      setSourceNode = _useState2[1];
 
   var nodeId = connectionNodeId;
   var handleId = connectionHandleId;
@@ -9458,7 +9461,7 @@ var ConnectionLine = (function (_ref) {
 
 var Marker = function Marker(_ref) {
   var id = _ref.id,
-    children = _ref.children;
+      children = _ref.children;
   return /*#__PURE__*/React__default["default"].createElement("marker", {
     className: "react-flow__arrowhead",
     id: id,
@@ -9507,18 +9510,18 @@ var StepEdge = /*#__PURE__*/React$1.memo(function (props) {
 
 var StraightEdge = /*#__PURE__*/React$1.memo(function (_ref) {
   var sourceX = _ref.sourceX,
-    sourceY = _ref.sourceY,
-    targetX = _ref.targetX,
-    targetY = _ref.targetY,
-    label = _ref.label,
-    labelStyle = _ref.labelStyle,
-    labelShowBg = _ref.labelShowBg,
-    labelBgStyle = _ref.labelBgStyle,
-    labelBgPadding = _ref.labelBgPadding,
-    labelBgBorderRadius = _ref.labelBgBorderRadius,
-    style = _ref.style,
-    arrowHeadType = _ref.arrowHeadType,
-    markerEndId = _ref.markerEndId;
+      sourceY = _ref.sourceY,
+      targetX = _ref.targetX,
+      targetY = _ref.targetY,
+      label = _ref.label,
+      labelStyle = _ref.labelStyle,
+      labelShowBg = _ref.labelShowBg,
+      labelBgStyle = _ref.labelBgStyle,
+      labelBgPadding = _ref.labelBgPadding,
+      labelBgBorderRadius = _ref.labelBgBorderRadius,
+      style = _ref.style,
+      arrowHeadType = _ref.arrowHeadType,
+      markerEndId = _ref.markerEndId;
   var yOffset = Math.abs(targetY - sourceY) / 2;
   var centerY = targetY < sourceY ? targetY + yOffset : targetY - yOffset;
   var xOffset = Math.abs(targetX - sourceX) / 2;
@@ -9635,10 +9638,10 @@ function onMouseDown(event, handleId, nodeId, setConnectionNodeId, setPosition, 
     });
 
     var _checkElementBelowIsV = checkElementBelowIsValid(event, connectionMode, isTarget, nodeId, handleId, isValidConnection, doc),
-      connection = _checkElementBelowIsV.connection,
-      elementBelow = _checkElementBelowIsV.elementBelow,
-      isValid = _checkElementBelowIsV.isValid,
-      isHoveringHandle = _checkElementBelowIsV.isHoveringHandle;
+        connection = _checkElementBelowIsV.connection,
+        elementBelow = _checkElementBelowIsV.elementBelow,
+        isValid = _checkElementBelowIsV.isValid,
+        isHoveringHandle = _checkElementBelowIsV.isHoveringHandle;
 
     if (!isHoveringHandle) {
       return resetRecentHandle(recentHoveredHandle);
@@ -9655,8 +9658,8 @@ function onMouseDown(event, handleId, nodeId, setConnectionNodeId, setPosition, 
 
   function onMouseUp(event) {
     var _checkElementBelowIsV2 = checkElementBelowIsValid(event, connectionMode, isTarget, nodeId, handleId, isValidConnection, doc),
-      connection = _checkElementBelowIsV2.connection,
-      isValid = _checkElementBelowIsV2.isValid;
+        connection = _checkElementBelowIsV2.connection,
+        isValid = _checkElementBelowIsV2.isValid;
 
     onConnectStop === null || onConnectStop === void 0 ? void 0 : onConnectStop(event);
 
@@ -9698,11 +9701,11 @@ var shiftY = function shiftY(y, shift, position) {
 
 var EdgeAnchor = function EdgeAnchor(_ref) {
   var className = _ref.className,
-    position = _ref.position,
-    centerX = _ref.centerX,
-    centerY = _ref.centerY,
-    _ref$radius = _ref.radius,
-    radius = _ref$radius === void 0 ? 10 : _ref$radius;
+      position = _ref.position,
+      centerX = _ref.centerX,
+      centerY = _ref.centerY,
+      _ref$radius = _ref.radius,
+      radius = _ref$radius === void 0 ? 10 : _ref$radius;
   return /*#__PURE__*/React__default["default"].createElement("circle", {
     className: cc(['react-flow__edgeupdater', className]),
     cx: shiftX(centerX, radius, position),
@@ -9716,43 +9719,43 @@ var EdgeAnchor = function EdgeAnchor(_ref) {
 var wrapEdge = (function (EdgeComponent) {
   var EdgeWrapper = function EdgeWrapper(_ref) {
     var id = _ref.id,
-      className = _ref.className,
-      type = _ref.type,
-      data = _ref.data,
-      onClick = _ref.onClick,
-      onEdgeDoubleClick = _ref.onEdgeDoubleClick,
-      selected = _ref.selected,
-      animated = _ref.animated,
-      label = _ref.label,
-      labelStyle = _ref.labelStyle,
-      labelShowBg = _ref.labelShowBg,
-      labelBgStyle = _ref.labelBgStyle,
-      labelBgPadding = _ref.labelBgPadding,
-      labelBgBorderRadius = _ref.labelBgBorderRadius,
-      style = _ref.style,
-      arrowHeadType = _ref.arrowHeadType,
-      source = _ref.source,
-      target = _ref.target,
-      sourceX = _ref.sourceX,
-      sourceY = _ref.sourceY,
-      targetX = _ref.targetX,
-      targetY = _ref.targetY,
-      sourcePosition = _ref.sourcePosition,
-      targetPosition = _ref.targetPosition,
-      elementsSelectable = _ref.elementsSelectable,
-      markerEndId = _ref.markerEndId,
-      isHidden = _ref.isHidden,
-      sourceHandleId = _ref.sourceHandleId,
-      targetHandleId = _ref.targetHandleId,
-      handleEdgeUpdate = _ref.handleEdgeUpdate,
-      onConnectEdge = _ref.onConnectEdge,
-      onContextMenu = _ref.onContextMenu,
-      onMouseEnter = _ref.onMouseEnter,
-      onMouseMove = _ref.onMouseMove,
-      onMouseLeave = _ref.onMouseLeave,
-      edgeUpdaterRadius = _ref.edgeUpdaterRadius,
-      onEdgeUpdateStart = _ref.onEdgeUpdateStart,
-      onEdgeUpdateEnd = _ref.onEdgeUpdateEnd;
+        className = _ref.className,
+        type = _ref.type,
+        data = _ref.data,
+        onClick = _ref.onClick,
+        onEdgeDoubleClick = _ref.onEdgeDoubleClick,
+        selected = _ref.selected,
+        animated = _ref.animated,
+        label = _ref.label,
+        labelStyle = _ref.labelStyle,
+        labelShowBg = _ref.labelShowBg,
+        labelBgStyle = _ref.labelBgStyle,
+        labelBgPadding = _ref.labelBgPadding,
+        labelBgBorderRadius = _ref.labelBgBorderRadius,
+        style = _ref.style,
+        arrowHeadType = _ref.arrowHeadType,
+        source = _ref.source,
+        target = _ref.target,
+        sourceX = _ref.sourceX,
+        sourceY = _ref.sourceY,
+        targetX = _ref.targetX,
+        targetY = _ref.targetY,
+        sourcePosition = _ref.sourcePosition,
+        targetPosition = _ref.targetPosition,
+        elementsSelectable = _ref.elementsSelectable,
+        markerEndId = _ref.markerEndId,
+        isHidden = _ref.isHidden,
+        sourceHandleId = _ref.sourceHandleId,
+        targetHandleId = _ref.targetHandleId,
+        handleEdgeUpdate = _ref.handleEdgeUpdate,
+        onConnectEdge = _ref.onConnectEdge,
+        onContextMenu = _ref.onContextMenu,
+        onMouseEnter = _ref.onMouseEnter,
+        onMouseMove = _ref.onMouseMove,
+        onMouseLeave = _ref.onMouseLeave,
+        edgeUpdaterRadius = _ref.edgeUpdaterRadius,
+        onEdgeUpdateStart = _ref.onEdgeUpdateStart,
+        onEdgeUpdateEnd = _ref.onEdgeUpdateEnd;
     var addSelectedElements = useStoreActions(function (actions) {
       return actions.addSelectedElements;
     });
@@ -9770,9 +9773,9 @@ var wrapEdge = (function (EdgeComponent) {
     });
 
     var _useState = React$1.useState(false),
-      _useState2 = _slicedToArray$1(_useState, 2),
-      updating = _useState2[0],
-      setUpdating = _useState2[1];
+        _useState2 = _slicedToArray$1(_useState, 2),
+        updating = _useState2[0],
+        setUpdating = _useState2[1];
 
     var inactive = !elementsSelectable && !onClick;
     var edgeClasses = cc(['react-flow__edge', "react-flow__edge-".concat(type), className, {
@@ -10000,10 +10003,10 @@ var getEdgePositions = function getEdgePositions(sourceNode, sourceHandle, sourc
 };
 function isEdgeVisible(_ref) {
   var sourcePos = _ref.sourcePos,
-    targetPos = _ref.targetPos,
-    width = _ref.width,
-    height = _ref.height,
-    transform = _ref.transform;
+      targetPos = _ref.targetPos,
+      width = _ref.width,
+      height = _ref.height,
+      transform = _ref.transform;
   var edgeBox = {
     x: Math.min(sourcePos.x, targetPos.x),
     y: Math.min(sourcePos.y, targetPos.y),
@@ -10049,21 +10052,21 @@ var getSourceTargetNodes = function getSourceTargetNodes(edge, nodes) {
 
 var Edge = function Edge(_ref) {
   var edge = _ref.edge,
-    props = _ref.props,
-    nodes = _ref.nodes,
-    selectedElements = _ref.selectedElements,
-    elementsSelectable = _ref.elementsSelectable,
-    transform = _ref.transform,
-    width = _ref.width,
-    height = _ref.height,
-    onlyRenderVisibleElements = _ref.onlyRenderVisibleElements,
-    connectionMode = _ref.connectionMode;
+      props = _ref.props,
+      nodes = _ref.nodes,
+      selectedElements = _ref.selectedElements,
+      elementsSelectable = _ref.elementsSelectable,
+      transform = _ref.transform,
+      width = _ref.width,
+      height = _ref.height,
+      onlyRenderVisibleElements = _ref.onlyRenderVisibleElements,
+      connectionMode = _ref.connectionMode;
   var sourceHandleId = edge.sourceHandle || null;
   var targetHandleId = edge.targetHandle || null;
 
   var _getSourceTargetNodes = getSourceTargetNodes(edge, nodes),
-    sourceNode = _getSourceTargetNodes.sourceNode,
-    targetNode = _getSourceTargetNodes.targetNode;
+      sourceNode = _getSourceTargetNodes.sourceNode,
+      targetNode = _getSourceTargetNodes.targetNode;
 
   var onConnectEdge = React$1.useCallback(function (connection) {
     var _props$onEdgeUpdate;
@@ -10107,10 +10110,10 @@ var Edge = function Edge(_ref) {
   }
 
   var _getEdgePositions = getEdgePositions(sourceNode, sourceHandle, sourcePosition, targetNode, targetHandle, targetPosition),
-    sourceX = _getEdgePositions.sourceX,
-    sourceY = _getEdgePositions.sourceY,
-    targetX = _getEdgePositions.targetX,
-    targetY = _getEdgePositions.targetY;
+      sourceX = _getEdgePositions.sourceX,
+      sourceY = _getEdgePositions.sourceY,
+      targetX = _getEdgePositions.targetX,
+      targetY = _getEdgePositions.targetY;
 
   var isVisible = onlyRenderVisibleElements ? isEdgeVisible({
     sourcePos: {
@@ -10219,10 +10222,10 @@ var EdgeRenderer = function EdgeRenderer(props) {
   }
 
   var connectionLineType = props.connectionLineType,
-    arrowHeadColor = props.arrowHeadColor,
-    connectionLineStyle = props.connectionLineStyle,
-    connectionLineComponent = props.connectionLineComponent,
-    onlyRenderVisibleElements = props.onlyRenderVisibleElements;
+      arrowHeadColor = props.arrowHeadColor,
+      connectionLineStyle = props.connectionLineStyle,
+      connectionLineComponent = props.connectionLineComponent,
+      onlyRenderVisibleElements = props.onlyRenderVisibleElements;
   var transformStyle = "translate(".concat(transform[0], "px,").concat(transform[1], "px) scale(").concat(transform[2], ")");
   var renderConnectionLine = connectionNodeId && connectionHandleType;
   return /*#__PURE__*/React__default["default"].createElement("svg", {
@@ -10268,14 +10271,14 @@ var EdgeRenderer$1 = /*#__PURE__*/React$1.memo(EdgeRenderer);
 
 var DEFAULT_PADDING = 0.1;
 var initialZoomPanHelper = {
-  zoomIn: function zoomIn() { },
-  zoomOut: function zoomOut() { },
-  zoomTo: function zoomTo(_) { },
-  transform: function transform(_) { },
+  zoomIn: function zoomIn() {},
+  zoomOut: function zoomOut() {},
+  zoomTo: function zoomTo(_) {},
+  transform: function transform(_) {},
   fitView: function fitView() {
   },
-  setCenter: function setCenter(_, __) { },
-  fitBounds: function fitBounds(_) { },
+  setCenter: function setCenter(_, __) {},
+  fitBounds: function fitBounds(_) {},
   project: function project(position) {
     return position;
   },
@@ -10321,11 +10324,11 @@ var useZoomPanHelper = function useZoomPanHelper() {
           };
 
           var _store$getState = store.getState(),
-            nodes = _store$getState.nodes,
-            width = _store$getState.width,
-            height = _store$getState.height,
-            minZoom = _store$getState.minZoom,
-            maxZoom = _store$getState.maxZoom;
+              nodes = _store$getState.nodes,
+              width = _store$getState.width,
+              height = _store$getState.height,
+              minZoom = _store$getState.minZoom,
+              maxZoom = _store$getState.maxZoom;
 
           if (!nodes.length) {
             return;
@@ -10336,19 +10339,19 @@ var useZoomPanHelper = function useZoomPanHelper() {
           }));
 
           var _getTransformForBound = getTransformForBounds(bounds, width, height, (_options$minZoom = options.minZoom) !== null && _options$minZoom !== void 0 ? _options$minZoom : minZoom, (_options$maxZoom = options.maxZoom) !== null && _options$maxZoom !== void 0 ? _options$maxZoom : maxZoom, (_options$padding = options.padding) !== null && _options$padding !== void 0 ? _options$padding : DEFAULT_PADDING),
-            _getTransformForBound2 = _slicedToArray$1(_getTransformForBound, 3),
-            x = _getTransformForBound2[0],
-            y = _getTransformForBound2[1],
-            zoom = _getTransformForBound2[2];
+              _getTransformForBound2 = _slicedToArray$1(_getTransformForBound, 3),
+              x = _getTransformForBound2[0],
+              y = _getTransformForBound2[1],
+              zoom = _getTransformForBound2[2];
 
           var transform = identity.translate(x, y).scale(zoom);
           d3Zoom.transform(getTransition(d3Selection, options.duration), transform);
         },
         setCenter: function setCenter(x, y, zoom, duration) {
           var _store$getState2 = store.getState(),
-            width = _store$getState2.width,
-            height = _store$getState2.height,
-            maxZoom = _store$getState2.maxZoom;
+              width = _store$getState2.width,
+              height = _store$getState2.height,
+              maxZoom = _store$getState2.maxZoom;
 
           var nextZoom = typeof zoom !== 'undefined' ? zoom : maxZoom;
           var centerX = width / 2 - x * nextZoom;
@@ -10361,25 +10364,25 @@ var useZoomPanHelper = function useZoomPanHelper() {
           var duration = arguments.length > 2 ? arguments[2] : undefined;
 
           var _store$getState3 = store.getState(),
-            width = _store$getState3.width,
-            height = _store$getState3.height,
-            minZoom = _store$getState3.minZoom,
-            maxZoom = _store$getState3.maxZoom;
+              width = _store$getState3.width,
+              height = _store$getState3.height,
+              minZoom = _store$getState3.minZoom,
+              maxZoom = _store$getState3.maxZoom;
 
           var _getTransformForBound3 = getTransformForBounds(bounds, width, height, minZoom, maxZoom, padding),
-            _getTransformForBound4 = _slicedToArray$1(_getTransformForBound3, 3),
-            x = _getTransformForBound4[0],
-            y = _getTransformForBound4[1],
-            zoom = _getTransformForBound4[2];
+              _getTransformForBound4 = _slicedToArray$1(_getTransformForBound3, 3),
+              x = _getTransformForBound4[0],
+              y = _getTransformForBound4[1],
+              zoom = _getTransformForBound4[2];
 
           var transform = identity.translate(x, y).scale(zoom);
           d3Zoom.transform(getTransition(d3Selection, duration), transform);
         },
         project: function project(position) {
           var _store$getState4 = store.getState(),
-            transform = _store$getState4.transform,
-            snapToGrid = _store$getState4.snapToGrid,
-            snapGrid = _store$getState4.snapGrid;
+              transform = _store$getState4.transform,
+              snapToGrid = _store$getState4.snapToGrid,
+              snapGrid = _store$getState4.snapGrid;
 
           return pointToRendererPoint(position, transform, snapToGrid, snapGrid);
         },
@@ -10394,72 +10397,72 @@ var useZoomPanHelper = function useZoomPanHelper() {
 
 var GraphView = function GraphView(_ref) {
   var nodeTypes = _ref.nodeTypes,
-    edgeTypes = _ref.edgeTypes,
-    onMove = _ref.onMove,
-    onMoveStart = _ref.onMoveStart,
-    onMoveEnd = _ref.onMoveEnd,
-    onLoad = _ref.onLoad,
-    onElementClick = _ref.onElementClick,
-    onNodeDoubleClick = _ref.onNodeDoubleClick,
-    onEdgeDoubleClick = _ref.onEdgeDoubleClick,
-    onNodeMouseEnter = _ref.onNodeMouseEnter,
-    onNodeMouseMove = _ref.onNodeMouseMove,
-    onNodeMouseLeave = _ref.onNodeMouseLeave,
-    onNodeContextMenu = _ref.onNodeContextMenu,
-    onNodeDragStart = _ref.onNodeDragStart,
-    onNodeDrag = _ref.onNodeDrag,
-    onNodeDragStop = _ref.onNodeDragStop,
-    onSelectionDragStart = _ref.onSelectionDragStart,
-    onSelectionDrag = _ref.onSelectionDrag,
-    onSelectionDragStop = _ref.onSelectionDragStop,
-    onSelectionContextMenu = _ref.onSelectionContextMenu,
-    connectionMode = _ref.connectionMode,
-    connectionLineType = _ref.connectionLineType,
-    connectionLineStyle = _ref.connectionLineStyle,
-    connectionLineComponent = _ref.connectionLineComponent,
-    selectionKeyCode = _ref.selectionKeyCode,
-    multiSelectionKeyCode = _ref.multiSelectionKeyCode,
-    zoomActivationKeyCode = _ref.zoomActivationKeyCode,
-    onElementsRemove = _ref.onElementsRemove,
-    deleteKeyCode = _ref.deleteKeyCode,
-    onConnect = _ref.onConnect,
-    onConnectStart = _ref.onConnectStart,
-    onConnectStop = _ref.onConnectStop,
-    onConnectEnd = _ref.onConnectEnd,
-    snapToGrid = _ref.snapToGrid,
-    snapGrid = _ref.snapGrid,
-    onlyRenderVisibleElements = _ref.onlyRenderVisibleElements,
-    nodesDraggable = _ref.nodesDraggable,
-    nodesConnectable = _ref.nodesConnectable,
-    elementsSelectable = _ref.elementsSelectable,
-    selectNodesOnDrag = _ref.selectNodesOnDrag,
-    minZoom = _ref.minZoom,
-    maxZoom = _ref.maxZoom,
-    defaultZoom = _ref.defaultZoom,
-    defaultPosition = _ref.defaultPosition,
-    translateExtent = _ref.translateExtent,
-    preventScrolling = _ref.preventScrolling,
-    nodeExtent = _ref.nodeExtent,
-    arrowHeadColor = _ref.arrowHeadColor,
-    markerEndId = _ref.markerEndId,
-    zoomOnScroll = _ref.zoomOnScroll,
-    zoomOnPinch = _ref.zoomOnPinch,
-    panOnScroll = _ref.panOnScroll,
-    panOnScrollSpeed = _ref.panOnScrollSpeed,
-    panOnScrollMode = _ref.panOnScrollMode,
-    zoomOnDoubleClick = _ref.zoomOnDoubleClick,
-    paneMoveable = _ref.paneMoveable,
-    onPaneClick = _ref.onPaneClick,
-    onPaneScroll = _ref.onPaneScroll,
-    onPaneContextMenu = _ref.onPaneContextMenu,
-    onEdgeUpdate = _ref.onEdgeUpdate,
-    onEdgeContextMenu = _ref.onEdgeContextMenu,
-    onEdgeMouseEnter = _ref.onEdgeMouseEnter,
-    onEdgeMouseMove = _ref.onEdgeMouseMove,
-    onEdgeMouseLeave = _ref.onEdgeMouseLeave,
-    edgeUpdaterRadius = _ref.edgeUpdaterRadius,
-    onEdgeUpdateStart = _ref.onEdgeUpdateStart,
-    onEdgeUpdateEnd = _ref.onEdgeUpdateEnd;
+      edgeTypes = _ref.edgeTypes,
+      onMove = _ref.onMove,
+      onMoveStart = _ref.onMoveStart,
+      onMoveEnd = _ref.onMoveEnd,
+      onLoad = _ref.onLoad,
+      onElementClick = _ref.onElementClick,
+      onNodeDoubleClick = _ref.onNodeDoubleClick,
+      onEdgeDoubleClick = _ref.onEdgeDoubleClick,
+      onNodeMouseEnter = _ref.onNodeMouseEnter,
+      onNodeMouseMove = _ref.onNodeMouseMove,
+      onNodeMouseLeave = _ref.onNodeMouseLeave,
+      onNodeContextMenu = _ref.onNodeContextMenu,
+      onNodeDragStart = _ref.onNodeDragStart,
+      onNodeDrag = _ref.onNodeDrag,
+      onNodeDragStop = _ref.onNodeDragStop,
+      onSelectionDragStart = _ref.onSelectionDragStart,
+      onSelectionDrag = _ref.onSelectionDrag,
+      onSelectionDragStop = _ref.onSelectionDragStop,
+      onSelectionContextMenu = _ref.onSelectionContextMenu,
+      connectionMode = _ref.connectionMode,
+      connectionLineType = _ref.connectionLineType,
+      connectionLineStyle = _ref.connectionLineStyle,
+      connectionLineComponent = _ref.connectionLineComponent,
+      selectionKeyCode = _ref.selectionKeyCode,
+      multiSelectionKeyCode = _ref.multiSelectionKeyCode,
+      zoomActivationKeyCode = _ref.zoomActivationKeyCode,
+      onElementsRemove = _ref.onElementsRemove,
+      deleteKeyCode = _ref.deleteKeyCode,
+      onConnect = _ref.onConnect,
+      onConnectStart = _ref.onConnectStart,
+      onConnectStop = _ref.onConnectStop,
+      onConnectEnd = _ref.onConnectEnd,
+      snapToGrid = _ref.snapToGrid,
+      snapGrid = _ref.snapGrid,
+      onlyRenderVisibleElements = _ref.onlyRenderVisibleElements,
+      nodesDraggable = _ref.nodesDraggable,
+      nodesConnectable = _ref.nodesConnectable,
+      elementsSelectable = _ref.elementsSelectable,
+      selectNodesOnDrag = _ref.selectNodesOnDrag,
+      minZoom = _ref.minZoom,
+      maxZoom = _ref.maxZoom,
+      defaultZoom = _ref.defaultZoom,
+      defaultPosition = _ref.defaultPosition,
+      translateExtent = _ref.translateExtent,
+      preventScrolling = _ref.preventScrolling,
+      nodeExtent = _ref.nodeExtent,
+      arrowHeadColor = _ref.arrowHeadColor,
+      markerEndId = _ref.markerEndId,
+      zoomOnScroll = _ref.zoomOnScroll,
+      zoomOnPinch = _ref.zoomOnPinch,
+      panOnScroll = _ref.panOnScroll,
+      panOnScrollSpeed = _ref.panOnScrollSpeed,
+      panOnScrollMode = _ref.panOnScrollMode,
+      zoomOnDoubleClick = _ref.zoomOnDoubleClick,
+      paneMoveable = _ref.paneMoveable,
+      onPaneClick = _ref.onPaneClick,
+      onPaneScroll = _ref.onPaneScroll,
+      onPaneContextMenu = _ref.onPaneContextMenu,
+      onEdgeUpdate = _ref.onEdgeUpdate,
+      onEdgeContextMenu = _ref.onEdgeContextMenu,
+      onEdgeMouseEnter = _ref.onEdgeMouseEnter,
+      onEdgeMouseMove = _ref.onEdgeMouseMove,
+      onEdgeMouseLeave = _ref.onEdgeMouseLeave,
+      edgeUpdaterRadius = _ref.edgeUpdaterRadius,
+      onEdgeUpdateStart = _ref.onEdgeUpdateStart,
+      onEdgeUpdateEnd = _ref.onEdgeUpdateEnd;
   var isInitialized = React$1.useRef(false);
   var setOnConnect = useStoreActions(function (actions) {
     return actions.setOnConnect;
@@ -10506,12 +10509,12 @@ var GraphView = function GraphView(_ref) {
   var currentStore = useStore();
 
   var _useZoomPanHelper = useZoomPanHelper(),
-    zoomIn = _useZoomPanHelper.zoomIn,
-    zoomOut = _useZoomPanHelper.zoomOut,
-    zoomTo = _useZoomPanHelper.zoomTo,
-    transform = _useZoomPanHelper.transform,
-    _fitView = _useZoomPanHelper.fitView,
-    initialized = _useZoomPanHelper.initialized;
+      zoomIn = _useZoomPanHelper.zoomIn,
+      zoomOut = _useZoomPanHelper.zoomOut,
+      zoomTo = _useZoomPanHelper.zoomTo,
+      transform = _useZoomPanHelper.transform,
+      _fitView = _useZoomPanHelper.fitView,
+      initialized = _useZoomPanHelper.initialized;
 
   React$1.useEffect(function () {
     if (!isInitialized.current && initialized) {
@@ -10701,18 +10704,18 @@ var alwaysValid = function alwaysValid() {
 
 var Handle = /*#__PURE__*/React$1.forwardRef(function (_ref, ref) {
   var _ref$type = _ref.type,
-    type = _ref$type === void 0 ? 'source' : _ref$type,
-    _ref$position = _ref.position,
-    position = _ref$position === void 0 ? exports.Position.Top : _ref$position,
-    _ref$isValidConnectio = _ref.isValidConnection,
-    isValidConnection = _ref$isValidConnectio === void 0 ? alwaysValid : _ref$isValidConnectio,
-    _ref$isConnectable = _ref.isConnectable,
-    isConnectable = _ref$isConnectable === void 0 ? true : _ref$isConnectable,
-    id = _ref.id,
-    onConnect = _ref.onConnect,
-    children = _ref.children,
-    className = _ref.className,
-    rest = _objectWithoutProperties(_ref, _excluded$2);
+      type = _ref$type === void 0 ? 'source' : _ref$type,
+      _ref$position = _ref.position,
+      position = _ref$position === void 0 ? exports.Position.Top : _ref$position,
+      _ref$isValidConnectio = _ref.isValidConnection,
+      isValidConnection = _ref$isValidConnectio === void 0 ? alwaysValid : _ref$isValidConnectio,
+      _ref$isConnectable = _ref.isConnectable,
+      isConnectable = _ref$isConnectable === void 0 ? true : _ref$isConnectable,
+      id = _ref.id,
+      onConnect = _ref.onConnect,
+      children = _ref.children,
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$2);
 
   var nodeId = React$1.useContext(NodeIdContext);
   var setPosition = useStoreActions(function (actions) {
@@ -10745,15 +10748,10 @@ var Handle = /*#__PURE__*/React$1.forwardRef(function (_ref, ref) {
   var onMouseDownHandler = React$1.useCallback(function (event) {
     onMouseDown(event, handleId, nodeId, setConnectionNodeId, setPosition, onConnectExtended, isTarget, isValidConnection, connectionMode, undefined, undefined, onConnectStart, onConnectStop, onConnectEnd);
   }, [handleId, nodeId, setConnectionNodeId, setPosition, onConnectExtended, isTarget, isValidConnection, connectionMode, onConnectStart, onConnectStop, onConnectEnd]);
-  var handleClasses = cc([
-    'react-flow__handle', 
-    "react-flow__handle-".concat(position), 
-    'nodrag', 
-    className, 
-    {
-      source: !isTarget,
-      target: isTarget,
-      connectable: isConnectable
+  var handleClasses = cc(['react-flow__handle', "react-flow__handle-".concat(position), 'nodrag', className, {
+    source: !isTarget,
+    target: isTarget,
+    connectable: isConnectable
   }]);
   return /*#__PURE__*/React__default["default"].createElement("div", _objectSpread$7({
     "data-handleid": handleId,
@@ -10769,11 +10767,11 @@ var Handle$1 = /*#__PURE__*/React$1.memo(Handle);
 
 var DefaultNode = function DefaultNode(_ref) {
   var data = _ref.data,
-    isConnectable = _ref.isConnectable,
-    _ref$targetPosition = _ref.targetPosition,
-    targetPosition = _ref$targetPosition === void 0 ? exports.Position.Top : _ref$targetPosition,
-    _ref$sourcePosition = _ref.sourcePosition,
-    sourcePosition = _ref$sourcePosition === void 0 ? exports.Position.Bottom : _ref$sourcePosition;
+      isConnectable = _ref.isConnectable,
+      _ref$targetPosition = _ref.targetPosition,
+      targetPosition = _ref$targetPosition === void 0 ? exports.Position.Top : _ref$targetPosition,
+      _ref$sourcePosition = _ref.sourcePosition,
+      sourcePosition = _ref$sourcePosition === void 0 ? exports.Position.Bottom : _ref$sourcePosition;
   return /*#__PURE__*/React__default["default"].createElement(React__default["default"].Fragment, null, /*#__PURE__*/React__default["default"].createElement(Handle$1, {
     type: "target",
     position: targetPosition,
@@ -10790,9 +10788,9 @@ var DefaultNode$1 = /*#__PURE__*/React$1.memo(DefaultNode);
 
 var InputNode = function InputNode(_ref) {
   var data = _ref.data,
-    isConnectable = _ref.isConnectable,
-    _ref$sourcePosition = _ref.sourcePosition,
-    sourcePosition = _ref$sourcePosition === void 0 ? exports.Position.Bottom : _ref$sourcePosition;
+      isConnectable = _ref.isConnectable,
+      _ref$sourcePosition = _ref.sourcePosition,
+      sourcePosition = _ref$sourcePosition === void 0 ? exports.Position.Bottom : _ref$sourcePosition;
   return /*#__PURE__*/React__default["default"].createElement(React__default["default"].Fragment, null, data.label, /*#__PURE__*/React__default["default"].createElement(Handle$1, {
     type: "source",
     position: sourcePosition,
@@ -10805,9 +10803,9 @@ var InputNode$1 = /*#__PURE__*/React$1.memo(InputNode);
 
 var OutputNode = function OutputNode(_ref) {
   var data = _ref.data,
-    isConnectable = _ref.isConnectable,
-    _ref$targetPosition = _ref.targetPosition,
-    targetPosition = _ref$targetPosition === void 0 ? exports.Position.Top : _ref$targetPosition;
+      isConnectable = _ref.isConnectable,
+      _ref$targetPosition = _ref.targetPosition,
+      targetPosition = _ref$targetPosition === void 0 ? exports.Position.Top : _ref$targetPosition;
   return /*#__PURE__*/React__default["default"].createElement(React__default["default"].Fragment, null, /*#__PURE__*/React__default["default"].createElement(Handle$1, {
     type: "target",
     position: targetPosition,
@@ -10824,36 +10822,36 @@ function _objectSpread$6(target) { for (var i = 1; i < arguments.length; i++) { 
 var wrapNode = (function (NodeComponent) {
   var NodeWrapper = function NodeWrapper(_ref) {
     var id = _ref.id,
-      type = _ref.type,
-      data = _ref.data,
-      scale = _ref.scale,
-      xPos = _ref.xPos,
-      yPos = _ref.yPos,
-      selected = _ref.selected,
-      onClick = _ref.onClick,
-      onMouseEnter = _ref.onMouseEnter,
-      onMouseMove = _ref.onMouseMove,
-      onMouseLeave = _ref.onMouseLeave,
-      onContextMenu = _ref.onContextMenu,
-      onNodeDoubleClick = _ref.onNodeDoubleClick,
-      onNodeDragStart = _ref.onNodeDragStart,
-      onNodeDrag = _ref.onNodeDrag,
-      onNodeDragStop = _ref.onNodeDragStop,
-      style = _ref.style,
-      className = _ref.className,
-      isDraggable = _ref.isDraggable,
-      isSelectable = _ref.isSelectable,
-      isConnectable = _ref.isConnectable,
-      selectNodesOnDrag = _ref.selectNodesOnDrag,
-      sourcePosition = _ref.sourcePosition,
-      targetPosition = _ref.targetPosition,
-      isHidden = _ref.isHidden,
-      isInitialized = _ref.isInitialized,
-      snapToGrid = _ref.snapToGrid,
-      snapGrid = _ref.snapGrid,
-      isDragging = _ref.isDragging,
-      resizeObserver = _ref.resizeObserver,
-      dragHandle = _ref.dragHandle;
+        type = _ref.type,
+        data = _ref.data,
+        scale = _ref.scale,
+        xPos = _ref.xPos,
+        yPos = _ref.yPos,
+        selected = _ref.selected,
+        onClick = _ref.onClick,
+        onMouseEnter = _ref.onMouseEnter,
+        onMouseMove = _ref.onMouseMove,
+        onMouseLeave = _ref.onMouseLeave,
+        onContextMenu = _ref.onContextMenu,
+        onNodeDoubleClick = _ref.onNodeDoubleClick,
+        onNodeDragStart = _ref.onNodeDragStart,
+        onNodeDrag = _ref.onNodeDrag,
+        onNodeDragStop = _ref.onNodeDragStop,
+        style = _ref.style,
+        className = _ref.className,
+        isDraggable = _ref.isDraggable,
+        isSelectable = _ref.isSelectable,
+        isConnectable = _ref.isConnectable,
+        selectNodesOnDrag = _ref.selectNodesOnDrag,
+        sourcePosition = _ref.sourcePosition,
+        targetPosition = _ref.targetPosition,
+        isHidden = _ref.isHidden,
+        isInitialized = _ref.isInitialized,
+        snapToGrid = _ref.snapToGrid,
+        snapGrid = _ref.snapGrid,
+        isDragging = _ref.isDragging,
+        resizeObserver = _ref.resizeObserver,
+        dragHandle = _ref.dragHandle;
     var updateNodeDimensions = useStoreActions(function (actions) {
       return actions.updateNodeDimensions;
     });
@@ -11132,7 +11130,7 @@ var fastDeepEqual = function equal(a, b) {
   }
 
   // true if both NaN, false otherwise
-  return a !== a && b !== b;
+  return a!==a && b!==b;
 };
 
 function ownKeys$4(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
@@ -11220,8 +11218,8 @@ function reactFlowReducer() {
 
           return res;
         }, nextElements),
-          nextNodes = _propElements$reduce.nextNodes,
-          nextEdges = _propElements$reduce.nextEdges;
+            nextNodes = _propElements$reduce.nextNodes,
+            nextEdges = _propElements$reduce.nextEdges;
 
         return _objectSpread$3(_objectSpread$3({}, state), {}, {
           nodes: nextNodes,
@@ -11260,14 +11258,14 @@ function reactFlowReducer() {
     case UPDATE_NODE_POS:
       {
         var _action$payload = action.payload,
-          id = _action$payload.id,
-          pos = _action$payload.pos;
+            id = _action$payload.id,
+            pos = _action$payload.pos;
         var position = pos;
 
         if (state.snapToGrid) {
           var _state$snapGrid = _slicedToArray$1(state.snapGrid, 2),
-            gridSizeX = _state$snapGrid[0],
-            gridSizeY = _state$snapGrid[1];
+              gridSizeX = _state$snapGrid[0],
+              gridSizeY = _state$snapGrid[1];
 
           position = {
             x: gridSizeX * Math.round(pos.x / gridSizeX),
@@ -11295,9 +11293,9 @@ function reactFlowReducer() {
     case UPDATE_NODE_POS_DIFF:
       {
         var _action$payload2 = action.payload,
-          _id = _action$payload2.id,
-          diff = _action$payload2.diff,
-          isDragging = _action$payload2.isDragging;
+            _id = _action$payload2.id,
+            diff = _action$payload2.diff,
+            isDragging = _action$payload2.isDragging;
 
         var _nextNodes2 = state.nodes.map(function (node) {
           var _state$selectedElemen;
@@ -11414,7 +11412,7 @@ function reactFlowReducer() {
     case ADD_SELECTED_ELEMENTS:
       {
         var multiSelectionActive = state.multiSelectionActive,
-          _selectedElements = state.selectedElements;
+            _selectedElements = state.selectedElements;
         var _elements = action.payload;
 
         var _selectedElementsArr = Array.isArray(_elements) ? _elements : [_elements];
@@ -11437,10 +11435,10 @@ function reactFlowReducer() {
     case INIT_D3ZOOM:
       {
         var _action$payload3 = action.payload,
-          d3Zoom = _action$payload3.d3Zoom,
-          d3Selection = _action$payload3.d3Selection,
-          d3ZoomHandler = _action$payload3.d3ZoomHandler,
-          transform = _action$payload3.transform;
+            d3Zoom = _action$payload3.d3Zoom,
+            d3Selection = _action$payload3.d3Selection,
+            d3ZoomHandler = _action$payload3.d3ZoomHandler,
+            transform = _action$payload3.transform;
         return _objectSpread$3(_objectSpread$3({}, state), {}, {
           d3Zoom: d3Zoom,
           d3Selection: d3Selection,
@@ -11572,7 +11570,7 @@ var initialState = {
   nodesConnectable: true,
   elementsSelectable: true,
   multiSelectionActive: false,
-  reactFlowVersion: "9.7.2"
+  reactFlowVersion: "9.7.2" 
 };
 var store = configureStore(initialState);
 
@@ -11599,7 +11597,7 @@ var Wrapper = function Wrapper(_ref) {
 Wrapper.displayName = 'ReactFlowWrapper';
 
 function styleInject(css, ref) {
-  if (ref === void 0) ref = {};
+  if ( ref === void 0 ) ref = {};
   var insertAt = ref.insertAt;
 
   if (!css || typeof document === 'undefined') { return; }
@@ -11628,7 +11626,7 @@ function styleInject(css, ref) {
 var css_248z$1 = ".react-flow{height:100%;overflow:hidden;position:relative;width:100%}.react-flow__pane,.react-flow__renderer,.react-flow__selectionpane{height:100%;left:0;position:absolute;top:0;width:100%}.react-flow__pane{z-index:1}.react-flow__renderer{z-index:4}.react-flow__selectionpane{z-index:5}.react-flow__edges,.react-flow__selection{left:0;position:absolute;top:0}.react-flow__edges{pointer-events:none;z-index:2}.react-flow__edge{pointer-events:visibleStroke}.react-flow__edge.inactive{pointer-events:none}@-webkit-keyframes dashdraw{0%{stroke-dashoffset:10}}@keyframes dashdraw{0%{stroke-dashoffset:10}}.react-flow__edge-path{fill:none}.react-flow__edge-textwrapper{pointer-events:all}.react-flow__edge-text{pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.react-flow__connection{pointer-events:none}.react-flow__connection .animated{stroke-dasharray:5;-webkit-animation:dashdraw .5s linear infinite;animation:dashdraw .5s linear infinite}.react-flow__connection-path{fill:none}.react-flow__nodes{height:100%;pointer-events:none;width:100%;z-index:3}.react-flow__node,.react-flow__nodes{position:absolute;transform-origin:0 0}.react-flow__node{pointer-events:all;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.react-flow__nodesselection{height:100%;left:0;pointer-events:none;position:absolute;top:0;transform-origin:left top;width:100%;z-index:3}.react-flow__nodesselection-rect{cursor:-webkit-grab;cursor:grab;pointer-events:all;position:absolute}.react-flow__handle{pointer-events:none}.react-flow__handle.connectable{pointer-events:all}.react-flow__handle-bottom{bottom:-4px;left:50%;top:auto;transform:translate(-50%)}.react-flow__handle-top{left:50%;top:-4px;transform:translate(-50%)}.react-flow__handle-left{left:-4px;top:50%;transform:translateY(-50%)}.react-flow__handle-right{right:-4px;top:50%;transform:translateY(-50%)}.react-flow__edgeupdater{cursor:move;pointer-events:all}.react-flow__background{height:100%;left:0;position:absolute;top:0;width:100%}.react-flow__controls{bottom:10px;left:10px;position:absolute;z-index:5}.react-flow__controls-button{border:none;height:24px;width:24px}.react-flow__controls-button svg{width:100%}.react-flow__minimap{bottom:10px;position:absolute;right:10px;z-index:5}";
 styleInject(css_248z$1);
 
-var css_248z = ".react-flow__selection{background:rgba(0,89,220,.08);border:1px dotted rgba(0,89,220,.8)}.react-flow__edge.selected .react-flow__edge-path{stroke:#555}.react-flow__edge.animated path{stroke-dasharray:5;-webkit-animation:dashdraw .5s linear infinite;animation:dashdraw .5s linear infinite}.react-flow__edge.updating .react-flow__edge-path{stroke:#777}.react-flow__edge-path{stroke:#b1b1b7;stroke-width:1}.react-flow__edge-text{font-size:10px}.react-flow__edge-textbg{fill:#fff}.react-flow__connection-path{stroke:#b1b1b7;stroke-width:1}.react-flow__node{cursor:-webkit-grab;cursor:grab}.react-flow__node-default,.react-flow__node-input,.react-flow__node-output{border-radius:3px;border-style:solid;border-width:1px;color:#222;font-size:12px;padding:10px;text-align:center;width:150px}.react-flow__node-default.selectable:hover,.react-flow__node-input.selectable:hover,.react-flow__node-output.selectable:hover{box-shadow:0 1px 4px 1px rgba(0,0,0,.08)}.react-flow__node-input{background:#fff;border-color:#0041d0}.react-flow__node-input.selected,.react-flow__node-input.selected:hover{box-shadow:0 0 0 .5px #0041d0}.react-flow__node-input .react-flow__handle{background:#0041d0}.react-flow__node-default{background:#fff;border-color:#1a192b}.react-flow__node-default.selected,.react-flow__node-default.selected:hover{box-shadow:0 0 0 .5px #1a192b}.react-flow__node-default .react-flow__handle{background:#1a192b}.react-flow__node-output{background:#fff;border-color:#ff0072}.react-flow__node-output.selected,.react-flow__node-output.selected:hover{box-shadow:0 0 0 .5px #ff0072}.react-flow__node-output .react-flow__handle{background:#ff0072}.react-flow__nodesselection-rect{background:rgba(0,89,220,.08);border:1px dotted rgba(0,89,220,.8)}.react-flow__handle{background:#555;border:1px solid #fff;border-radius:100%;height:6px;position:absolute;width:6px}.react-flow__handle.connectable{cursor:pointer}.react-flow__minimap{background-color:#fff}.react-flow__controls{box-shadow:0 0 2px 1px rgba(0,0,0,.08)}.react-flow__controls-button{align-items:center;background:#fefefe;border-bottom:1px solid #eee;box-sizing:content-box;cursor:pointer;display:flex;height:16px;justify-content:center;padding:5px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:16px}.react-flow__controls-button svg{max-height:12px;max-width:12px}.react-flow__controls-button:hover{background:#f4f4f4}";
+var css_248z = ".react-flow__selection{background:rgba(0,89,220,.08);border:1px dotted rgba(0,89,220,.8)}.react-flow__edge.selected .react-flow__edge-path{stroke:#555}.react-flow__edge.animated path{stroke-dasharray:5;-webkit-animation:dashdraw .5s linear infinite;animation:dashdraw .5s linear infinite}.react-flow__edge.updating .react-flow__edge-path{stroke:#777}.react-flow__edge-path{stroke:#b1b1b7;stroke-width:1}.react-flow__edge-text{font-size:10px}.react-flow__edge-textbg{fill:#fff}.react-flow__connection-path{stroke:#b1b1b7;stroke-width:1}.react-flow__node{cursor:-webkit-grab;cursor:grab}.react-flow__node-default,.react-flow__node-input,.react-flow__node-output{border-radius:3px;border-style:solid;border-width:1px;color:#222;font-size:12px;padding:10px;text-align:center;width:150px}.react-flow__node-default.selectable:hover,.react-flow__node-input.selectable:hover,.react-flow__node-output.selectable:hover{box-shadow:0 1px 4px 1px rgba(0,0,0,.08)}.react-flow__node-input{background:#fff;border-color:#0041d0}.react-flow__node-input.selected,.react-flow__node-input.selected:hover{box-shadow:0 0 0 .5px #0041d0}.react-flow__node-input .react-flow__handle{background:#0041d0}.react-flow__node-default{background:#fff;border-color:#1a192b}.react-flow__node-default.selected,.react-flow__node-default.selected:hover{box-shadow:0 0 0 .5px #1a192b}.react-flow__node-default .react-flow__handle{background:#1a192b}.react-flow__node-output{background:#fff;border-color:#ff0072}.react-flow__node-output.selected,.react-flow__node-output.selected:hover{box-shadow:0 0 0 .5px #ff0072}.react-flow__node-output .react-flow__handle{background:#ff0072}.react-flow__nodesselection-rect{background:rgba(0,89,220,.08);border:1px dotted rgba(0,89,220,.8)}.react-flow__handle{background:#555;border:1px solid #fff;border-radius:100%;height:6px;position:absolute;width:6px}.react-flow__handle.connectable{cursor:crosshair}.react-flow__minimap{background-color:#fff}.react-flow__controls{box-shadow:0 0 2px 1px rgba(0,0,0,.08)}.react-flow__controls-button{align-items:center;background:#fefefe;border-bottom:1px solid #eee;box-sizing:content-box;cursor:pointer;display:flex;height:16px;justify-content:center;padding:5px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:16px}.react-flow__controls-button svg{max-height:12px;max-width:12px}.react-flow__controls-button:hover{background:#f4f4f4}";
 styleInject(css_248z);
 
 var _excluded$1 = ["elements", "className", "nodeTypes", "edgeTypes", "onElementClick", "onLoad", "onMove", "onMoveStart", "onMoveEnd", "onElementsRemove", "onConnect", "onConnectStart", "onConnectStop", "onConnectEnd", "onNodeMouseEnter", "onNodeMouseMove", "onNodeMouseLeave", "onNodeContextMenu", "onNodeDoubleClick", "onNodeDragStart", "onNodeDrag", "onNodeDragStop", "onSelectionChange", "onSelectionDragStart", "onSelectionDrag", "onSelectionDragStop", "onSelectionContextMenu", "connectionMode", "connectionLineType", "connectionLineStyle", "connectionLineComponent", "deleteKeyCode", "selectionKeyCode", "multiSelectionKeyCode", "zoomActivationKeyCode", "snapToGrid", "snapGrid", "onlyRenderVisibleElements", "selectNodesOnDrag", "nodesDraggable", "nodesConnectable", "elementsSelectable", "minZoom", "maxZoom", "defaultZoom", "defaultPosition", "translateExtent", "preventScrolling", "nodeExtent", "arrowHeadColor", "markerEndId", "zoomOnScroll", "zoomOnPinch", "panOnScroll", "panOnScrollSpeed", "panOnScrollMode", "zoomOnDoubleClick", "paneMoveable", "onPaneClick", "onPaneScroll", "onPaneContextMenu", "children", "onEdgeUpdate", "onEdgeContextMenu", "onEdgeDoubleClick", "onEdgeMouseEnter", "onEdgeMouseMove", "onEdgeMouseLeave", "onEdgeUpdateStart", "onEdgeUpdateEnd", "edgeUpdaterRadius", "nodeTypesId", "edgeTypesId"];
@@ -11649,106 +11647,106 @@ var defaultEdgeTypes = {
 };
 var ReactFlow = /*#__PURE__*/React$1.forwardRef(function (_ref, ref) {
   var _ref$elements = _ref.elements,
-    elements = _ref$elements === void 0 ? [] : _ref$elements,
-    className = _ref.className,
-    _ref$nodeTypes = _ref.nodeTypes,
-    nodeTypes = _ref$nodeTypes === void 0 ? defaultNodeTypes : _ref$nodeTypes,
-    _ref$edgeTypes = _ref.edgeTypes,
-    edgeTypes = _ref$edgeTypes === void 0 ? defaultEdgeTypes : _ref$edgeTypes,
-    onElementClick = _ref.onElementClick,
-    onLoad = _ref.onLoad,
-    onMove = _ref.onMove,
-    onMoveStart = _ref.onMoveStart,
-    onMoveEnd = _ref.onMoveEnd,
-    onElementsRemove = _ref.onElementsRemove,
-    onConnect = _ref.onConnect,
-    onConnectStart = _ref.onConnectStart,
-    onConnectStop = _ref.onConnectStop,
-    onConnectEnd = _ref.onConnectEnd,
-    onNodeMouseEnter = _ref.onNodeMouseEnter,
-    onNodeMouseMove = _ref.onNodeMouseMove,
-    onNodeMouseLeave = _ref.onNodeMouseLeave,
-    onNodeContextMenu = _ref.onNodeContextMenu,
-    onNodeDoubleClick = _ref.onNodeDoubleClick,
-    onNodeDragStart = _ref.onNodeDragStart,
-    onNodeDrag = _ref.onNodeDrag,
-    onNodeDragStop = _ref.onNodeDragStop,
-    onSelectionChange = _ref.onSelectionChange,
-    onSelectionDragStart = _ref.onSelectionDragStart,
-    onSelectionDrag = _ref.onSelectionDrag,
-    onSelectionDragStop = _ref.onSelectionDragStop,
-    onSelectionContextMenu = _ref.onSelectionContextMenu,
-    _ref$connectionMode = _ref.connectionMode,
-    connectionMode = _ref$connectionMode === void 0 ? exports.ConnectionMode.Strict : _ref$connectionMode,
-    _ref$connectionLineTy = _ref.connectionLineType,
-    connectionLineType = _ref$connectionLineTy === void 0 ? exports.ConnectionLineType.Bezier : _ref$connectionLineTy,
-    connectionLineStyle = _ref.connectionLineStyle,
-    connectionLineComponent = _ref.connectionLineComponent,
-    _ref$deleteKeyCode = _ref.deleteKeyCode,
-    deleteKeyCode = _ref$deleteKeyCode === void 0 ? 'Backspace' : _ref$deleteKeyCode,
-    _ref$selectionKeyCode = _ref.selectionKeyCode,
-    selectionKeyCode = _ref$selectionKeyCode === void 0 ? 'Shift' : _ref$selectionKeyCode,
-    _ref$multiSelectionKe = _ref.multiSelectionKeyCode,
-    multiSelectionKeyCode = _ref$multiSelectionKe === void 0 ? 'Meta' : _ref$multiSelectionKe,
-    _ref$zoomActivationKe = _ref.zoomActivationKeyCode,
-    zoomActivationKeyCode = _ref$zoomActivationKe === void 0 ? 'Meta' : _ref$zoomActivationKe,
-    _ref$snapToGrid = _ref.snapToGrid,
-    snapToGrid = _ref$snapToGrid === void 0 ? false : _ref$snapToGrid,
-    _ref$snapGrid = _ref.snapGrid,
-    snapGrid = _ref$snapGrid === void 0 ? [15, 15] : _ref$snapGrid,
-    _ref$onlyRenderVisibl = _ref.onlyRenderVisibleElements,
-    onlyRenderVisibleElements = _ref$onlyRenderVisibl === void 0 ? false : _ref$onlyRenderVisibl,
-    _ref$selectNodesOnDra = _ref.selectNodesOnDrag,
-    selectNodesOnDrag = _ref$selectNodesOnDra === void 0 ? true : _ref$selectNodesOnDra,
-    nodesDraggable = _ref.nodesDraggable,
-    nodesConnectable = _ref.nodesConnectable,
-    elementsSelectable = _ref.elementsSelectable,
-    minZoom = _ref.minZoom,
-    maxZoom = _ref.maxZoom,
-    _ref$defaultZoom = _ref.defaultZoom,
-    defaultZoom = _ref$defaultZoom === void 0 ? 1 : _ref$defaultZoom,
-    _ref$defaultPosition = _ref.defaultPosition,
-    defaultPosition = _ref$defaultPosition === void 0 ? [0, 0] : _ref$defaultPosition,
-    translateExtent = _ref.translateExtent,
-    _ref$preventScrolling = _ref.preventScrolling,
-    preventScrolling = _ref$preventScrolling === void 0 ? true : _ref$preventScrolling,
-    nodeExtent = _ref.nodeExtent,
-    _ref$arrowHeadColor = _ref.arrowHeadColor,
-    arrowHeadColor = _ref$arrowHeadColor === void 0 ? '#b1b1b7' : _ref$arrowHeadColor,
-    markerEndId = _ref.markerEndId,
-    _ref$zoomOnScroll = _ref.zoomOnScroll,
-    zoomOnScroll = _ref$zoomOnScroll === void 0 ? true : _ref$zoomOnScroll,
-    _ref$zoomOnPinch = _ref.zoomOnPinch,
-    zoomOnPinch = _ref$zoomOnPinch === void 0 ? true : _ref$zoomOnPinch,
-    _ref$panOnScroll = _ref.panOnScroll,
-    panOnScroll = _ref$panOnScroll === void 0 ? false : _ref$panOnScroll,
-    _ref$panOnScrollSpeed = _ref.panOnScrollSpeed,
-    panOnScrollSpeed = _ref$panOnScrollSpeed === void 0 ? 0.5 : _ref$panOnScrollSpeed,
-    _ref$panOnScrollMode = _ref.panOnScrollMode,
-    panOnScrollMode = _ref$panOnScrollMode === void 0 ? exports.PanOnScrollMode.Free : _ref$panOnScrollMode,
-    _ref$zoomOnDoubleClic = _ref.zoomOnDoubleClick,
-    zoomOnDoubleClick = _ref$zoomOnDoubleClic === void 0 ? true : _ref$zoomOnDoubleClic,
-    _ref$paneMoveable = _ref.paneMoveable,
-    paneMoveable = _ref$paneMoveable === void 0 ? true : _ref$paneMoveable,
-    onPaneClick = _ref.onPaneClick,
-    onPaneScroll = _ref.onPaneScroll,
-    onPaneContextMenu = _ref.onPaneContextMenu,
-    children = _ref.children,
-    onEdgeUpdate = _ref.onEdgeUpdate,
-    onEdgeContextMenu = _ref.onEdgeContextMenu,
-    onEdgeDoubleClick = _ref.onEdgeDoubleClick,
-    onEdgeMouseEnter = _ref.onEdgeMouseEnter,
-    onEdgeMouseMove = _ref.onEdgeMouseMove,
-    onEdgeMouseLeave = _ref.onEdgeMouseLeave,
-    onEdgeUpdateStart = _ref.onEdgeUpdateStart,
-    onEdgeUpdateEnd = _ref.onEdgeUpdateEnd,
-    _ref$edgeUpdaterRadiu = _ref.edgeUpdaterRadius,
-    edgeUpdaterRadius = _ref$edgeUpdaterRadiu === void 0 ? 10 : _ref$edgeUpdaterRadiu,
-    _ref$nodeTypesId = _ref.nodeTypesId,
-    nodeTypesId = _ref$nodeTypesId === void 0 ? '1' : _ref$nodeTypesId,
-    _ref$edgeTypesId = _ref.edgeTypesId,
-    edgeTypesId = _ref$edgeTypesId === void 0 ? '1' : _ref$edgeTypesId,
-    rest = _objectWithoutProperties(_ref, _excluded$1);
+      elements = _ref$elements === void 0 ? [] : _ref$elements,
+      className = _ref.className,
+      _ref$nodeTypes = _ref.nodeTypes,
+      nodeTypes = _ref$nodeTypes === void 0 ? defaultNodeTypes : _ref$nodeTypes,
+      _ref$edgeTypes = _ref.edgeTypes,
+      edgeTypes = _ref$edgeTypes === void 0 ? defaultEdgeTypes : _ref$edgeTypes,
+      onElementClick = _ref.onElementClick,
+      onLoad = _ref.onLoad,
+      onMove = _ref.onMove,
+      onMoveStart = _ref.onMoveStart,
+      onMoveEnd = _ref.onMoveEnd,
+      onElementsRemove = _ref.onElementsRemove,
+      onConnect = _ref.onConnect,
+      onConnectStart = _ref.onConnectStart,
+      onConnectStop = _ref.onConnectStop,
+      onConnectEnd = _ref.onConnectEnd,
+      onNodeMouseEnter = _ref.onNodeMouseEnter,
+      onNodeMouseMove = _ref.onNodeMouseMove,
+      onNodeMouseLeave = _ref.onNodeMouseLeave,
+      onNodeContextMenu = _ref.onNodeContextMenu,
+      onNodeDoubleClick = _ref.onNodeDoubleClick,
+      onNodeDragStart = _ref.onNodeDragStart,
+      onNodeDrag = _ref.onNodeDrag,
+      onNodeDragStop = _ref.onNodeDragStop,
+      onSelectionChange = _ref.onSelectionChange,
+      onSelectionDragStart = _ref.onSelectionDragStart,
+      onSelectionDrag = _ref.onSelectionDrag,
+      onSelectionDragStop = _ref.onSelectionDragStop,
+      onSelectionContextMenu = _ref.onSelectionContextMenu,
+      _ref$connectionMode = _ref.connectionMode,
+      connectionMode = _ref$connectionMode === void 0 ? exports.ConnectionMode.Strict : _ref$connectionMode,
+      _ref$connectionLineTy = _ref.connectionLineType,
+      connectionLineType = _ref$connectionLineTy === void 0 ? exports.ConnectionLineType.Bezier : _ref$connectionLineTy,
+      connectionLineStyle = _ref.connectionLineStyle,
+      connectionLineComponent = _ref.connectionLineComponent,
+      _ref$deleteKeyCode = _ref.deleteKeyCode,
+      deleteKeyCode = _ref$deleteKeyCode === void 0 ? 'Backspace' : _ref$deleteKeyCode,
+      _ref$selectionKeyCode = _ref.selectionKeyCode,
+      selectionKeyCode = _ref$selectionKeyCode === void 0 ? 'Shift' : _ref$selectionKeyCode,
+      _ref$multiSelectionKe = _ref.multiSelectionKeyCode,
+      multiSelectionKeyCode = _ref$multiSelectionKe === void 0 ? 'Meta' : _ref$multiSelectionKe,
+      _ref$zoomActivationKe = _ref.zoomActivationKeyCode,
+      zoomActivationKeyCode = _ref$zoomActivationKe === void 0 ? 'Meta' : _ref$zoomActivationKe,
+      _ref$snapToGrid = _ref.snapToGrid,
+      snapToGrid = _ref$snapToGrid === void 0 ? false : _ref$snapToGrid,
+      _ref$snapGrid = _ref.snapGrid,
+      snapGrid = _ref$snapGrid === void 0 ? [15, 15] : _ref$snapGrid,
+      _ref$onlyRenderVisibl = _ref.onlyRenderVisibleElements,
+      onlyRenderVisibleElements = _ref$onlyRenderVisibl === void 0 ? false : _ref$onlyRenderVisibl,
+      _ref$selectNodesOnDra = _ref.selectNodesOnDrag,
+      selectNodesOnDrag = _ref$selectNodesOnDra === void 0 ? true : _ref$selectNodesOnDra,
+      nodesDraggable = _ref.nodesDraggable,
+      nodesConnectable = _ref.nodesConnectable,
+      elementsSelectable = _ref.elementsSelectable,
+      minZoom = _ref.minZoom,
+      maxZoom = _ref.maxZoom,
+      _ref$defaultZoom = _ref.defaultZoom,
+      defaultZoom = _ref$defaultZoom === void 0 ? 1 : _ref$defaultZoom,
+      _ref$defaultPosition = _ref.defaultPosition,
+      defaultPosition = _ref$defaultPosition === void 0 ? [0, 0] : _ref$defaultPosition,
+      translateExtent = _ref.translateExtent,
+      _ref$preventScrolling = _ref.preventScrolling,
+      preventScrolling = _ref$preventScrolling === void 0 ? true : _ref$preventScrolling,
+      nodeExtent = _ref.nodeExtent,
+      _ref$arrowHeadColor = _ref.arrowHeadColor,
+      arrowHeadColor = _ref$arrowHeadColor === void 0 ? '#b1b1b7' : _ref$arrowHeadColor,
+      markerEndId = _ref.markerEndId,
+      _ref$zoomOnScroll = _ref.zoomOnScroll,
+      zoomOnScroll = _ref$zoomOnScroll === void 0 ? true : _ref$zoomOnScroll,
+      _ref$zoomOnPinch = _ref.zoomOnPinch,
+      zoomOnPinch = _ref$zoomOnPinch === void 0 ? true : _ref$zoomOnPinch,
+      _ref$panOnScroll = _ref.panOnScroll,
+      panOnScroll = _ref$panOnScroll === void 0 ? false : _ref$panOnScroll,
+      _ref$panOnScrollSpeed = _ref.panOnScrollSpeed,
+      panOnScrollSpeed = _ref$panOnScrollSpeed === void 0 ? 0.5 : _ref$panOnScrollSpeed,
+      _ref$panOnScrollMode = _ref.panOnScrollMode,
+      panOnScrollMode = _ref$panOnScrollMode === void 0 ? exports.PanOnScrollMode.Free : _ref$panOnScrollMode,
+      _ref$zoomOnDoubleClic = _ref.zoomOnDoubleClick,
+      zoomOnDoubleClick = _ref$zoomOnDoubleClic === void 0 ? true : _ref$zoomOnDoubleClic,
+      _ref$paneMoveable = _ref.paneMoveable,
+      paneMoveable = _ref$paneMoveable === void 0 ? true : _ref$paneMoveable,
+      onPaneClick = _ref.onPaneClick,
+      onPaneScroll = _ref.onPaneScroll,
+      onPaneContextMenu = _ref.onPaneContextMenu,
+      children = _ref.children,
+      onEdgeUpdate = _ref.onEdgeUpdate,
+      onEdgeContextMenu = _ref.onEdgeContextMenu,
+      onEdgeDoubleClick = _ref.onEdgeDoubleClick,
+      onEdgeMouseEnter = _ref.onEdgeMouseEnter,
+      onEdgeMouseMove = _ref.onEdgeMouseMove,
+      onEdgeMouseLeave = _ref.onEdgeMouseLeave,
+      onEdgeUpdateStart = _ref.onEdgeUpdateStart,
+      onEdgeUpdateEnd = _ref.onEdgeUpdateEnd,
+      _ref$edgeUpdaterRadiu = _ref.edgeUpdaterRadius,
+      edgeUpdaterRadius = _ref$edgeUpdaterRadiu === void 0 ? 10 : _ref$edgeUpdaterRadiu,
+      _ref$nodeTypesId = _ref.nodeTypesId,
+      nodeTypesId = _ref$nodeTypesId === void 0 ? '1' : _ref$nodeTypesId,
+      _ref$edgeTypesId = _ref.edgeTypesId,
+      edgeTypesId = _ref$edgeTypesId === void 0 ? '1' : _ref$edgeTypesId,
+      rest = _objectWithoutProperties(_ref, _excluded$1);
 
   var nodeTypesParsed = React$1.useMemo(function () {
     return createNodeTypes(nodeTypes);
@@ -11855,20 +11853,20 @@ function useUpdateNodeInternals() {
 
 var MiniMapNode = function MiniMapNode(_ref) {
   var x = _ref.x,
-    y = _ref.y,
-    width = _ref.width,
-    height = _ref.height,
-    style = _ref.style,
-    color = _ref.color,
-    strokeColor = _ref.strokeColor,
-    strokeWidth = _ref.strokeWidth,
-    className = _ref.className,
-    borderRadius = _ref.borderRadius,
-    shapeRendering = _ref.shapeRendering;
+      y = _ref.y,
+      width = _ref.width,
+      height = _ref.height,
+      style = _ref.style,
+      color = _ref.color,
+      strokeColor = _ref.strokeColor,
+      strokeWidth = _ref.strokeWidth,
+      className = _ref.className,
+      borderRadius = _ref.borderRadius,
+      shapeRendering = _ref.shapeRendering;
 
   var _ref2 = style || {},
-    background = _ref2.background,
-    backgroundColor = _ref2.backgroundColor;
+      background = _ref2.background,
+      backgroundColor = _ref2.backgroundColor;
 
   var fill = color || background || backgroundColor;
   return /*#__PURE__*/React__default["default"].createElement("rect", {
@@ -11894,19 +11892,19 @@ var defaultHeight = 150;
 
 var MiniMap = function MiniMap(_ref) {
   var style = _ref.style,
-    className = _ref.className,
-    _ref$nodeStrokeColor = _ref.nodeStrokeColor,
-    nodeStrokeColor = _ref$nodeStrokeColor === void 0 ? '#555' : _ref$nodeStrokeColor,
-    _ref$nodeColor = _ref.nodeColor,
-    nodeColor = _ref$nodeColor === void 0 ? '#fff' : _ref$nodeColor,
-    _ref$nodeClassName = _ref.nodeClassName,
-    nodeClassName = _ref$nodeClassName === void 0 ? '' : _ref$nodeClassName,
-    _ref$nodeBorderRadius = _ref.nodeBorderRadius,
-    nodeBorderRadius = _ref$nodeBorderRadius === void 0 ? 5 : _ref$nodeBorderRadius,
-    _ref$nodeStrokeWidth = _ref.nodeStrokeWidth,
-    nodeStrokeWidth = _ref$nodeStrokeWidth === void 0 ? 2 : _ref$nodeStrokeWidth,
-    _ref$maskColor = _ref.maskColor,
-    maskColor = _ref$maskColor === void 0 ? 'rgb(240, 242, 243, 0.7)' : _ref$maskColor;
+      className = _ref.className,
+      _ref$nodeStrokeColor = _ref.nodeStrokeColor,
+      nodeStrokeColor = _ref$nodeStrokeColor === void 0 ? '#555' : _ref$nodeStrokeColor,
+      _ref$nodeColor = _ref.nodeColor,
+      nodeColor = _ref$nodeColor === void 0 ? '#fff' : _ref$nodeColor,
+      _ref$nodeClassName = _ref.nodeClassName,
+      nodeClassName = _ref$nodeClassName === void 0 ? '' : _ref$nodeClassName,
+      _ref$nodeBorderRadius = _ref.nodeBorderRadius,
+      nodeBorderRadius = _ref$nodeBorderRadius === void 0 ? 5 : _ref$nodeBorderRadius,
+      _ref$nodeStrokeWidth = _ref.nodeStrokeWidth,
+      nodeStrokeWidth = _ref$nodeStrokeWidth === void 0 ? 2 : _ref$nodeStrokeWidth,
+      _ref$maskColor = _ref.maskColor,
+      maskColor = _ref$maskColor === void 0 ? 'rgb(240, 242, 243, 0.7)' : _ref$maskColor;
   var containerWidth = useStoreState(function (s) {
     return s.width;
   });
@@ -11917,10 +11915,10 @@ var MiniMap = function MiniMap(_ref) {
   var _useStoreState = useStoreState(function (s) {
     return s.transform;
   }),
-    _useStoreState2 = _slicedToArray$1(_useStoreState, 3),
-    tX = _useStoreState2[0],
-    tY = _useStoreState2[1],
-    tScale = _useStoreState2[2];
+      _useStoreState2 = _slicedToArray$1(_useStoreState, 3),
+      tX = _useStoreState2[0],
+      tY = _useStoreState2[1],
+      tScale = _useStoreState2[2];
 
   var nodes = useStoreState(function (s) {
     return s.nodes;
@@ -12063,8 +12061,8 @@ function ownKeys$1(object, enumerableOnly) { var keys = Object.keys(object); if 
 function _objectSpread$1(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys$1(Object(source), !0).forEach(function (key) { _defineProperty$2(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys$1(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 var ControlButton = function ControlButton(_ref) {
   var children = _ref.children,
-    className = _ref.className,
-    rest = _objectWithoutProperties(_ref, _excluded);
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React__default["default"].createElement("button", _objectSpread$1({
     type: "button",
@@ -12074,33 +12072,33 @@ var ControlButton = function ControlButton(_ref) {
 
 var Controls = function Controls(_ref2) {
   var style = _ref2.style,
-    _ref2$showZoom = _ref2.showZoom,
-    showZoom = _ref2$showZoom === void 0 ? true : _ref2$showZoom,
-    _ref2$showFitView = _ref2.showFitView,
-    showFitView = _ref2$showFitView === void 0 ? true : _ref2$showFitView,
-    _ref2$showInteractive = _ref2.showInteractive,
-    showInteractive = _ref2$showInteractive === void 0 ? true : _ref2$showInteractive,
-    fitViewParams = _ref2.fitViewParams,
-    onZoomIn = _ref2.onZoomIn,
-    onZoomOut = _ref2.onZoomOut,
-    onFitView = _ref2.onFitView,
-    onInteractiveChange = _ref2.onInteractiveChange,
-    className = _ref2.className,
-    children = _ref2.children;
+      _ref2$showZoom = _ref2.showZoom,
+      showZoom = _ref2$showZoom === void 0 ? true : _ref2$showZoom,
+      _ref2$showFitView = _ref2.showFitView,
+      showFitView = _ref2$showFitView === void 0 ? true : _ref2$showFitView,
+      _ref2$showInteractive = _ref2.showInteractive,
+      showInteractive = _ref2$showInteractive === void 0 ? true : _ref2$showInteractive,
+      fitViewParams = _ref2.fitViewParams,
+      onZoomIn = _ref2.onZoomIn,
+      onZoomOut = _ref2.onZoomOut,
+      onFitView = _ref2.onFitView,
+      onInteractiveChange = _ref2.onInteractiveChange,
+      className = _ref2.className,
+      children = _ref2.children;
 
   var _useState = React$1.useState(false),
-    _useState2 = _slicedToArray$1(_useState, 2),
-    isVisible = _useState2[0],
-    setIsVisible = _useState2[1];
+      _useState2 = _slicedToArray$1(_useState, 2),
+      isVisible = _useState2[0],
+      setIsVisible = _useState2[1];
 
   var setInteractive = useStoreActions(function (actions) {
     return actions.setInteractive;
   });
 
   var _useZoomPanHelper = useZoomPanHelper(),
-    zoomIn = _useZoomPanHelper.zoomIn,
-    zoomOut = _useZoomPanHelper.zoomOut,
-    fitView = _useZoomPanHelper.fitView;
+      zoomIn = _useZoomPanHelper.zoomIn,
+      zoomOut = _useZoomPanHelper.zoomOut,
+      fitView = _useZoomPanHelper.fitView;
 
   var isInteractive = useStoreState(function (s) {
     return s.nodesDraggable && s.nodesConnectable && s.elementsSelectable;
@@ -12176,22 +12174,22 @@ var defaultColors = (_defaultColors = {}, _defineProperty$2(_defaultColors, expo
 
 var Background = function Background(_ref) {
   var _ref$variant = _ref.variant,
-    variant = _ref$variant === void 0 ? exports.BackgroundVariant.Dots : _ref$variant,
-    _ref$gap = _ref.gap,
-    gap = _ref$gap === void 0 ? 15 : _ref$gap,
-    _ref$size = _ref.size,
-    size = _ref$size === void 0 ? 0.4 : _ref$size,
-    color = _ref.color,
-    style = _ref.style,
-    className = _ref.className;
+      variant = _ref$variant === void 0 ? exports.BackgroundVariant.Dots : _ref$variant,
+      _ref$gap = _ref.gap,
+      gap = _ref$gap === void 0 ? 15 : _ref$gap,
+      _ref$size = _ref.size,
+      size = _ref$size === void 0 ? 0.4 : _ref$size,
+      color = _ref.color,
+      style = _ref.style,
+      className = _ref.className;
 
   var _useStoreState = useStoreState(function (s) {
     return s.transform;
   }),
-    _useStoreState2 = _slicedToArray$1(_useStoreState, 3),
-    x = _useStoreState2[0],
-    y = _useStoreState2[1],
-    scale = _useStoreState2[2]; // when there are multiple flows on a page we need to make sure that every background gets its own pattern.
+      _useStoreState2 = _slicedToArray$1(_useStoreState, 3),
+      x = _useStoreState2[0],
+      y = _useStoreState2[1],
+      scale = _useStoreState2[2]; // when there are multiple flows on a page we need to make sure that every background gets its own pattern.
 
 
   var patternId = React$1.useMemo(function () {
